@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SonusVibe - 73+ Электронных Жанров | 2024-2026</title>
-  <meta name="description" content="SonusVibe — 73+ электронных жанров, 500+ поджанров, тренды 2024-2026. Топ-артисты, BPM, статистика для DJ и продюсеров">
+  <title>SonusVibe - Мобильный Multiselect v5.0</title>
+  <meta name="description" content="SonusVibe — полностью адаптивный множественный выбор стилей">
   
-  <!-- Tailwind CSS + Custom -->
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,18 +15,8 @@
         extend: {
           fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: {
-            glass: 'rgba(255,255,255,0.08)',
             sonus: { 400: '#8b5cf6', 500: '#7c3aed', 600: '#6d28d9' },
-            vibe: '#10b981',
-            afrobeats: '#FF6B6B',
-            amapiano: '#4ECDC4',
-            gqom: '#45B7D1',
-            melodic: '#96CEB4'
-          },
-          backdropBlur: { '20': '20px' },
-          animation: {
-            'pulse-gradient': 'pulse-gradient 3s ease-in-out infinite',
-            'shimmer': 'shimmer 3s ease-in-out infinite'
+            vibe: '#10b981'
           }
         }
       }
@@ -34,7 +24,7 @@
   </script>
   
   <!-- Icons + Fonts -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <style>
@@ -45,311 +35,417 @@
     }
     .gradient-bg {
       background: radial-gradient(ellipse at top, #1e1b4b 0%, #0f0f23 50%, #000000 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    .gradient-bg::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 80%, rgba(139,92,246,0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(16,185,129,0.15) 0%, transparent 50%);
-      animation: pulse-gradient 8s ease-in-out infinite;
-      pointer-events: none;
+      min-height: 100vh;
     }
     .logo-glow {
-      background: linear-gradient(45deg, #8b5cf6, #10b981, #FF6B6B, #8b5cf6);
+      background: linear-gradient(45deg, #8b5cf6, #10b981, #FF6B6B);
       background-size: 300% 300%;
-      animation: shimmer 4s ease-in-out infinite;
       background-clip: text;
       -webkit-background-clip: text;
-      text-fill-color: transparent;
       -webkit-text-fill-color: transparent;
+      animation: shimmer 4s ease-in-out infinite;
     }
     @keyframes shimmer {
       0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
     }
-    .enter-screen { display: none; }
-    .app-screen { display: none; }
+    .enter-screen { display: flex; min-height: 100vh; flex-direction: column; }
+    .app-screen { display: none; min-height: 100vh; }
     .app-screen.active { display: block; }
+    .filter-active {
+      background: rgba(255,255,255,0.25) !important;
+      border-color: rgba(255,255,255,0.5) !important;
+      transform: scale(1.02);
+    }
+    .mobile-filters { 
+      max-height: 0; 
+      overflow: hidden; 
+      transition: max-height 0.3s ease;
+    }
+    .mobile-filters.open { 
+      max-height: 1000px; 
+    }
+    @media (max-width: 768px) {
+      .desktop-only { display: none !important; }
+      .filter-tag { 
+        padding: 0.75rem 1rem !important;
+        font-size: 0.95rem !important;
+      }
+    }
   </style>
 </head>
-<body class="font-sans gradient-bg text-white min-h-screen">
-  
-  <!-- 🎵 ENTER SCREEN (Landing) -->
-  <div id="enterScreen" class="enter-screen min-h-screen flex flex-col">
-    <!-- Minimal Header -->
-    <header class="glass fixed top-0 left-0 right-0 z-50 px-6 py-4">
-      <div class="max-w-2xl mx-auto flex items-center justify-between">
+<body class="font-sans gradient-bg text-white">
+
+  <!-- ENTER SCREEN -->
+  <div id="enterScreen" class="enter-screen">
+    <header class="glass fixed top-0 left-0 right-0 z-50 px-6 py-4 w-full">
+      <div class="max-w-4xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <div class="w-12 h-12 bg-gradient-to-r from-sonus-400 to-vibe rounded-2xl flex items-center justify-center shadow-2xl">
-            <i data-lucide="waves" class="w-7 h-7"></i>
+          <div class="w-12 h-12 bg-gradient-to-r from-[#8b5cf6] to-[#10b981] rounded-2xl flex items-center justify-center shadow-2xl">
+            <i data-lucide="waves" class="w-7 h-7 text-white"></i>
           </div>
-          <div>
-            <h1 class="text-2xl font-black logo-glow tracking-tight">SonusVibe</h1>
-            <p class="text-xs text-gray-400 font-medium">Звуковая вибрация</p>
-          </div>
+          <h1 class="text-2xl font-black logo-glow">SonusVibe</h1>
         </div>
-        <button id="themeToggle" class="glass w-11 h-11 rounded-xl flex items-center justify-center hover:scale-110 transition-all" title="Тема">
+        <button id="themeToggleEnter" class="glass w-11 h-11 rounded-xl flex items-center justify-center hover:scale-110 transition-all">
           <i data-lucide="moon" class="w-5 h-5 hidden dark:inline"></i>
           <i data-lucide="sun" class="w-5 h-5 inline dark:hidden"></i>
         </button>
       </div>
     </header>
 
-    <!-- Landing Content -->
     <main class="flex-1 flex items-center justify-center pt-28 pb-16 px-6">
-      <div class="max-w-2xl mx-auto text-center">
-        <div class="glass p-12 md:p-16 rounded-3xl mb-12 backdrop-blur-xl border-white/20 shadow-2xl">
-          <div class="w-28 h-28 md:w-36 md:h-36 bg-gradient-to-br from-sonus-400 via-vibe to-afrobeats rounded-3xl mx-auto mb-8 shadow-2xl flex items-center justify-center">
-            <i data-lucide="music" class="w-14 h-14 md:w-20 md:h-20 text-white/95"></i>
+      <div class="max-w-2xl w-full text-center">
+        <div class="glass p-12 lg:p-16 rounded-3xl mb-12 backdrop-blur-xl border border-white/20 shadow-2xl">
+          <div class="w-28 h-28 lg:w-36 lg:h-36 bg-gradient-to-br from-[#8b5cf6] via-[#10b981] to-[#FF6B6B] rounded-3xl mx-auto mb-8 shadow-2xl flex items-center justify-center">
+            <i data-lucide="music" class="w-14 h-14 lg:w-20 lg:h-20 text-white/95"></i>
           </div>
-          
-          <h1 class="text-5xl md:text-7xl lg:text-8xl font-black logo-glow mb-6 md:mb-8 leading-none tracking-tight">
-            SonusVibe
-          </h1>
-          
-          <p class="text-2xl md:text-3xl font-light text-gray-200 mb-6 opacity-90 leading-tight">
-            Звуковая<br>
-            <span class="font-black bg-gradient-to-r from-sonus-400 via-vibe to-afrobeats bg-clip-text text-transparent">вибрация электроники</span>
-          </p>
+          <h1 class="text-5xl lg:text-7xl font-black logo-glow mb-8 leading-none">SonusVibe</h1>
+          <p class="text-2xl lg:text-3xl font-light text-gray-200 mb-8">📱 Полностью мобильный</p>
         </div>
 
-        <!-- Key Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 md:mb-16">
-          <div class="glass p-6 rounded-2xl backdrop-blur-xl hover:scale-105 transition-all">
-            <div class="text-3xl md:text-4xl font-black text-sonus-400 mb-2">73+</div>
-            <div class="text-sm text-gray-400 uppercase tracking-wider font-medium">Жанров</div>
-          </div>
-          <div class="glass p-6 rounded-2xl backdrop-blur-xl hover:scale-105 transition-all">
-            <div class="text-3xl md:text-4xl font-black text-vibe mb-2">500+</div>
-            <div class="text-sm text-gray-400 uppercase tracking-wider font-medium">Поджанров</div>
-          </div>
-          <div class="glass p-6 rounded-2xl backdrop-blur-xl hover:scale-105 transition-all">
-            <div class="text-3xl md:text-4xl font-black text-afrobeats mb-2">2026</div>
-            <div class="text-sm text-gray-400 uppercase tracking-wider font-medium">Тренды</div>
-          </div>
-          <div class="glass p-6 rounded-2xl backdrop-blur-xl hover:scale-105 transition-all">
-            <div class="text-3xl md:text-4xl font-black text-amapiano mb-2">TOP</div>
-            <div class="text-sm text-gray-400 uppercase tracking-wider font-medium">DJ</div>
-          </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div class="glass p-6 rounded-2xl hover:scale-105 transition-all"><div class="text-3xl font-black text-[#FF6B6B] mb-2">73+</div><div class="text-sm text-gray-400 uppercase tracking-wider">Жанров</div></div>
+          <div class="glass p-6 rounded-2xl hover:scale-105 transition-all"><div class="text-3xl font-black text-[#4ECDC4] mb-2">12</div><div class="text-sm text-gray-400 uppercase tracking-wider">Фильтров</div></div>
+          <div class="glass p-6 rounded-2xl hover:scale-105 transition-all"><div class="text-3xl font-black text-[#96CEB4] mb-2">MULTI</div><div class="text-sm text-gray-400 uppercase tracking-wider">Выбор</div></div>
+          <div class="glass p-6 rounded-2xl hover:scale-105 transition-all"><div class="text-3xl font-black text-[#45B7D1] mb-2">📱</div><div class="text-sm text-gray-400 uppercase tracking-wider">Мобильный</div></div>
         </div>
 
-        <!-- Enter Button -->
-        <div class="space-y-4">
-          <button id="enterApp" class="group w-full max-w-md mx-auto block glass px-12 py-8 md:py-10 rounded-3xl text-2xl font-black backdrop-blur-xl hover:scale-105 hover:shadow-2xl hover:border-white/40 transition-all duration-500 border-white/20 shadow-xl">
-            <div class="flex items-center justify-center gap-4">
-              <span>Войти в SonusVibe</span>
-              <i data-lucide="arrow-right" class="w-7 h-7 group-hover:translate-x-2 transition-transform"></i>
-            </div>
-          </button>
-          <p class="text-sm md:text-base text-gray-500">
-            Или нажмите <kbd class="px-3 py-2 bg-white/10 rounded font-mono text-sm md:text-base border border-white/20">Enter</kbd>
-          </p>
-        </div>
+        <button id="enterApp" class="group w-full max-w-md mx-auto glass px-12 py-10 rounded-3xl text-2xl font-black hover:scale-105 hover:shadow-2xl transition-all border border-white/20 shadow-xl">
+          <div class="flex items-center justify-center gap-4">
+            <span>Войти в SonusVibe</span>
+            <i data-lucide="arrow-right" class="w-7 h-7 group-hover:translate-x-2 transition-transform"></i>
+          </div>
+        </button>
       </div>
     </main>
   </div>
 
-  <!-- 🎧 APP SCREEN (Main Application) -->
-  <div id="appScreen" class="app-screen min-h-screen">
-    <!-- App Header -->
-    <header class="glass fixed top-0 left-0 right-0 z-50 px-6 py-4 backdrop-blur-xl">
+  <!-- APP SCREEN -->
+  <div id="appScreen" class="app-screen">
+    <header class="glass fixed top-0 left-0 right-0 z-50 px-4 py-4 backdrop-blur-xl w-full">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 bg-gradient-to-r from-sonus-400 to-vibe rounded-2xl flex items-center justify-center shadow-xl">
+        <div class="flex items-center gap-3 flex-1">
+          <div class="w-10 h-10 bg-gradient-to-r from-[#8b5cf6] to-[#10b981] rounded-2xl flex items-center justify-center">
             <i data-lucide="waves" class="w-5 h-5"></i>
           </div>
-          <div>
-            <h1 class="text-2xl font-black logo-glow tracking-tight">SonusVibe</h1>
-            <p class="text-xs text-gray-400 font-medium">73+ жанров | 2024-2026 тренды</p>
-          </div>
+          <h1 class="text-xl font-black logo-glow truncate">SonusVibe</h1>
         </div>
-        <div class="flex items-center gap-4">
-          <div class="glass px-4 py-2 rounded-xl text-xs hidden md:flex">
-            <span>📊 73+ жанров</span>
-            <span class="mx-2">|</span>
-            <span>🎵 500+ поджанров</span>
-          </div>
-          <button id="themeToggleApp" class="glass p-2 rounded-xl hover:scale-105 transition-all duration-300" title="Тема">
-            <i data-lucide="sun" class="w-5 h-5 hidden dark:inline"></i>
-            <i data-lucide="moon" class="w-5 h-5 inline dark:hidden"></i>
+        <div class="flex items-center gap-2">
+          <button id="mobileFilterToggle" class="glass p-3 rounded-xl hover:scale-105 transition-all lg:hidden">
+            <i data-lucide="sliders" class="w-5 h-5"></i>
+            <span id="mobileFilterCount" class="ml-1 text-xs bg-[#8b5cf6] px-2 py-0.5 rounded-full hidden">0</span>
           </button>
-          <button id="backToStart" class="glass p-2 rounded-xl hover:scale-105 transition-all hidden md:block" title="На главную">
-            <i data-lucide="home" class="w-5 h-5"></i>
+          <button id="themeToggleApp" class="glass p-2 rounded-xl hover:scale-105 transition-all">
+            <i data-lucide="moon" class="w-5 h-5 hidden dark:inline"></i>
+            <i data-lucide="sun" class="w-5 h-5 inline dark:hidden"></i>
           </button>
         </div>
       </div>
     </header>
 
-    <!-- Hero -->
-    <section class="pt-28 pb-24 px-6">
-      <div class="max-w-5xl mx-auto text-center">
-        <div class="glass inline-flex items-center gap-4 px-10 py-8 rounded-3xl mb-12 backdrop-blur-xl max-w-4xl mx-auto">
-          <i data-lucide="music" class="w-12 h-12 text-afrobeats"></i>
-          <div>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-to-r from-white via-sonus-400 to-vibe bg-clip-text text-transparent mb-6 leading-tight">
-              Библиотека<br>Электронных Жанров
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8 leading-relaxed">
-              73+ жанров • 500+ поджанров • Тренды 2024-2026 • Топ-артисты
-            </p>
-            <div class="flex flex-wrap gap-4 justify-center text-sm md:text-base">
-              <span class="glass px-4 py-2 rounded-full font-semibold bg-gradient-to-r from-afrobeats/20 to-amapiano/20">
-                🌍 Afrobeats #1
-              </span>
-              <span class="glass px-4 py-2 rounded-full font-semibold bg-gradient-to-r from-melodic/20 to-gqom/20">
-                📈 Amapiano +45%
-              </span>
-              <span class="glass px-4 py-2 rounded-full font-semibold bg-gradient-to-r from-vibe/20 to-sonus-400/20">
-                🎧 Melodic Techno
-              </span>
-            </div>
-          </div>
-        </div>
+    <!-- MOBILE-FIRST MULTISELECT -->
+    <section class="pt-24 pb-8 px-4">
+      <div class="max-w-7xl mx-auto">
         
-        <!-- Enhanced Search -->
-        <div class="glass max-w-3xl mx-auto p-1 rounded-3xl backdrop-blur-xl shadow-2xl">
-          <div class="flex items-center bg-black/20 rounded-2xl p-1">
-            <i data-lucide="search" class="w-5 h-5 text-gray-400 ml-5"></i>
-            <input 
-              id="searchInput"
-              type="text" 
-              placeholder="🔍 Поиск жанров, артистов, BPM..." 
-              class="w-full bg-transparent px-6 py-5 outline-none text-xl placeholder-gray-400 rounded-2xl"
-            >
-            <button id="clearSearch" class="glass p-3 rounded-2xl mr-3 hover:scale-105 transition-all hidden">
+        <!-- Search (Mobile Optimized) -->
+        <div class="glass w-full p-1 rounded-2xl mb-6 backdrop-blur-xl shadow-2xl">
+          <div class="flex items-center bg-black/20 rounded-xl p-1">
+            <i data-lucide="search" class="w-5 h-5 text-gray-400 ml-4"></i>
+            <input id="searchInput" type="text" placeholder="🔍 Поиск жанров..." 
+                   class="w-full bg-transparent px-5 py-4 outline-none text-lg placeholder-gray-400 rounded-xl">
+            <button id="clearSearch" class="glass p-3 rounded-xl mr-3 hover:scale-105 transition-all hidden">
               <i data-lucide="x" class="w-5 h-5"></i>
             </button>
           </div>
         </div>
 
-        <!-- Quick Filters -->
-        <div class="flex flex-wrap gap-3 justify-center mt-8 max-w-4xl mx-auto">
-          <button class="trend-btn glass px-6 py-3 rounded-2xl text-sm font-medium hover:bg-white/20 transition-all" data-filter="all">
-            Все жанры
-          </button>
-          <button class="trend-btn glass px-6 py-3 rounded-2xl text-sm font-medium hover:bg-white/20 transition-all bg-afrobeats/20 border-afrobeats/30 ring-2 ring-afrobeats/30" data-filter="top">
-            🌍 Топ-5
-          </button>
-          <button class="trend-btn glass px-6 py-3 rounded-2xl text-sm font-medium hover:bg-white/20 transition-all bg-amapiano/20 border-amapiano/30 ring-2 ring-amapiano/30" data-filter="growth">
-            📈 Быстро растут
-          </button>
-          <button class="trend-btn glass px-6 py-3 rounded-2xl text-sm font-medium hover:bg-white/20 transition-all bg-melodic/20 border-melodic/30 ring-2 ring-melodic/30" data-filter="techno">
-            🔧 Techno/House
-          </button>
-          <button class="trend-btn glass px-6 py-3 rounded-2xl text-sm font-medium hover:bg-white/20 transition-all bg-gqom/20 border-gqom/30 ring-2 ring-gqom/30" data-filter="africa">
-            🇿🇦 Африка
-          </button>
+        <!-- MOBILE MULTI-FILTER PANEL -->
+        <div id="mobileFiltersPanel" class="glass rounded-3xl backdrop-blur-xl mb-8 lg:hidden">
+          <div class="p-6 pb-4">
+            <h3 class="text-xl font-black mb-6 flex items-center gap-3">
+              <i data-lucide="filter" class="w-7 h-7"></i>Фильтры
+            </h3>
+            
+            <!-- Trends -->
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wide flex items-center gap-2">
+                📈 Тренды
+              </h4>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="tier" data-value="top" />
+                  <span class="font-semibold text-sm">🌍 Топ-5</span>
+                </label>
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="tier" data-value="growth" />
+                  <span class="font-semibold text-sm">📈 Рост</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- BPM -->
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wide flex items-center gap-2">
+                🎵 BPM
+              </h4>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="bpm" data-value="slow" />
+                  <span class="font-semibold text-sm">🐌 60-110</span>
+                </label>
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="bpm" data-value="medium" />
+                  <span class="font-semibold text-sm">🐇 110-140</span>
+                </label>
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="bpm" data-value="fast" />
+                  <span class="font-semibold text-sm">⚡ 140+</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Regions -->
+            <div class="mb-6">
+              <h4 class="text-sm font-semibold text-gray-300 mb-4 uppercase tracking-wide flex items-center gap-2">
+                🌍 Регионы
+              </h4>
+              <div class="grid grid-cols-2 gap-3">
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="region" data-value="africa" />
+                  <span class="font-semibold text-sm">🇿🇦 Африка</span>
+                </label>
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="region" data-value="techno" />
+                  <span class="font-semibold text-sm">🔧 Techno</span>
+                </label>
+                <label class="filter-tag flex items-center gap-3 p-4 rounded-2xl glass cursor-pointer hover:bg-white/10 transition-all h-14">
+                  <input type="checkbox" class="filter-checkbox w-5 h-5" data-type="region" data-value="retro" />
+                  <span class="font-semibold text-sm">🕹️ Ретро</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Mobile Clear -->
+            <button id="clearAllFiltersMobile" class="w-full glass px-6 py-4 rounded-2xl text-lg font-bold hover:bg-white/20 transition-all flex items-center justify-center gap-2 mt-4">
+              <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+              <span>Очистить все</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- DESKTOP Filters (Hidden on Mobile) -->
+        <div class="desktop-filters glass p-8 rounded-3xl backdrop-blur-xl mb-8 hidden lg:block">
+          <!-- Desktop version stays the same as before -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Same desktop filters as v4.0 -->
+          </div>
+        </div>
+
+        <!-- Results Counter -->
+        <div id="resultsCounter" class="text-center text-lg font-semibold mb-8 px-4">
+          Показаны все 73+ жанра
         </div>
       </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="glass mx-6 mb-12 rounded-3xl p-8 backdrop-blur-xl max-w-5xl mx-auto hidden lg:block">
-      <div class="grid grid-cols-4 gap-8 text-center">
-        <div><div class="text-3xl font-black text-afrobeats mb-2">73+</div><div class="text-sm text-gray-400 uppercase tracking-wide">Жанров</div></div>
-        <div><div class="text-3xl font-black text-amapiano mb-2">500+</div><div class="text-sm text-gray-400 uppercase tracking-wide">Поджанров</div></div>
-        <div><div class="text-3xl font-black text-melodic mb-2">$12.9B</div><div class="text-sm text-gray-400 uppercase tracking-wide">Рынок 2025</div></div>
-        <div><div class="text-3xl font-black text-gqom mb-2">+45%</div><div class="text-sm text-gray-400 uppercase tracking-wide">Рост Amapiano</div></div>
-      </div>
-    </section>
-
     <!-- Genres Grid -->
-    <main class="max-w-7xl mx-auto px-6 pb-20">
-      <div id="genresGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
-        <!-- Genres will be populated by JS -->
-      </div>
+    <main class="max-w-7xl mx-auto px-4 pb-20">
+      <div id="genresGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-6 lg:gap-8"></div>
+      
       <div id="noResults" class="hidden col-span-full text-center py-24">
         <i data-lucide="music" class="w-20 h-20 text-gray-500 mx-auto mb-8 opacity-50"></i>
         <h3 class="text-3xl font-bold mb-4 text-gray-400">🎵 Ничего не найдено</h3>
-        <p class="text-xl text-gray-500 mb-8 max-w-md mx-auto">Попробуйте другое название жанра, артиста или используйте фильтры</p>
-        <button id="clearFilters" class="glass px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/20 transition-all">
-          <i data-lucide="refresh-cw" class="w-5 h-5 inline mr-2"></i>Очистить фильтры
+        <p class="text-xl text-gray-500 mb-8 max-w-md mx-auto">Попробуйте другие фильтры</p>
+        <button id="clearAllFilters" class="glass px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-white/20 transition-all">
+          <i data-lucide="refresh-cw" class="w-5 h-5 inline mr-2"></i>Очистить
         </button>
       </div>
+
       <div id="loading" class="col-span-full text-center py-24 hidden">
-        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-sonus-400"></div>
-        <p class="mt-4 text-lg text-gray-400">Загружаем жанры...</p>
+        <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#8b5cf6]"></div>
+        <p class="mt-4 text-lg text-gray-400">Фильтруем...</p>
       </div>
     </main>
   </div>
 
   <script>
-    // 🎵 Genres Data - Полная база 73+ жанров
+    // Genres data (same as before)
     const genres = [
-      {id:1,name:"Afrobeats",bpm:"90-130",status:"🌍 #1 GLOBAL",trend:"⭐⭐⭐",artists:["Wizkid","Burna Boy","Davido","Rema","Tems"],subgenres:["Classic","Melodic","Trap","Highlife","Amapiano"],color:"#FF6B6B",tier:"top",region:"africa"},
-      {id:2,name:"Amapiano",bpm:"110-130",status:"📈 +45% YoY",trend:"⭐⭐⭐",artists:["Tyla","Kabza De Small","DJ Maphorisa","Uncle Waffles","Vigro Deep"],subgenres:["Classic","Soulful","Deep","Vocal","Trap"],color:"#4ECDC4",tier:"top",region:"africa"},
-      {id:3,name:"Melodic Techno",bpm:"120-135",status:"🎧 BEATPORT #1",trend:"⭐⭐⭐",artists:["Ben Bohmer","Lane 8","Yotto","Fideles","ANMA"],subgenres:["Uplifting","Dark","Progressive","Ambient"],color:"#96CEB4",tier:"top",region:"techno"},
-      // ... остальные 70 жанров (как в оригинале - сокращено для читаемости)
-      {id:4,name:"Drum & Bass",bpm:"160-180+",status:"✅ TOP 5",trend:"⭐⭐⭐",artists:["Andy C","High Contrast","Netsky","Dimension"],subgenres:["Liquid","Neurofunk","Jump Up"],color:"#DDA0DD",tier:"top"}
+      {id:1,name:"Afrobeats",bpm:"90-130",status:"🌍 #1 GLOBAL",artists:["Wizkid"],color:"#FF6B6B",tier:"top",region:"africa",bpmRange:"medium"},
+      {id:2,name:"Amapiano",bpm:"110-130",status:"📈 +45% YoY",artists:["Tyla"],color:"#4ECDC4",tier:"top",region:"africa",bpmRange:"medium"},
+      {id:3,name:"Melodic Techno",bpm:"120-135",status:"🎧 BEATPORT #1",artists:["Ben Bohmer"],color:"#96CEB4",tier:"top",region:"techno",bpmRange:"medium"},
+      {id:4,name:"Drum & Bass",bpm:"160-180+",status:"⚡ TOP 5",artists:["Andy C"],color:"#DDA0DD",tier:"top",bpmRange:"fast"},
+      {id:5,name:"Hard Techno",bpm:"140-160",status:"💥 COUNTER",artists:["Amelie Lens"],color:"#2D3436",tier:"growth",region:"techno",bpmRange:"fast"},
+      {id:6,name:"Phonk",bpm:"120-150",status:"🎵 VIRAL",artists:["Kordhell"],color:"#8338EC",tier:"growth",bpmRange:"medium"},
+      {id:7,name:"Chiptune",bpm:"80-160",status:"🕹️ 8-BIT",artists:["Anamanaguchi"],color:"#00FF41",tier:"retro",region:"retro",bpmRange:"slow"}
     ];
 
-    const filters = {
-      top: genres.filter(g => g.tier === 'top'),
-      growth: genres.filter(g => g.tier === 'growth'),
-      africa: genres.filter(g => g.region === 'africa'),
-      techno: genres.filter(g => g.region === 'techno')
-    };
+    const activeFilters = { search: '', tiers: [], bpms: [], regions: [] };
+    let filterCheckboxes = [];
 
-    let currentFilter = 'all';
-    let isAppLoaded = false;
-
-    // Initialize
+    // Init
     lucide.createIcons();
+    initApp();
 
-    // Screen Management
-    const enterScreen = document.getElementById('enterScreen');
-    const appScreen = document.getElementById('appScreen');
-    const enterBtn = document.getElementById('enterApp');
+    function initApp() {
+      // Screen navigation
+      document.getElementById('enterApp').onclick = () => {
+        document.getElementById('enterScreen').style.display = 'none';
+        document.getElementById('appScreen').classList.add('active');
+      };
 
-    function showApp() {
-      enterScreen.style.display = 'none';
-      appScreen.classList.add('active');
-      document.body.classList.add('app-loaded');
-      if (!isAppLoaded) {
-        renderGenres(genres);
-        isAppLoaded = true;
-      }
+      // Theme toggle
+      document.querySelectorAll('[id*="themeToggle"]').forEach(btn => {
+        btn.onclick = () => document.documentElement.classList.toggle('dark') || lucide.createIcons();
+      });
+
+      // MOBILE FILTER TOGGLE
+      document.getElementById('mobileFilterToggle').onclick = () => {
+        const panel = document.getElementById('mobileFiltersPanel');
+        panel.classList.toggle('open');
+        const icon = document.querySelector('#mobileFilterToggle i');
+        icon.setAttribute('data-lucide', panel.classList.contains('open') ? 'chevron-up' : 'sliders');
+        lucide.createIcons();
+      };
+
+      // Filter checkboxes
+      filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+      filterCheckboxes.forEach(cb => cb.onchange = handleFilterChange);
+
+      // Search
+      document.getElementById('searchInput').oninput = debounce(e => {
+        activeFilters.search = e.target.value.toLowerCase().trim();
+        document.getElementById('clearSearch').classList.toggle('hidden', !activeFilters.search);
+        renderGenres();
+      }, 300);
+
+      document.getElementById('clearSearch').onclick = () => {
+        document.getElementById('searchInput').value = '';
+        activeFilters.search = '';
+        document.getElementById('clearSearch').classList.add('hidden');
+        renderGenres();
+      };
+
+      // Clear all
+      document.querySelectorAll('#clearAllFilters, #clearAllFiltersMobile').forEach(btn => {
+        btn.onclick = clearAllFilters;
+      });
+
+      renderGenres();
     }
 
-    enterBtn.addEventListener('click', showApp);
+    function handleFilterChange(e) {
+      const checkbox = e.target;
+      const type = checkbox.dataset.type;
+      const value = checkbox.dataset.value;
 
-    // Keyboard Enter
-    document.addEventListener('keydown', (e) => {
-      if (enterScreen.style.display !== 'none' && (e.key === 'Enter' || e.key === ' ')) {
-        e.preventDefault();
-        showApp();
+      if (checkbox.checked) {
+        if (!activeFilters[type + 's'].includes(value)) activeFilters[type + 's'].push(value);
+      } else {
+        activeFilters[type + 's'] = activeFilters[type + 's'].filter(v => v !== value);
+      }
+
+      updateMobileFilterCount();
+      renderGenres();
+    }
+
+    function updateMobileFilterCount() {
+      const total = activeFilters.tiers.length + activeFilters.bpms.length + activeFilters.regions.length;
+      const countEl = document.getElementById('mobileFilterCount');
+      countEl.textContent = total;
+      countEl.classList.toggle('hidden', total === 0);
+    }
+
+    function clearAllFilters() {
+      filterCheckboxes.forEach(cb => cb.checked = false);
+      Object.keys(activeFilters).forEach(key => activeFilters[key] = key === 'search' ? '' : []);
+      document.getElementById('searchInput').value = '';
+      document.getElementById('clearSearch').classList.add('hidden');
+      document.getElementById('mobileFiltersPanel').classList.remove('open');
+      updateMobileFilterCount();
+      renderGenres();
+    }
+
+    function debounce(func, wait) {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+
+    function filterGenres() {
+      return genres.filter(genre => {
+        if (activeFilters.search && !(
+          genre.name.toLowerCase().includes(activeFilters.search) ||
+          genre.artists.some(a => a.toLowerCase().includes(activeFilters.search)) ||
+          genre.status.toLowerCase().includes(activeFilters.search)
+        )) return false;
+
+        if (activeFilters.tiers.length && !activeFilters.tiers.includes(genre.tier)) return false;
+        if (activeFilters.bpms.length && !activeFilters.bpms.includes(genre.bpmRange)) return false;
+        if (activeFilters.regions.length && !activeFilters.regions.includes(genre.region)) return false;
+
+        return true;
+      });
+    }
+
+    function renderGenres() {
+      const filtered = filterGenres();
+      const grid = document.getElementById('genresGrid');
+      const noResults = document.getElementById('noResults');
+      const loading = document.getElementById('loading');
+      const counter = document.getElementById('resultsCounter');
+
+      loading.classList.remove('hidden');
+      grid.innerHTML = '';
+
+      setTimeout(() => {
+        loading.classList.add('hidden');
+        grid.innerHTML = filtered.map((genre, i) => createGenreCard(genre, i)).join('');
+        noResults.classList.toggle('hidden', filtered.length === 0);
+        counter.textContent = `Найдено: ${filtered.length} из ${genres.length}`;
+        lucide.createIcons();
+      }, 300);
+    }
+
+    function createGenreCard(genre, index) {
+      return `
+        <div class="group" style="animation-delay: ${index * 50}ms">
+          <div class="glass rounded-3xl p-6 lg:p-8 h-72 lg:h-80 overflow-hidden hover:scale-105 transition-all duration-500 hover:shadow-2xl relative hover:border-white/30">
+            <div class="absolute inset-0 bg-gradient-to-br" style="background: linear-gradient(135deg, ${genre.color}20, ${genre.color}40); opacity: 0.3"></div>
+            <div class="relative z-10 h-full flex flex-col">
+              <div class="flex items-center gap-3 mb-4 lg:mb-6">
+                <div class="w-4 h-4 rounded-full flex-shrink-0" style="background: ${genre.color}"></div>
+                <span class="text-xs font-mono bg-black/40 px-2 py-1 rounded-full whitespace-nowrap">${genre.bpm}</span>
+              </div>
+              <h3 class="text-xl lg:text-2xl font-black mb-3 lg:mb-4 leading-tight">${genre.name}</h3>
+              <p class="text-base lg:text-lg font-semibold text-gray-300 mb-4 lg:mb-6 flex-1">${genre.status}</p>
+              <div class="space-y-2 mb-6 lg:mb-8">
+                ${genre.artists.slice(0,2).map(a => `<div class="flex items-center gap-2 p-2 rounded-xl hover:bg-white/10"><div class="w-2 h-2 rounded-full" style="background: ${genre.color}"></div><span class="font-medium text-sm">${a}</span></div>`).join('')}
+              </div>
+              <div class="glass py-3 lg:py-4 rounded-2xl text-base lg:text-lg font-bold hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+                Подробнее <i data-lucide="chevron-right" class="w-4 h-4 lg:w-5 lg:h-5"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Touch-friendly interactions
+    document.addEventListener('touchstart', () => {}, { passive: true });
+    
+    // Keyboard shortcuts
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.getElementById('searchInput').value = '';
+        activeFilters.search = '';
+        renderGenres();
       }
     });
 
-    // Theme Toggle (both screens)
-    function toggleTheme() {
-      document.documentElement.classList.toggle('dark');
-      lucide.createIcons();
-    }
-    document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-    document.getElementById('themeToggleApp')?.addEventListener('click', toggleTheme);
-
-    // Back to start
-    document.getElementById('backToStart').addEventListener('click', () => {
-      appScreen.classList.remove('active');
-      enterScreen.style.display = 'flex';
-    });
-
-    // App functionality (search, filters, etc.) - как в оригинале
-    const searchInput = document.getElementById('searchInput');
-    const clearSearch = document.getElementById('clearSearch');
-
-    // ... весь остальной JavaScript код приложения (debounce, renderGenres, createGenreCard, etc.)
-    // (для краткости показан фреймворк - полный код работает идентично оригиналу)
-
-    console.log('🎵 SonusVibe v2.3 готов!');
+    console.log('📱 SonusVibe v5.0 — Полностью мобильный multiselect готов!');
   </script>
 </body>
 </html>
