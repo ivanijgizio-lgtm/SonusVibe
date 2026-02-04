@@ -3,601 +3,943 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SonusVibe v8.0 - Полный справочник электронной музыки</title>
-  <meta name="description" content="SonusVibe - 73+ жанров, 600+ поджанров, поиск по стилям, данные 2024-2026">
+  <title>SonusVibe - Electronic Music Reference</title>
+  <meta name="description" content="SonusVibe - Complete electronic music guide with search and filtering">
   
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
     :root {
-      --bg: linear-gradient(135deg, #0f0f23 0%, #1a0d2e 50%, #0a0a1a 100%);
-      --glass: rgba(255,255,255,0.05);
-      --glass-hover: rgba(255,255,255,0.1);
-      --border: rgba(255,255,255,0.08);
-      --purple: #8b5cf6;
-      --cyan: #4ECDC4;
-      --red: #FF6B6B;
-      --green: #10b981;
-      --gradient: linear-gradient(135deg, #8b5cf6, #10b981, #FF6B6B);
+      --black: #0a0a0a;
+      --dark-gray: #1a1a1a;
+      --purple: #7c3aed;
+      --purple-hover: #6d28d9;
+      --light-gray: #f5f5f5;
+      --border: #2d2d2d;
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
-      background: var(--bg); 
-      color: white; 
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--black);
+      color: var(--light-gray);
       line-height: 1.6;
-      overflow-x: hidden;
     }
-    .glass { 
-      background: var(--glass); 
-      backdrop-filter: blur(20px); 
-      border: 1px solid var(--border);
-      border-radius: 20px;
+    
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
     }
-    .glow { 
-      background: var(--gradient);
-      background-size: 300% 300%;
-      background-clip: text;
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: shimmer 4s ease infinite;
+      background-clip: text;
     }
-    @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
     
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-    .section { padding: 80px 0; }
-    .section-hero { padding: 120px 0 80px; text-align: center; }
-    
-    /* Header */
-    .header { 
-      position: fixed; 
-      top: 0; left: 0; right: 0; 
-      z-index: 100; 
-      backdrop-filter: blur(20px); 
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border);
+    .nav-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
     }
-    .nav { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-size: 1.5rem; font-weight: 800; }
-    .btn { 
-      background: var(--gradient); 
-      border: none; 
-      color: white; 
-      padding: 1rem 2.5rem; 
-      border-radius: 50px; 
-      font-weight: 600; 
-      font-size: 1.1rem; 
-      cursor: pointer; 
+    
+    .btn-nav {
+      background: transparent;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
       transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex; 
-      align-items: center; 
+      font-size: 0.95rem;
+    }
+    
+    .btn-nav:hover {
+      background: var(--purple);
+      color: white;
+    }
+    
+    .landing-page {
+      display: block;
+    }
+    
+    .landing-page.hidden {
+      display: none;
+    }
+    
+    .app-page {
+      display: none;
+    }
+    
+    .app-page.active {
+      display: block;
+    }
+    
+    /* Landing Styles */
+    .hero {
+      padding-top: 150px;
+      padding-bottom: 100px;
+      text-align: center;
+    }
+    
+    .hero-title {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: #a0a0a0;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+      padding: 2rem;
+      background: var(--dark-gray);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--purple);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      color: #808080;
+    }
+    
+    .cta-button {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      border: none;
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3);
+    }
+    
+    .features {
+      padding: 80px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .feature {
+      padding: 2rem;
+      background: var(--dark-gray);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    
+    .feature:hover {
+      border-color: var(--purple);
+      transform: translateY(-4px);
+    }
+    
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--light-gray);
+    }
+    
+    .feature-desc {
+      color: #a0a0a0;
+      font-size: 0.95rem;
+    }
+    
+    /* App Styles */
+    .app-container {
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+    
+    .search-section {
+      margin-bottom: 3rem;
+    }
+    
+    .search-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .search-input {
+      background: var(--dark-gray);
+      border: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      color: var(--light-gray);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: var(--purple);
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    }
+    
+    .search-btn {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    
+    .search-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3);
+    }
+    
+    .filters {
+      background: var(--dark-gray);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+    
+    .filter-group {
+      margin-bottom: 2rem;
+    }
+    
+    .filter-group:last-child {
+      margin-bottom: 0;
+    }
+    
+    .filter-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #808080;
+      margin-bottom: 1rem;
+    }
+    
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
       gap: 0.75rem;
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 15px 30px rgba(139,92,246,0.4); }
     
-    /* Hero */
-    .hero-title { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 900; margin-bottom: 1rem; }
-    .hero-subtitle { font-size: 1.5rem; opacity: 0.9; margin-bottom: 3rem; max-width: 700px; margin-inline: auto; }
-    
-    /* Features Grid */
-    .features-grid { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-      gap: 2rem; 
-      margin: 3rem 0;
-    }
-    .feature-card { 
-      padding: 2.5rem; 
-      transition: all 0.3s ease; 
+    .filter-tag {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--light-gray);
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
       cursor: pointer;
-      position: relative; 
-      overflow: hidden;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
-    .feature-card:hover { 
-      transform: translateY(-10px); 
-      box-shadow: 0 30px 60px rgba(0,0,0,0.4);
-    }
-    .feature-card::before {
-      content: ''; 
-      position: absolute; 
-      top: 0; left: 0; right: 0; 
-      height: 4px; 
-      background: var(--gradient);
-    }
-    .feature-icon { 
-      width: 80px; height: 80px; 
-      border-radius: 20px; 
-      background: var(--gradient); 
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2rem;
-    }
-    .feature-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
-    .feature-desc { opacity: 0.8; line-height: 1.6; margin-bottom: 1.5rem; }
     
-    /* Stats */
-    .stats { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; margin: 4rem 0; }
-    .stat { text-align: center; }
-    .stat-number { font-size: 3rem; font-weight: 800; background: var(--gradient); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .stat-label { opacity: 0.75; margin-top: 0.5rem; }
+    .filter-tag:hover {
+      border-color: var(--purple);
+      color: var(--purple);
+    }
     
-    /* Genres Showcase */
-    .genres-showcase { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-      gap: 1.5rem;
+    .filter-tag.active {
+      background: var(--purple);
+      border-color: var(--purple);
+      color: white;
+    }
+    
+    .filter-divider {
+      height: 1px;
+      background: var(--border);
       margin: 2rem 0;
     }
-    .genre-tag { 
-      padding: 1.5rem; 
-      background: linear-gradient(135deg, rgba(139,92,246,0.2), rgba(78,205,196,0.2)); 
+    
+    .clear-btn {
+      background: transparent;
       border: 1px solid var(--border);
-      border-radius: 15px;
-      text-align: center;
+      color: #a0a0a0;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
       transition: all 0.3s ease;
     }
-    .genre-tag:hover { transform: scale(1.05); background: linear-gradient(135deg, rgba(139,92,246,0.3), rgba(78,205,196,0.3)); }
-    .genre-emoji { font-size: 2rem; margin-bottom: 0.5rem; }
-    .genre-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .genre-bpm { font-size: 0.9rem; opacity: 0.7; }
     
-    /* Table */
-    .table-container { 
-      overflow-x: auto; 
-      margin: 2rem 0;
+    .clear-btn:hover {
+      border-color: var(--purple);
+      color: var(--purple);
     }
-    table { 
-      width: 100%; 
-      border-collapse: collapse;
-      background: var(--glass);
-      border-radius: 20px;
-      overflow: hidden;
+    
+    .results-counter {
+      font-size: 0.9rem;
+      color: #808080;
+      margin-bottom: 2rem;
     }
-    th, td { 
-      padding: 1.5rem; 
-      text-align: left; 
-      border-bottom: 1px solid var(--border);
+    
+    .genres-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
     }
-    th { 
-      background: rgba(139,92,246,0.2); 
+    
+    .genre-card {
+      background: var(--dark-gray);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    
+    .genre-card:hover {
+      border-color: var(--purple);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(124, 58, 237, 0.15);
+    }
+    
+    .genre-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .genre-name {
+      font-size: 1.4rem;
       font-weight: 700;
+      color: var(--light-gray);
     }
-    tr:hover { background: rgba(255,255,255,0.05); }
     
-    /* Responsive */
+    .genre-bpm {
+      font-size: 0.8rem;
+      color: #808080;
+      background: rgba(124, 58, 237, 0.1);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    
+    .genre-meta {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.85rem;
+      color: #a0a0a0;
+    }
+    
+    .genre-description {
+      color: #a0a0a0;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .genre-image {
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(167, 139, 250, 0.2));
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: rgba(124, 58, 237, 0.5);
+    }
+    
+    .genre-button {
+      background: transparent;
+      border: 1px solid var(--purple);
+      color: var(--purple);
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+    
+    .genre-button:hover {
+      background: var(--purple);
+      color: white;
+    }
+    
+    .no-results {
+      text-align: center;
+      padding: 3rem;
+      color: #a0a0a0;
+    }
+    
+    .no-results-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--light-gray);
+    }
+    
     @media (max-width: 768px) {
-      .features-grid { grid-template-columns: 1fr; }
-      .stats { gap: 2rem; }
-      .stat-number { font-size: 2.5rem; }
-      .section { padding: 60px 0; }
-      th, td { padding: 1rem; font-size: 0.9rem; }
+      .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .search-box {
+        grid-template-columns: 1fr;
+      }
+      
+      .genres-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="header glass">
-    <nav class="container nav">
-      <div class="logo glow">SonusVibe</div>
-      <button id="launchAppBtn" class="btn">
-        <span>🚀 Запустить приложение</span>
-      </button>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <div class="logo">SonusVibe</div>
+        <div class="nav-actions">
+          <button id="togglePageBtn" class="btn-nav">Launch App</button>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <!-- Landing Page -->
-  <div id="landingPage">
-    <!-- Hero Section -->
-    <section class="section-hero">
-      <div class="container">
-        <h1 class="hero-title glow">Полный справочник электронной музыки</h1>
-        <p class="hero-subtitle">73+ жанров, 600+ поджанров, 220+ артистов, данные 2024-2026. Поиск, фильтрация, анализ в реальном времени.</p>
+  <div id="landingPage" class="landing-page">
+    <div class="container">
+      <div class="hero">
+        <h1 class="hero-title">Electronic Music Reference</h1>
+        <p class="hero-subtitle">Explore 73+ genres, 600+ subgenres, and 220+ artists with detailed information and search</p>
         
         <div class="stats">
           <div class="stat">
             <div class="stat-number">73+</div>
-            <div class="stat-label">Основных жанров</div>
+            <div class="stat-label">Main Genres</div>
           </div>
           <div class="stat">
             <div class="stat-number">600+</div>
-            <div class="stat-label">Поджанров</div>
+            <div class="stat-label">Subgenres</div>
           </div>
           <div class="stat">
             <div class="stat-number">220+</div>
-            <div class="stat-label">Артистов</div>
+            <div class="stat-label">Artists</div>
           </div>
           <div class="stat">
             <div class="stat-number">$12.9B</div>
-            <div class="stat-label">Рынок 2024</div>
+            <div class="stat-label">Market 2024</div>
           </div>
         </div>
-
-        <button id="scrollToFeatures" class="btn" style="margin-top: 2rem;">
-          <span>⬇️ Узнать больше</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="section">
-      <div class="container">
-        <h2 class="glow" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">Возможности SonusVibe</h2>
         
-        <div class="features-grid">
-          <!-- Feature 1 -->
-          <div class="feature-card glass">
-            <div class="feature-icon">🔍</div>
-            <h3 class="feature-title">Поиск по стилям</h3>
-            <p class="feature-desc">Найдите жанры по названию, артистам, BPM, статусу. 600+ поджанров в одном месте.</p>
-            <a href="#" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Поиск</a>
-          </div>
-
-          <!-- Feature 2 -->
-          <div class="feature-card glass">
-            <div class="feature-icon">📊</div>
-            <h3 class="feature-title">Множественная фильтрация</h3>
-            <p class="feature-desc">Фильтруйте по тренду (Топ-5, Рост), BPM (60-110, 110-140, 140+), регионам (Африка, Techno, Ретро).</p>
-            <a href="#" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Фильтры</a>
-          </div>
-
-          <!-- Feature 3 -->
-          <div class="feature-card glass">
-            <div class="feature-icon">🌍</div>
-            <h3 class="feature-title">Тренды 2024-2026</h3>
-            <p class="feature-desc">Актуальные данные о росте жанров. Amapiano +45%, Jersey Club +25%, Phonk +40%.</p>
-            <a href="#" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Тренды</a>
-          </div>
-
-          <!-- Feature 4 -->
-          <div class="feature-card glass">
-            <div class="feature-icon">⚡</div>
-            <h3 class="feature-title">Анализ BPM</h3>
-            <p class="feature-desc">Поиск по темпу: 90-130 (Afrobeats), 110-140 (House/Amapiano), 160+ (Drum&Bass).</p>
-            <a href="#" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">BPM</a>
-          </div>
-
-          <!-- Feature 5 -->
-          <div class="feature-card glass">
-            <div class="feature-icon">🎛️</div>
-            <h3 class="feature-title">Профили жанров</h3>
-            <p class="feature-desc">Подробная информация: история, ключевые артисты, потоки Spotify, присутствие на фестивалях.</p>
-            <a href="#" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Профили</a>
-          </div>
-
-          <!-- Feature 6 -->
-          <div class="feature-card glass">
-            <div class="feature-icon">📱</div>
-            <h3 class="feature-title">100% адаптивный</h3>
-            <p class="feature-desc">Работает на iPhone, Android, планшетах и десктопе. Touch-optimized интерфейс.</p>
-            <a href="#" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">Тест</a>
-          </div>
-        </div>
+        <button id="ctaButton" class="cta-button">Explore Now</button>
       </div>
-    </section>
 
-    <!-- Top Genres Section -->
-    <section class="section">
-      <div class="container">
-        <h2 class="glow" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">Топ жанры 2024-2025</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="feature-title">Advanced Search</div>
+          <div class="feature-desc">Search by genre name, artist, BPM, or trend status. Find exactly what you're looking for.</div>
+        </div>
         
-        <div class="genres-showcase">
-          <div class="genre-tag"><div class="genre-emoji">🌍</div><div class="genre-name">Afrobeats</div><div class="genre-bpm">90-130 BPM • #1 Global</div></div>
-          <div class="genre-tag"><div class="genre-emoji">🎛️</div><div class="genre-name">Melodic Techno</div><div class="genre-bpm">120-135 BPM • Beatport #1</div></div>
-          <div class="genre-tag"><div class="genre-emoji">🎵</div><div class="genre-name">Amapiano</div><div class="genre-bpm">110-130 BPM • +45% growth</div></div>
-          <div class="genre-tag"><div class="genre-emoji">⚡</div><div class="genre-name">Drum & Bass</div><div class="genre-bpm">160-180 BPM • TOP 5</div></div>
-          <div class="genre-tag"><div class="genre-emoji">🎲</div><div class="genre-name">Dark Progressive</div><div class="genre-bpm">120-130 BPM • Revival</div></div>
-          <div class="genre-tag"><div class="genre-emoji">🔥</div><div class="genre-name">Jersey Club</div><div class="genre-bpm">130-150 BPM • Viral +25%</div></div>
-          <div class="genre-tag"><div class="genre-emoji">🇿🇦</div><div class="genre-name">Gqom</div><div class="genre-bpm">120-130 BPM • Emerging</div></div>
-          <div class="genre-tag"><div class="genre-emoji">🎧</div><div class="genre-name">Hard Techno</div><div class="genre-bpm">140-160 BPM • Growing</div></div>
+        <div class="feature">
+          <div class="feature-title">Smart Filters</div>
+          <div class="feature-desc">Filter by trend (Top-5, Growing) and BPM range (60-110, 110-140, 140+) for precise discovery.</div>
         </div>
-      </div>
-    </section>
-
-    <!-- Growth Table -->
-    <section class="section">
-      <div class="container">
-        <h2 class="glow" style="font-size: 3rem; text-align: center; margin-bottom: 3rem;">Рост жанров 2024-2025</h2>
         
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Жанр</th>
-                <th>YoY Рост</th>
-                <th>Статус</th>
-                <th>Прогноз 2025-2026</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>🎵 Amapiano</strong></td>
-                <td style="color: var(--red);">+45%</td>
-                <td>Fastest Growing</td>
-                <td>🚀 Mainstream Breakthrough</td>
-              </tr>
-              <tr>
-                <td><strong>🎲 Jersey Club</strong></td>
-                <td style="color: var(--red);">+25%</td>
-                <td>Viral Trending</td>
-                <td>⭐ TikTok Momentum</td>
-              </tr>
-              <tr>
-                <td><strong>🎧 Melodic Techno</strong></td>
-                <td style="color: var(--cyan);">+20%</td>
-                <td>Sustained Growth</td>
-                <td>⚖️ Market Saturation Risk</td>
-              </tr>
-              <tr>
-                <td><strong>🇿🇦 Gqom</strong></td>
-                <td style="color: var(--cyan);">+20%</td>
-                <td>Emerging</td>
-                <td>🚀 Very High Potential</td>
-              </tr>
-              <tr>
-                <td><strong>🎵 Phonk</strong></td>
-                <td style="color: var(--red);">+40%</td>
-                <td>Viral Trending</td>
-                <td>⭐ TikTok Breakout</td>
-              </tr>
-              <tr>
-                <td><strong>🌍 Afrobeats</strong></td>
-                <td style="color: var(--green);">+10%</td>
-                <td>Plateauing</td>
-                <td>⚖️ Dominant but Saturation</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="feature">
+          <div class="feature-title">Genre Profiles</div>
+          <div class="feature-desc">Get detailed information about each genre including BPM, key artists, growth trends, and descriptions.</div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-title">Market Data</div>
+          <div class="feature-desc">Access streaming statistics, festival presence, and 2024-2026 trend predictions for all genres.</div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-title">2024-2026 Trends</div>
+          <div class="feature-desc">Stay updated with latest growth rates: Amapiano +45%, Jersey Club +25%, Phonk +40%.</div>
+        </div>
+        
+        <div class="feature">
+          <div class="feature-title">Mobile Optimized</div>
+          <div class="feature-desc">Fully responsive design works seamlessly on all devices - desktop, tablet, and mobile.</div>
         </div>
       </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section" style="text-align: center;">
-      <div class="container">
-        <h2 class="glow" style="font-size: 3rem; margin-bottom: 2rem;">Готовы к исследованию?</h2>
-        <p style="font-size: 1.3rem; opacity: 0.9; margin-bottom: 3rem; max-width: 600px; margin-inline: auto;">Откройте полную мощь SonusVibe: поиск по 600+ поджанрам, фильтрация по BPM и трендам, анализ данных 2024-2026 в реальном времени.</p>
-        <button id="cta-launch" class="btn" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
-          <span>🚀 Запустить SonusVibe</span>
-        </button>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="glass py-12 mt-20">
-      <div class="container text-center">
-        <h3 class="glow text-2xl font-black mb-4">SonusVibe v8.0</h3>
-        <p class="opacity-75 mb-6">© 2026. Полный справочник электронной музыки 2024-2026.</p>
-        <div class="flex flex-wrap justify-center gap-4 text-sm opacity-75">
-          <a href="#">О проекте</a>
-          <a href="#">GitHub</a>
-          <a href="#">Контакты</a>
-        </div>
-      </div>
-    </footer>
+    </div>
   </div>
 
-  <!-- APP PAGE (Hidden initially) -->
-  <div id="appPage" style="display: none;">
-    <header class="header glass">
-      <nav class="container nav">
-        <div class="logo glow">SonusVibe</div>
-        <div style="display: flex; gap: 1rem; align-items: center;">
-          <button id="backToLanding" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">← Назад</button>
-          <button id="themeToggle" class="btn" style="font-size: 1rem; padding: 0.75rem 1.5rem;">🌙</button>
-        </div>
-      </nav>
-    </header>
+  <!-- App Page -->
+  <div id="appPage" class="app-page">
+    <div class="container app-container">
+      <button id="backBtn" class="btn-nav" style="margin-bottom: 2rem;">Back to Landing</button>
 
-    <!-- App Content -->
-    <section style="pt-24 pb-8 px-6; padding-top: 80px;">
-      <div class="container">
-        <!-- Search -->
-        <div class="glass p-4 rounded-2xl mb-8 max-w-2xl mx-auto">
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <span style="font-size: 1.3rem;">🔍</span>
-            <input id="appSearch" placeholder="Поиск жанров, артистов, BPM..." style="width: 100%; background: transparent; border: none; padding: 1rem; outline: none; font-size: 1.1rem; color: white;">
-          </div>
-        </div>
-
-        <!-- Filters -->
-        <div class="glass p-8 rounded-3xl mb-12">
-          <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">🎛️ Фильтры по стилям</h3>
-          
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
-            
-            <!-- Trend Filters -->
-            <div>
-              <h4 style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; margin-bottom: 1rem;">📈 Тренды</h4>
-              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="tier" data-value="top" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>🌍 Топ-5</span>
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="tier" data-value="growth" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>📈 Рост</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- BPM Filters -->
-            <div>
-              <h4 style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; margin-bottom: 1rem;">🎵 BPM</h4>
-              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="bpm" data-value="slow" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>🐌 60-110</span>
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="bpm" data-value="medium" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>🐇 110-140</span>
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="bpm" data-value="fast" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>⚡ 140+</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Region Filters -->
-            <div>
-              <h4 style="font-size: 0.9rem; font-weight: 700; text-transform: uppercase; opacity: 0.7; margin-bottom: 1rem;">🌍 Регионы</h4>
-              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="region" data-value="africa" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>🇿🇦 Африка</span>
-                </label>
-                <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer; padding: 0.75rem; border-radius: 10px; transition: all 0.3s; background: var(--glass-hover);">
-                  <input type="checkbox" class="filterCheckbox" data-type="region" data-value="techno" style="width: 20px; height: 20px; cursor: pointer;">
-                  <span>🔧 Techno</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Clear Button -->
-            <div style="display: flex; align-items: flex-end;">
-              <button id="clearAllFilters" class="btn" style="width: 100%; font-size: 1rem; padding: 0.75rem 1.5rem; justify-content: center;">
-                🔄 Очистить все
-              </button>
-            </div>
-          </div>
-
-          <div style="margin-top: 1.5rem; text-center; opacity: 0.75;">
-            <span>📊 Результаты: </span><span id="resultsCount">50+ жанров</span>
-          </div>
+      <div class="search-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Search Genres</h2>
+        
+        <div class="search-box">
+          <input 
+            id="searchInput" 
+            type="text" 
+            class="search-input" 
+            placeholder="e.g., Amapiano, Drum and Bass, Techno..."
+            autocomplete="off"
+          >
+          <button id="searchBtn" class="search-btn">Search</button>
         </div>
       </div>
-    </section>
 
-    <!-- Genres Grid -->
-    <section style="px-6 pb-20;">
-      <div class="container">
-        <div id="genresGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem;"></div>
+      <div class="filters">
+        <div class="filter-group">
+          <div class="filter-title">Trend Status</div>
+          <div class="filter-options">
+            <button class="filter-tag" data-filter="all">All Genres</button>
+            <button class="filter-tag" data-filter="top">Top-5</button>
+            <button class="filter-tag" data-filter="growth">Growing</button>
+          </div>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <div class="filter-group">
+          <div class="filter-title">BPM Range</div>
+          <div class="filter-options">
+            <button class="filter-tag" data-filter="slow">60-110 BPM</button>
+            <button class="filter-tag" data-filter="medium">110-140 BPM</button>
+            <button class="filter-tag" data-filter="fast">140+ BPM</button>
+          </div>
+        </div>
+
+        <div class="filter-divider"></div>
+
+        <button id="clearBtn" class="clear-btn">Clear All Filters</button>
       </div>
-    </section>
+
+      <div class="results-counter">
+        <span id="resultsText">Showing all genres</span>
+      </div>
+
+      <div id="genresContainer" class="genres-grid"></div>
+      <div id="noResults" class="no-results hidden">
+        <div class="no-results-title">No Results Found</div>
+        <p>Try a different search term or adjust your filters</p>
+      </div>
+    </div>
   </div>
 
   <script>
-    // Comprehensive genres database from PDF
-    const genresDatabase = [
-      // AFRICAN GENRES
-      {name: "Afrobeats", bpm: "90-130", status: "🌍 #1 Global", growth: "+10%", tier: "top", region: "africa", bpmRange: "medium", artists: "Wizkid, Burna Boy, Davido", streams: "10B+"},
-      {name: "Amapiano", bpm: "110-130", status: "📈 +45% YoY", growth: "+45%", tier: "top", region: "africa", bpmRange: "medium", artists: "Tyla, Kabza De Small", streams: "3B/mo"},
-      {name: "Gqom", bpm: "120-130+", status: "🔥 Next Big", growth: "+20%", tier: "growth", region: "africa", bpmRange: "medium", artists: "DJ Lag, Babes Wodumo", streams: "500M/mo"},
-      {name: "Afro-House", bpm: "120-130", status: "🌍 Growing", growth: "+12%", tier: "top", region: "africa", bpmRange: "medium", artists: "Black Coffee", streams: "1B/mo"},
-      
-      // ELECTRONIC GENRES
-      {name: "Melodic Techno", bpm: "120-135", status: "🎧 Beatport #1", growth: "+20%", tier: "top", region: "techno", bpmRange: "medium", artists: "Ben Bohmer, Lane 8", streams: "4B/mo"},
-      {name: "Dark Progressive", bpm: "120-130", status: "🔄 Revival", growth: "+15%", tier: "top", region: "techno", bpmRange: "medium", artists: "Sasha, John Digweed", streams: "2B/mo"},
-      {name: "Drum & Bass", bpm: "160-180+", status: "⚡ TOP 5", growth: "+5%", tier: "top", bpmRange: "fast", artists: "Andy C, Netsky", streams: "2.5B/mo"},
-      {name: "Hard Techno", bpm: "140-160", status: "💥 Counter", growth: "+15%", tier: "growth", region: "techno", bpmRange: "fast", artists: "Amelie Lens", streams: "800M/mo"},
-      {name: "Deep House", bpm: "120-130", status: "🏠 Classic", growth: "+8%", tier: "top", region: "techno", bpmRange: "medium", artists: "Various", streams: "1.5B/mo"},
-      {name: "Tech House", bpm: "120-135", status: "🎛️ Popular", growth: "+10%", tier: "top", region: "techno", bpmRange: "medium", artists: "Various", streams: "2B/mo"},
-      
-      // EMERGING GENRES
-      {name: "Jersey Club", bpm: "130-150", status: "🎲 Viral +25%", growth: "+25%", tier: "growth", bpmRange: "medium", artists: "DJ Sliink, R1o", streams: "1B/mo"},
-      {name: "Hyperpop", bpm: "140-180+", status: "🌈 +30%", growth: "+30%", tier: "growth", bpmRange: "fast", artists: "100 gecs, Charli XCX", streams: "2B/mo"},
-      {name: "Phonk", bpm: "120-150", status: "🎵 Viral +40%", growth: "+40%", tier: "growth", bpmRange: "medium", artists: "Kordhell, DJ Smokey", streams: "1.5B/mo"},
-      
-      // MORE GENRES
-      {name: "Progressive House", bpm: "120-130", status: "🎶 Classic", growth: "+8%", tier: "top", region: "techno", bpmRange: "medium", artists: "Various", streams: "2B/mo"},
-      {name: "Liquid Funk", bpm: "160-180", status: "🌊 Smooth", growth: "+10%", tier: "top", bpmRange: "fast", artists: "High Contrast, Logistics", streams: "800M/mo"},
-      {name: "Ambient", bpm: "60-110", status: "🧘 Wellness", growth: "+25%", tier: "growth", bpmRange: "slow", artists: "Various", streams: "3B/mo"},
-      {name: "Lo-Fi Hip-Hop", bpm: "80-100", status: "📚 Study", growth: "+20%", tier: "growth", bpmRange: "slow", artists: "Various", streams: "5B/mo"},
-      {name: "Dark Psytrance", bpm: "140-160", status: "🌀 Psychedelic", growth: "+12%", tier: "top", bpmRange: "fast", artists: "Various", streams: "500M/mo"},
-      {name: "Goa Trance", bpm: "130-150", status: "✨ Spiritual", growth: "+8%", tier: "top", bpmRange: "medium", artists: "Various", streams: "400M/mo"},
+    const genresData = [
+      {
+        name: "Afrobeats",
+        bpm: "90-130",
+        growth: "+10%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Wizkid, Burna Boy, Davido",
+        description: "Vibrant fusion of West African rhythms with modern production. Characterized by infectious grooves, soulful vocals, and contemporary instrumentation. Origin: Nigeria, Ghana, UK. Status: Global #1 genre, 10B+ Spotify streams/month.",
+        image: "🌍"
+      },
+      {
+        name: "Amapiano",
+        bpm: "110-130",
+        growth: "+45%",
+        tier: "growth",
+        bpmRange: "medium",
+        artists: "Tyla, Kabza De Small, DJ Maphorisa",
+        description: "South African piano-driven electronic genre with jazz influences. Features soulful piano chords, groovy basslines, and warm synths. Origin: Johannesburg, South Africa. Status: Fastest growing electronic genre, 3B Spotify streams/month, +45% YoY growth.",
+        image: "🎹"
+      },
+      {
+        name: "Melodic Techno",
+        bpm: "120-135",
+        growth: "+20%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Ben Bohmer, Lane 8, Yotto, ANMA",
+        description: "Emotional techno blending deep house and techno elements. Known for uplifting melodies, atmospheric pads, and hypnotic rhythms. Origin: Global, popularized by Afterlife Recordings. Status: Beatport #1, 4B Spotify streams/month, dominant festival presence.",
+        image: "🎧"
+      },
+      {
+        name: "Drum and Bass",
+        bpm: "160-180+",
+        growth: "+5%",
+        tier: "top",
+        bpmRange: "fast",
+        artists: "Andy C, Netsky, High Contrast, Logistics",
+        description: "Fast breakbeats with powerful basslines. Features rapid hi-hat patterns, syncopated drums, and heavy sub-bass. Multiple subgenres: liquid funk, neurofunk, jump up. Origin: UK. Status: Consistent TOP 5, loyal fanbase, 2.5B Spotify streams/month.",
+        image: "⚡"
+      },
+      {
+        name: "Dark Progressive",
+        bpm: "120-130",
+        growth: "+15%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Sasha, John Digweed, Eric Prydz, Deep Shepard",
+        description: "Psychologically intense progressive house with dark atmospheres. Features deep grooves, hypnotic elements, and emotional builds. Origin: UK, USA. Status: Revival trend 2020-2025, 2B+ Spotify streams/month, major festival presence.",
+        image: "🌙"
+      },
+      {
+        name: "Jersey Club",
+        bpm: "130-150",
+        growth: "+25%",
+        tier: "growth",
+        bpmRange: "medium",
+        artists: "DJ Sliink, R1o, Queen Key, DJ Jayhood",
+        description: "Fast-paced syncopated rhythms originating from New Jersey house parties. Features chopped vocals, complex percussion, and celebratory energy. Origin: New Jersey, USA. Status: Viral on TikTok, +25% growth, 1B Spotify streams/month, emerging festival presence.",
+        image: "🔥"
+      },
+      {
+        name: "Hard Techno",
+        bpm: "140-160+",
+        growth: "+15%",
+        tier: "growth",
+        bpmRange: "fast",
+        artists: "Amelie Lens, Charlotte de Witte, Reinier Zonneveld",
+        description: "Aggressive industrial techno with heavy kicks and dystopian aesthetics. Features minimal melody, intense percussion, and peak-time energy. Origin: Germany, Belgium. Status: Underground growing trend, counter to melodic saturation, strong underground circuit.",
+        image: "💥"
+      },
+      {
+        name: "Gqom",
+        bpm: "120-130+",
+        growth: "+20%",
+        tier: "growth",
+        bpmRange: "medium",
+        artists: "DJ Lag, Babes Wodumo, Rudeboyz, Citizen Deep",
+        description: "Minimal raw South African dance music with non-4/4 rhythms. Features heavy distorted bass, hypnotic structures, dark atmospheres. Origin: Durban, South Africa. Status: Emerging global trend, 200-500M Spotify streams/month, strong underground circuit.",
+        image: "🇿🇦"
+      },
+      {
+        name: "Hyperpop",
+        bpm: "140-180+",
+        growth: "+30%",
+        tier: "growth",
+        bpmRange: "fast",
+        artists: "100 gecs, Charli XCX, Caroline Polachek, AG Cook",
+        description: "Experimental genre-blending pop with electronic elements. Features chaotic production, autotune, genre-shifting. Origin: Internet/UK. Status: Mainstreaming (+30% growth), 2B Spotify streams/month, strong visual aesthetic component.",
+        image: "🌈"
+      },
+      {
+        name: "Phonk",
+        bpm: "120-150",
+        growth: "+40%",
+        tier: "growth",
+        bpmRange: "medium",
+        artists: "DJ Smokey, Onra, SpaceGhostPurrp, Kordhell",
+        description: "Lo-fi hip-hop fusion with aggressive distorted production. Features 90s rap samples, heavy bass, retro vinyl aesthetics. Origin: Houston, Texas. Status: Viral on TikTok (+40% growth), 1.5B Spotify streams/month, young demographic favorite.",
+        image: "🎵"
+      },
+      {
+        name: "Liquid Funk",
+        bpm: "160-180",
+        growth: "+10%",
+        tier: "top",
+        bpmRange: "fast",
+        artists: "High Contrast, Logistics, London Elektricity, Apex",
+        description: "Smooth soulful drum and bass with jazz influences. Features atmospheric synths, smooth strings, sophisticated arrangements. Origin: UK. Status: Sophisticated subgenre, dedicated fanbase, 800M Spotify streams/month.",
+        image: "🌊"
+      },
+      {
+        name: "Deep House",
+        bpm: "120-130",
+        growth: "+8%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Various producers globally",
+        description: "Soulful house music with jazzy chords and warm atmospheres. Features deep grooves, soulful vocals, and emotional depth. Origin: USA, Europe. Status: Classic genre, 1.5B Spotify streams/month, timeless appeal.",
+        image: "🏠"
+      },
+      {
+        name: "Tech House",
+        bpm: "120-135",
+        growth: "+10%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Pan-Pot, Green Velvet, Marco Carola",
+        description: "Fusion of techno machinery with house grooves. Features bouncy rhythms, syncopated drums, futuristic synths. Origin: Global. Status: Club favorite, 2B Spotify streams/month, consistent festival presence.",
+        image: "🎛️"
+      },
+      {
+        name: "Ambient",
+        bpm: "60-110",
+        growth: "+25%",
+        tier: "growth",
+        bpmRange: "slow",
+        artists: "Brian Eno, Nils Frahm, Max Richter",
+        description: "Atmospheric minimalist music for relaxation and focus. Features sparse textures, sustained tones, meditative qualities. Origin: Multi-genre. Status: Wellness trend, 3B Spotify streams/month, major growth post-COVID.",
+        image: "🧘"
+      },
+      {
+        name: "Progressive House",
+        bpm: "120-130",
+        growth: "+8%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Sasha, John Digweed, Joris Voorn",
+        description: "Long-form emotional house music with gradual builds. Features subtle progression, layered arrangements, emotional journeys. Origin: Global. Status: Festival staple, 2B Spotify streams/month, timeless appeal.",
+        image: "🎶"
+      },
+      {
+        name: "Acid Techno",
+        bpm: "125-135",
+        growth: "+8%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Richie Hawtin, Chris Liebing, Westbam",
+        description: "Techno with prominent TB-303 synthesizer sound. Features squelchy acid basslines, robotic textures, hypnotic patterns. Origin: Germany. Status: Cult following, 600M Spotify streams/month, strong underground presence.",
+        image: "⚙️"
+      },
+      {
+        name: "Uplifting Trance",
+        bpm: "135-150",
+        growth: "+5%",
+        tier: "top",
+        bpmRange: "fast",
+        artists: "Armin van Buuren, Tiësto, Above & Beyond",
+        description: "Euphoric trance with emotional melodies and euphoric builds. Features epic synths, soaring vocals, emotional peaks. Origin: Netherlands. Status: Festival staple, 1.5B Spotify streams/month, loyal fanbase.",
+        image: "✨"
+      },
+      {
+        name: "Dark Psytrance",
+        bpm: "140-160",
+        growth: "+12%",
+        tier: "top",
+        bpmRange: "fast",
+        artists: "Infected Mushroom, Vini Vici, Astrix",
+        description: "Psychedelic trance with dark hypnotic elements. Features driving basslines, psychedelic synths, trance builds. Origin: Israel, Global. Status: Festival presence, 500M Spotify streams/month, dedicated underground scene.",
+        image: "🌀"
+      },
+      {
+        name: "Acid House",
+        bpm: "120-135",
+        growth: "+6%",
+        tier: "top",
+        bpmRange: "medium",
+        artists: "Phuture, DJ Pierre, CJ Mackintosh",
+        description: "House music featuring acid TB-303 synthesizer sounds. Features squelchy basslines, funky grooves, acidic textures. Origin: Chicago. Status: Classic genre, 800M Spotify streams/month, cult nostalgia.",
+        image: "🔮"
+      },
+      {
+        name: "Lo-Fi Hip Hop",
+        bpm: "80-100",
+        growth: "+20%",
+        tier: "growth",
+        bpmRange: "slow",
+        artists: "Nujabes, Jinsang, Raf Duran",
+        description: "Relaxing hip-hop with jazzy samples and lo-fi aesthetic. Features vinyl crackle, mellow beats, nostalgic samples. Origin: YouTube community. Status: Study music phenomenon, 5B Spotify streams/month, viral wellness trend.",
+        image: "📚"
+      },
+      {
+        name: "Neurofunk",
+        bpm: "160-180",
+        growth: "+8%",
+        tier: "top",
+        bpmRange: "fast",
+        artists: "Source Direct, Calibre, Logistics, Apex",
+        description: "Technical drum and bass with sci-fi industrial aesthetics. Features complex breakbeats, futuristic synths, minimal arrangements. Origin: UK. Status: Specialist subgenre, 400M Spotify streams/month, dedicated technical fanbase.",
+        image: "🤖"
+      }
     ];
 
-    // Active filters
-    const activeFilters = { search: '', tiers: [], bpms: [], regions: [] };
+    let filteredGenres = [...genresData];
+    let activeFilters = { trend: 'all', bpm: 'all' };
 
-    // Init
-    document.getElementById('launchAppBtn').onclick = showApp;
-    document.getElementById('cta-launch').onclick = showApp;
-    document.getElementById('backToLanding').onclick = showLanding;
-    document.getElementById('scrollToFeatures').onclick = () => document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+    // DOM Elements
+    const toggleBtn = document.getElementById('togglePageBtn');
+    const ctaBtn = document.getElementById('ctaButton');
+    const backBtn = document.getElementById('backBtn');
+    const landingPage = document.getElementById('landingPage');
+    const appPage = document.getElementById('appPage');
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const filterTags = document.querySelectorAll('.filter-tag');
+    const clearBtn = document.getElementById('clearBtn');
+    const genresContainer = document.getElementById('genresContainer');
+    const noResults = document.getElementById('noResults');
+    const resultsText = document.getElementById('resultsText');
 
-    // Filter handlers
-    document.querySelectorAll('.filterCheckbox').forEach(cb => {
-      cb.onchange = handleFilter;
+    // Event Listeners
+    toggleBtn.addEventListener('click', showApp);
+    ctaBtn.addEventListener('click', showApp);
+    backBtn.addEventListener('click', showLanding);
+    searchBtn.addEventListener('click', handleSearch);
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') handleSearch();
+    });
+    clearBtn.addEventListener('click', clearFilters);
+
+    filterTags.forEach(tag => {
+      tag.addEventListener('click', () => applyFilter(tag));
     });
 
-    // Search handler
-    document.getElementById('appSearch').oninput = debounce((e) => {
-      activeFilters.search = e.target.value.toLowerCase();
-      renderGenres();
-    }, 300);
-
-    // Clear filters
-    document.getElementById('clearAllFilters').onclick = () => {
-      document.querySelectorAll('.filterCheckbox').forEach(cb => cb.checked = false);
-      Object.keys(activeFilters).forEach(key => activeFilters[key] = key === 'search' ? '' : []);
-      document.getElementById('appSearch').value = '';
-      renderGenres();
-    };
-
     function showApp() {
-      document.getElementById('landingPage').style.display = 'none';
-      document.getElementById('appPage').style.display = 'block';
-      renderGenres();
+      landingPage.classList.add('hidden');
+      appPage.classList.add('active');
+      searchInput.focus();
     }
 
     function showLanding() {
-      document.getElementById('appPage').style.display = 'none';
-      document.getElementById('landingPage').style.display = 'block';
+      appPage.classList.remove('active');
+      landingPage.classList.remove('hidden');
+      clearFilters();
     }
 
-    function handleFilter(e) {
-      const type = e.target.dataset.type;
-      const value = e.target.dataset.value;
-      if (e.target.checked) {
-        if (!activeFilters[type + 's'].includes(value)) activeFilters[type + 's'].push(value);
+    function handleSearch() {
+      const term = searchInput.value.toLowerCase().trim();
+      if (term) {
+        filteredGenres = genresData.filter(g => 
+          g.name.toLowerCase().includes(term) ||
+          g.artists.toLowerCase().includes(term) ||
+          g.description.toLowerCase().includes(term)
+        );
       } else {
-        activeFilters[type + 's'] = activeFilters[type + 's'].filter(v => v !== value);
+        filteredGenres = [...genresData];
       }
-      renderGenres();
+      applyFilters();
     }
 
-    function debounce(fn, ms) {
-      let t;
-      return (...args) => {
-        clearTimeout(t);
-        t = setTimeout(() => fn(...args), ms);
-      };
+    function applyFilter(tag) {
+      const filterType = tag.getAttribute('data-filter');
+      
+      document.querySelectorAll(`[data-filter="${filterType}"]`).forEach(t => {
+        t.classList.remove('active');
+      });
+      tag.classList.add('active');
+
+      if (filterType === 'all' || filterType === 'top' || filterType === 'growth') {
+        activeFilters.trend = filterType;
+      } else {
+        activeFilters.bpm = filterType;
+      }
+
+      applyFilters();
     }
 
-    function filterGenres() {
-      return genresDatabase.filter(g => {
-        if (activeFilters.search && !g.name.toLowerCase().includes(activeFilters.search) && !g.artists.toLowerCase().includes(activeFilters.search)) return false;
-        if (activeFilters.tiers.length && !activeFilters.tiers.includes(g.tier)) return false;
-        if (activeFilters.bpms.length && !activeFilters.bpms.includes(g.bpmRange)) return false;
-        if (activeFilters.regions.length && !activeFilters.regions.includes(g.region)) return false;
-        return true;
+    function applyFilters() {
+      let result = [...filteredGenres];
+
+      if (activeFilters.trend !== 'all') {
+        const tierMap = { top: 'top', growth: 'growth' };
+        result = result.filter(g => g.tier === tierMap[activeFilters.trend]);
+      }
+
+      if (activeFilters.bpm !== 'all') {
+        result = result.filter(g => g.bpmRange === activeFilters.bpm);
+      }
+
+      renderGenres(result);
+    }
+
+    function clearFilters() {
+      activeFilters = { trend: 'all', bpm: 'all' };
+      searchInput.value = '';
+      filteredGenres = [...genresData];
+      document.querySelectorAll('.filter-tag').forEach(tag => tag.classList.remove('active'));
+      document.querySelector('[data-filter="all"]').classList.add('active');
+      renderGenres(genresData);
+    }
+
+    function renderGenres(genres) {
+      genresContainer.innerHTML = '';
+      resultsText.textContent = `Showing ${genres.length} of ${genresData.length} genres`;
+
+      if (genres.length === 0) {
+        genresContainer.classList.add('hidden');
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      genresContainer.classList.remove('hidden');
+
+      genres.forEach(genre => {
+        const card = document.createElement('div');
+        card.className = 'genre-card';
+        card.innerHTML = `
+          <div class="genre-header">
+            <div class="genre-name">${genre.name}</div>
+            <div class="genre-bpm">${genre.bpm}</div>
+          </div>
+          <div class="genre-meta">
+            <span>Growth: ${genre.growth}</span>
+          </div>
+          <div class="genre-image">${genre.image}</div>
+          <div class="genre-description">${genre.description}</div>
+          <div class="genre-meta">
+            <span>Artists: ${genre.artists}</span>
+          </div>
+          <button class="genre-button">View Details</button>
+        `;
+        genresContainer.appendChild(card);
       });
     }
 
-    function renderGenres() {
-      const filtered = filterGenres();
-      const grid = document.getElementById('genresGrid');
-      document.getElementById('resultsCount').textContent = `${filtered.length} жанров`;
-      grid.innerHTML = filtered.map((g, i) => `
-        <div class="glass" style="padding: 2rem; border-radius: 15px; animation: fadeInUp 0.6s ease forwards; animation-delay: ${i*50}ms; opacity: 0;">
-          <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-            <span style="width: 16px; height: 16px; border-radius: 50%; background: linear-gradient(135deg, var(--purple), var(--cyan));"></span>
-            <span style="font-size: 0.85rem; font-family: monospace; background: rgba(139,92,246,0.2); padding: 0.4rem 0.8rem; border-radius: 8px;">${g.bpm}</span>
-          </div>
-          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem;">${g.name}</h3>
-          <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 1rem;">${g.status}</p>
-          <div style="font-size: 0.9rem; opacity: 0.75; margin-bottom: 1rem;">
-            <div>🎤 ${g.artists}</div>
-            <div>📊 ${g.streams}</div>
-          </div>
-          <button class="btn" style="width: 100%; font-size: 0.95rem; padding: 0.75rem; justify-content: center;">Подробнее →</button>
-        </div>
-      `).join('');
-    }
-
-    console.log('🎵 SonusVibe v8.0 - Complete Music Reference!');
+    // Initial render
+    renderGenres(genresData);
+    document.querySelector('[data-filter="all"]').classList.add('active');
   </script>
 </body>
 </html>
