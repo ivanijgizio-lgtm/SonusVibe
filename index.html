@@ -429,6 +429,143 @@
       margin-bottom: 1rem;
       color: var(--light-gray);
     }
+
+    /* 🔥 AI SECTION STYLES - НОВЫЙ БЛОК */
+    .ai-section {
+      padding-top: 100px;
+      padding-bottom: 60px;
+      display: none;
+    }
+    
+    .ai-section.active {
+      display: block;
+    }
+    
+    .ai-container {
+      background: var(--dark-gray);
+      padding: 2.5rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      margin-bottom: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    
+    .ai-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #7c3aed, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .ai-input-group {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .ai-input {
+      background: var(--black);
+      border: 2px solid var(--border);
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      color: var(--light-gray);
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .ai-input:focus {
+      outline: none;
+      border-color: var(--purple);
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
+    }
+    
+    .ai-generate-btn {
+      background: linear-gradient(135deg, #7c3aed, #6d28d9);
+      border: none;
+      color: white;
+      padding: 1.2rem 2.5rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    
+    .ai-generate-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
+    }
+    
+    .ai-generate-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .ai-loading {
+      display: none;
+      gap: 1rem;
+      align-items: center;
+    }
+    
+    .ai-spinner {
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-top: 2px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .ai-results {
+      display: none;
+    }
+    
+    .ai-results.active {
+      display: block;
+    }
+    
+    .recommendation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .ai-recommendation {
+      background: rgba(124, 58, 237, 0.1);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .ai-recommendation:hover {
+      background: rgba(124, 58, 237, 0.2);
+      transform: translateY(-4px);
+    }
+    
+    .ai-rec-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--purple);
+      margin-bottom: 0.5rem;
+    }
+    
+    .ai-rec-details {
+      color: #a0a0a0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
     
     @media (max-width: 768px) {
       .hero {
@@ -440,11 +577,11 @@
         font-size: 2rem;
       }
       
-      .search-box {
+      .search-box, .ai-input-group {
         grid-template-columns: 1fr;
       }
       
-      .genres-grid {
+      .genres-grid, .recommendation-grid {
         grid-template-columns: 1fr;
       }
       
@@ -452,6 +589,16 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
       }
+      
+      .ai-container {
+        padding: 1.5rem;
+      }
+    }
+
+    /* 🔥 ФИКСЫ ИЗ ПРЕДЫДУЩЕГО РЕВЬЮ */
+    .no-results.hidden,
+    .genres-grid.hidden {
+      display: none;
     }
   </style>
 </head>
@@ -583,9 +730,41 @@
       </div>
 
       <div id="genresContainer" class="genres-grid"></div>
-      <div id="noResults" class="no-results hidden">
+      <div id="noResults" class="no-results">
         <div class="no-results-title">No Results Found</div>
         <p>Try a different search term or adjust your filters</p>
+      </div>
+
+      <!-- 🔥 AI РЕКОМЕНДАЦИИ — НОВЫЙ БЛОК! -->
+      <div id="aiSection" class="ai-section">
+        <div class="container">
+          <button id="backToApp" class="btn-nav" style="margin-bottom: 2rem;">← Back to Genres</button>
+          
+          <div class="ai-container">
+            <h2 class="ai-title">🤖 AI Music Recommender</h2>
+            
+            <div class="ai-input-group">
+              <input 
+                id="aiInput" 
+                type="text" 
+                class="ai-input" 
+                placeholder="Опиши свой вкус... например: 'люблю мелодичный техно 120-130 bpm с эмоциональными вокалами'"
+              >
+              <button id="aiGenerateBtn" class="ai-generate-btn">
+                <span class="ai-loading">
+                  <div class="ai-spinner"></div>
+                  Генерирую...
+                </span>
+                <span class="ai-text">🎯 Get Recommendations</span>
+              </button>
+            </div>
+            
+            <div id="aiResults" class="ai-results">
+              <h3 style="color: var(--light-gray); margin-bottom: 1rem;">Вам могут понравиться:</h3>
+              <div id="recommendationGrid" class="recommendation-grid"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -821,6 +1000,15 @@
     const noResults = document.getElementById('noResults');
     const resultsText = document.getElementById('resultsText');
 
+    // 🔥 AI SECTION ELEMENTS
+    const aiSection = document.getElementById('aiSection');
+    const backToAppBtn = document.getElementById('backToApp');
+    const aiInput = document.getElementById('aiInput');
+    const aiGenerateBtn = document.getElementById('aiGenerateBtn');
+    const aiResults = document.getElementById('aiResults');
+    const recommendationGrid = document.getElementById('recommendationGrid');
+    const appContainer = document.querySelector('.app-container');
+
     // Event Listeners
     toggleBtn.addEventListener('click', showApp);
     ctaBtn.addEventListener('click', showApp);
@@ -834,6 +1022,34 @@
     filterTags.forEach(tag => {
       tag.addEventListener('click', () => applyFilter(tag));
     });
+
+    // 🔥 AI EVENT LISTENERS
+    backToAppBtn.addEventListener('click', showGenres);
+    let isGenerating = false;
+    aiGenerateBtn.addEventListener('click', generateRecommendations);
+    aiInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !isGenerating) generateRecommendations();
+    });
+
+    // AI Recommendations Data (умные рекомендации по ключевым словам)
+    const aiRecommendations = {
+      'техно': ['Melodic Techno', 'Hard Techno', 'Acid Techno'],
+      'techno': ['Melodic Techno', 'Hard Techno', 'Acid Techno'],
+      'хаус': ['Deep House', 'Tech House', 'Progressive House'],
+      'house': ['Deep House', 'Tech House', 'Progressive House'],
+      'драм': ['Drum and Bass', 'Liquid Funk', 'Neurofunk'],
+      'drum': ['Drum and Bass', 'Liquid Funk', 'Neurofunk'],
+      'амапиано': ['Amapiano', 'Gqom'],
+      'amapiano': ['Amapiano', 'Gqom'],
+      '120': ['Melodic Techno', 'Deep House', 'Tech House'],
+      '130': ['Jersey Club', 'Amapiano', 'Progressive House'],
+      '140': ['Hard Techno', 'Uplifting Trance', 'Dark Psytrance'],
+      'мелодичный': ['Melodic Techno', 'Liquid Funk', 'Progressive House'],
+      'melodic': ['Melodic Techno', 'Liquid Funk', 'Progressive House'],
+      'агрессивный': ['Hard Techno', 'Dark Progressive'],
+      'chill': ['Ambient', 'Lo-Fi Hip Hop'],
+      'релакс': ['Ambient', 'Lo-Fi Hip Hop']
+    };
 
     function showApp() {
       landingPage.classList.add('hidden');
@@ -904,6 +1120,7 @@
 
     function renderGenres(genres) {
       genresContainer.innerHTML = '';
+      genresContainer.classList.remove('hidden');
       resultsText.textContent = `Showing ${genres.length} of ${genresData.length} genres`;
 
       if (genres.length === 0) {
@@ -913,7 +1130,6 @@
       }
 
       noResults.classList.add('hidden');
-      genresContainer.classList.remove('hidden');
 
       genres.forEach(genre => {
         const card = document.createElement('div');
@@ -935,6 +1151,93 @@
         `;
         genresContainer.appendChild(card);
       });
+    }
+
+    // 🔥 AI FUNCTIONS
+    function showGenres() {
+      aiSection.classList.remove('active');
+      appContainer.style.display = 'block';
+      document.getElementById('genresContainer').parentElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    function generateRecommendations() {
+      if (isGenerating) return;
+      
+      const query = aiInput.value.toLowerCase().trim();
+      if (!query) {
+        aiInput.focus();
+        return;
+      }
+      
+      isGenerating = true;
+      aiGenerateBtn.disabled = true;
+      aiGenerateBtn.querySelector('.ai-loading').style.display = 'flex';
+      aiGenerateBtn.querySelector('.ai-text').style.display = 'none';
+      
+      // Симуляция AI задержки (реальная интеграция будет через API)
+      setTimeout(() => {
+        const matches = findRecommendations(query);
+        renderAIRecommendations(matches);
+        
+        aiGenerateBtn.disabled = false;
+        aiGenerateBtn.querySelector('.ai-loading').style.display = 'none';
+        aiGenerateBtn.querySelector('.ai-text').style.display = 'inline';
+        isGenerating = false;
+      }, 1500);
+    }
+    
+    function findRecommendations(query) {
+      // Ищем совпадения по ключевым словам
+      for (const [key, recs] of Object.entries(aiRecommendations)) {
+        if (query.includes(key)) {
+          return recs.map(name => {
+            const genre = genresData.find(g => g.name === name);
+            return genre ? { ...genre, confidence: Math.floor(Math.random() * 20) + 80 } : null;
+          }).filter(Boolean);
+        }
+      }
+      
+      // Fallback - топ популярные жанры
+      return genresData.slice(0, 4).map(g => ({ ...g, confidence: 75 }));
+    }
+    
+    function renderAIRecommendations(recommendations) {
+      recommendationGrid.innerHTML = '';
+      aiResults.classList.add('active');
+      
+      recommendations.slice(0, 6).forEach(rec => {
+        const card = document.createElement('div');
+        card.className = 'ai-recommendation';
+        card.innerHTML = `
+          <div class="ai-rec-name">${rec.name}</div>
+          <div class="ai-rec-details">
+            <strong>${rec.confidence}%</strong> совпадение • ${rec.bpm} BPM<br>
+            ${rec.artists.split(', ').slice(0, 2).join(', ')}...
+          </div>
+        `;
+        recommendationGrid.appendChild(card);
+      });
+      
+      // Скролл к результатам
+      aiResults.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Модификация genre-button для перехода в AI
+    document.addEventListener('click', (e) => {
+      if (e.target.classList.contains('genre-button')) {
+        const genreCard = e.target.closest('.genre-card');
+        const genreName = genreCard.querySelector('.genre-name').textContent;
+        aiInput.value = `подбери похожие на ${genreName}`;
+        showAISection();
+      }
+    });
+    
+    function showAISection() {
+      appContainer.querySelector('.search-section, .filters, .results-counter, #genresContainer, #noResults').forEach(el => {
+        el.style.display = 'none';
+      });
+      aiSection.classList.add('active');
+      aiInput.focus();
     }
 
     // Initial render
