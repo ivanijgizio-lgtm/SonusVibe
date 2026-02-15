@@ -14,31 +14,42 @@ const modifiers = [
 
 let list = [];
 
-// 1) базовые жанры
 base.forEach(name => list.push(name));
-
-// 2) добавляем комбинации (мод. + жанр)
 modifiers.forEach(mod => {
-  base.forEach(name => {
-    list.push(`${mod} ${name}`);
-  });
+  base.forEach(name => list.push(`${mod} ${name}`));
 });
 
-// 3) уникальные
 const unique = [...new Set(list)];
-
-// 4) ограничим до 3000 (можно поменять)
 const finalList = unique.slice(0, 3000);
 
-const genres = finalList.map(name => ({
+const images = [
+  "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+  "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60"
+];
+
+// безопасные бесплатные демо‑аудио
+const audios = [
+  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+];
+
+// бесплатное демо‑видео
+const videos = [
+  "https://www.w3schools.com/html/mov_bbb.mp4"
+];
+
+const genres = finalList.map((name, i) => ({
   id: name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
   name,
   bpm: "unknown",
   tier: "all",
   bpmRange: "all",
   subgenres: [],
-  description: "Описание добавим позже",
-  image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60"
+  description: `${name} — жанр, сочетающий атмосферу, ритм и эмоциональную подачу. Используется в клубах, видео и стриминге.`,
+  image: images[i % images.length],
+  audio: audios[i % audios.length],
+  video: videos[i % videos.length]
 }));
 
 fs.writeFileSync('data/genres.json', JSON.stringify(genres, null, 2));
