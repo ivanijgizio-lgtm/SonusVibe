@@ -1,251 +1,68 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SonusVibe — Music Genres Explorer</title>
-  <meta name="description" content="Modern electronic music guide with search, filters, favorites, groups and mix." />
+  <title>SonusVibe — Music Genres</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
+    * {margin:0;padding:0;box-sizing:border-box;}
     :root {
-      --bg: #0b0b12;
-      --surface: rgba(255,255,255,0.06);
-      --surface-2: rgba(255,255,255,0.08);
-      --card: #12121a;
-      --text: #f6f7ff;
-      --muted: #a2a4c5;
-      --accent: #7c3aed;
-      --accent-2: #22d3ee;
-      --border: rgba(255,255,255,0.08);
-      --shadow: 0 16px 40px rgba(0,0,0,0.35);
-      --radius: 16px;
+      --bg:#0b0b12;
+      --card:#11121a;
+      --surface:rgba(255,255,255,0.06);
+      --border:rgba(255,255,255,0.08);
+      --text:#f6f7ff;
+      --muted:#a2a4c5;
+      --accent:#7c3aed;
+      --accent2:#22d3ee;
+      --radius:16px;
+      --shadow:0 18px 40px rgba(0,0,0,.35);
     }
-
     body {
-      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,0.2), transparent 60%),
-                  radial-gradient(1000px 600px at 100% 0%, rgba(34,211,238,0.15), transparent 60%),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      font-family:"Plus Jakarta Sans",sans-serif;
+      background:radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,0.2), transparent 60%),
+                 radial-gradient(1000px 600px at 100% 0%, rgba(34,211,238,0.18), transparent 60%),
+                 var(--bg);
+      color:var(--text);
     }
-
-    h1, h2, h3, .logo {
-      font-family: "Space Grotesk", sans-serif;
-      letter-spacing: -0.02em;
+    h1,h2,h3,.logo{font-family:"Space Grotesk",sans-serif;}
+    .hidden{display:none!important;}
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+    .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,18,0.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:1rem 0;}
+    .nav{display:flex;justify-content:space-between;align-items:center;}
+    .logo{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .btn{border:1px solid var(--border);background:var(--surface);color:var(--text);padding:.7rem 1.4rem;border-radius:12px;cursor:pointer;font-weight:600;transition:.2s;}
+    .btn:hover{transform:translateY(-1px);border-color:var(--accent);}
+    .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:white;box-shadow:0 10px 30px rgba(124,58,237,.3);}
+    .hero{padding-top:140px;text-align:center;}
+    .hero-title{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;}
+    .hero-subtitle{color:var(--muted);max-width:700px;margin:1rem auto 2rem;}
+    .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem;backdrop-filter:blur(10px);position:relative;z-index:2;}
+    .input,.select{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.2rem;color:var(--text);width:100%;pointer-events:auto;user-select:text;}
+    .search-box{display:grid;grid-template-columns:1fr auto;gap:.8rem;}
+    .filter-options{display:flex;gap:.7rem;flex-wrap:wrap;}
+    .filter-tag{padding:.5rem 1rem;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--text);cursor:pointer;font-size:.85rem;}
+    .filter-tag.active{background:var(--accent);border-color:var(--accent);}
+    .genres-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;}
+    .genre-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow);transition:.2s;position:relative;overflow:hidden;}
+    .genre-card:hover{transform:translateY(-3px);border-color:var(--accent);}
+    .card-cover{
+      height:140px;border-radius:12px;background-size:cover;background-position:center;margin-bottom:1rem;
+      display:flex;align-items:end;padding:0.8rem;
+      background-image:linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.25));
     }
-
-    .hidden { display: none !important; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      background: rgba(10,10,18,0.7);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 0;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      font-size: 1.7rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #7c3aed, #22d3ee);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .btn {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text);
-      padding: 0.7rem 1.4rem;
-      border-radius: 12px;
-      cursor: pointer;
-      transition: 0.2s ease;
-      font-weight: 600;
-    }
-    .btn:hover { transform: translateY(-1px); border-color: var(--accent); }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      border: none;
-      color: #fff;
-      box-shadow: 0 12px 30px rgba(124,58,237,0.25);
-    }
-
-    .hero {
-      padding-top: 140px;
-      text-align: center;
-    }
-    .hero-title {
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 700;
-    }
-    .hero-subtitle {
-      color: var(--muted);
-      max-width: 700px;
-      margin: 1rem auto 2rem;
-    }
-
-    .stats {
-      margin-top: 3rem;
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    .stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.2rem;
-      text-align: center;
-      backdrop-filter: blur(12px);
-    }
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent-2);
-    }
-    .stat-label { color: var(--muted); font-size: 0.9rem; }
-
-    .features {
-      padding: 4rem 0;
-      display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
-    .feature {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-    }
-
-    .app-container { padding-top: 110px; padding-bottom: 60px; }
-
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      backdrop-filter: blur(10px);
-      margin-bottom: 2rem;
-    }
-
-    .search-box {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 0.8rem;
-    }
-    .input, .select {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 0.9rem 1.2rem;
-      border-radius: 12px;
-      color: var(--text);
-    }
-
-    .filter-options { display: flex; flex-wrap: wrap; gap: 0.7rem; }
-    .filter-tag {
-      padding: 0.5rem 1rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text);
-      cursor: pointer;
-      font-size: 0.85rem;
-    }
-    .filter-tag.active {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .results-counter { color: var(--muted); margin: 1rem 0 1.5rem; }
-
-    .genres-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .genre-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: 0.2s ease;
-      box-shadow: var(--shadow);
-    }
-    .genre-card:hover { transform: translateY(-3px); border-color: var(--accent); }
-
-    .genre-header { display: flex; justify-content: space-between; margin-bottom: 1rem; }
-    .genre-name { font-size: 1.2rem; font-weight: 700; }
-    .genre-bpm { font-size: 0.8rem; color: var(--muted); }
-
-    .genre-image {
-      height: 110px;
-      background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(34,211,238,0.2));
-      border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2.2rem; color: rgba(124,58,237,0.6);
-      margin-bottom: 1rem;
-    }
-
-    .genre-actions { display: flex; gap: 0.6rem; margin-top: 1rem; }
-    .btn-icon {
-      padding: 0.55rem 0.8rem;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      cursor: pointer;
-    }
-    .btn-icon.fav.active { border-color: #fcd34d; color: #fcd34d; }
-
-    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .chip {
-      padding: 0.4rem 0.8rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.8rem;
-      cursor: pointer;
-    }
-    .chip.active { background: var(--accent); border-color: var(--accent); }
-
-    dialog {
-      border: none;
-      border-radius: var(--radius);
-      background: #11111a;
-      color: var(--text);
-      padding: 1.5rem;
-      max-width: 720px;
-      width: 90%;
-      box-shadow: var(--shadow);
-    }
-    dialog::backdrop { background: rgba(0,0,0,0.6); }
-
-    @media (max-width: 768px) {
-      .search-box { grid-template-columns: 1fr; }
-    }
+    .card-cover .tag{background:rgba(0,0,0,.4);padding:.3rem .7rem;border-radius:999px;font-size:.75rem;}
+    .genre-title{font-size:1.2rem;font-weight:700;margin-bottom:.4rem;}
+    .meta{color:var(--muted);font-size:.85rem;}
+    .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0;}
+    .chip{padding:.35rem .7rem;border-radius:999px;border:1px solid var(--border);font-size:.75rem;color:var(--muted);}
+    .actions{display:flex;gap:.6rem;margin-top:.7rem;}
+    @media(max-width:768px){.search-box{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -257,57 +74,33 @@
   </div>
 </header>
 
-<!-- Landing -->
 <section id="landingPage">
   <div class="container hero">
-    <h1 class="hero-title">Electronic Music Reference</h1>
-    <p class="hero-subtitle">Современный справочник жанров, артистов, происхождения и музыкальных структур.</p>
+    <h1 class="hero-title">Music Genres Explorer</h1>
+    <p class="hero-subtitle">Электронный справочник жанров с историей, примерами и структурой треков.</p>
     <button id="ctaButton" class="btn btn-primary">Explore Now</button>
-
-    <div class="stats">
-      <div class="stat"><div class="stat-number" id="statGenres">0</div><div class="stat-label">Genres</div></div>
-      <div class="stat"><div class="stat-number" id="statSub">0</div><div class="stat-label">Subgenres</div></div>
-      <div class="stat"><div class="stat-number" id="statArtists">0</div><div class="stat-label">Artists</div></div>
-      <div class="stat"><div class="stat-number">2024+</div><div class="stat-label">Updated</div></div>
-    </div>
-
-    <div class="features">
-      <div class="feature"><h3>Smart Filters</h3><p>Фильтры по трендам, BPM и группам.</p></div>
-      <div class="feature"><h3>Favorites & Groups</h3><p>Сохраняй избранное и собирай плейлисты.</p></div>
-      <div class="feature"><h3>Genre Mix</h3><p>Смешивай жанры и смотри результат.</p></div>
-      <div class="feature"><h3>History & Structure</h3><p>История, структура треков, примеры и ссылки.</p></div>
-    </div>
   </div>
 </section>
 
-<!-- App -->
 <section id="appPage" class="hidden">
-  <div class="container app-container">
+  <div class="container" style="padding-top:120px">
     <button id="backBtn" class="btn">← Back</button>
 
     <div class="panel">
-      <h2>Search Genres</h2>
+      <h2>Search</h2>
       <div class="search-box" style="margin-top:1rem;">
-        <input id="searchInput" class="input" placeholder="Amapiano, Techno, Ambient..." />
+        <input id="searchInput" type="search" class="input" placeholder="Amapiano, Techno..." autocomplete="off" />
         <button id="searchBtn" class="btn btn-primary">Search</button>
-      </div>
-      <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap;">
-        <select id="sortSelect" class="select">
-          <option value="name">Sort: Name</option>
-          <option value="growth">Sort: Growth</option>
-          <option value="bpm">Sort: BPM</option>
-        </select>
       </div>
     </div>
 
     <div class="panel">
       <h3>Filters</h3>
-      <div class="filter-options" style="margin:0.7rem 0 1rem;">
+      <div class="filter-options" style="margin:.7rem 0;">
         <button class="filter-tag active" data-group="trend" data-filter="all">All</button>
         <button class="filter-tag" data-group="trend" data-filter="top">Top</button>
         <button class="filter-tag" data-group="trend" data-filter="growth">Growth</button>
       </div>
-
       <div class="filter-options">
         <button class="filter-tag active" data-group="bpm" data-filter="all">Any BPM</button>
         <button class="filter-tag" data-group="bpm" data-filter="slow">60–110</button>
@@ -317,128 +110,62 @@
       <button id="clearBtn" class="btn" style="margin-top:1rem;">Clear</button>
     </div>
 
-    <div class="panel">
-      <h3>Favorites & Groups</h3>
-      <div id="favoritesList" class="chips"></div>
-      <button id="createGroupBtn" class="btn" style="margin-top:1rem;">Create Group</button>
-      <div style="margin-top:1rem;">
-        <div id="groupsList" class="chips"></div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <h3>Mix Genres</h3>
-      <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
-        <select id="mixA" class="select"></select>
-        <select id="mixB" class="select"></select>
-        <button id="mixBtn" class="btn btn-primary">Mix</button>
-      </div>
-      <div id="mixResult" style="margin-top:1rem; color:var(--muted);"></div>
-    </div>
-
-    <div class="results-counter" id="resultsText"></div>
+    <div id="resultsText" style="margin-bottom:1rem;color:var(--muted);"></div>
     <div id="genresContainer" class="genres-grid"></div>
     <div id="noResults" class="hidden">Нет результатов</div>
   </div>
 </section>
 
-<dialog id="detailsDialog">
-  <h2 id="detailTitle"></h2>
-  <p id="detailDesc"></p>
-  <p><strong>Origin:</strong> <span id="detailOrigin"></span></p>
-  <p><strong>Structure:</strong> <span id="detailStructure"></span></p>
-  <p><strong>Key Artists:</strong> <span id="detailArtists"></span></p>
-  <p><strong>Subgenres:</strong> <span id="detailSubs"></span></p>
-  <p><strong>Examples:</strong> <span id="detailExamples"></span></p>
-  <a id="detailLink" href="#" target="_blank">История жанра</a>
-  <div style="margin-top:1rem;">
-    <button id="closeDialog" class="btn">Close</button>
-  </div>
-</dialog>
-
 <script>
-  const genresData = [
-    {
-      id:"amapiano", name:"Amapiano", bpm:"110-130", growth:"+45%", tier:"growth", bpmRange:"medium",
-      artists:"Tyla, Kabza De Small, DJ Maphorisa",
-      description:"ЮАР-пиано-хаус с джазовыми акцентами.",
-      origin:"Johannesburg, South Africa (2014–)",
-      structure:"Intro → Piano Groove → Vocal Hook → Breakdown → Drop",
-      subgenres:["Log Drum", "Sgija", "Private School Amapiano"],
-      examples:["Tyla — Water", "Kabza De Small — Scorpion Kings"],
-      historyLink:"https://en.wikipedia.org/wiki/Amapiano",
-      image:"🎹"
-    },
-    {
-      id:"techno", name:"Techno", bpm:"120-135", growth:"+10%", tier:"top", bpmRange:"medium",
-      artists:"Jeff Mills, Charlotte de Witte",
-      description:"Детройтские механистичные ритмы и индустриальный саунд.",
-      origin:"Detroit, USA (1980s)",
-      structure:"Loop-based, 16-bar progression, minimal breakdowns",
-      subgenres:["Acid Techno","Hard Techno","Melodic Techno"],
-      examples:["Jeff Mills — The Bells"],
-      historyLink:"https://en.wikipedia.org/wiki/Techno",
-      image:"⚙️"
-    },
-    {
-      id:"dnb", name:"Drum and Bass", bpm:"160-180", growth:"+5%", tier:"top", bpmRange:"fast",
-      artists:"Andy C, Netsky",
-      description:"Быстрые брейкбиты и глубокий саб-бас.",
-      origin:"UK (1990s)",
-      structure:"Intro → Drop → Bass Groove → Breakdown → Second Drop",
-      subgenres:["Liquid","Neurofunk","Jump Up"],
-      examples:["Netsky — Memory Lane"],
-      historyLink:"https://en.wikipedia.org/wiki/Drum_and_bass",
-      image:"⚡"
-    },
-    {
-      id:"ambient", name:"Ambient", bpm:"60-100", growth:"+25%", tier:"growth", bpmRange:"slow",
-      artists:"Brian Eno, Nils Frahm",
-      description:"Минимализм и атмосферные звуковые поля.",
-      origin:"UK/USA (1970s)",
-      structure:"Drone / pad based, no strict drums",
-      subgenres:["Dark Ambient","Drone","Ambient Techno"],
-      examples:["Brian Eno — An Ending"],
-      historyLink:"https://en.wikipedia.org/wiki/Ambient_music",
-      image:"🧘"
+  let genresData = [];
+  let filteredGenres = [];
+  let activeFilters = { trend:"all", bpm:"all" };
+
+  const el = id => document.getElementById(id);
+
+  async function loadGenres() {
+    try {
+      const res = await fetch('data/genres.json');
+      if (!res.ok) throw new Error('Файл не найден');
+      genresData = await res.json();
+    } catch (e) {
+      console.warn('Не удалось загрузить genres.json, использую fallback');
+      genresData = [
+        {
+          id:"amapiano",
+          name:"Amapiano",
+          bpm:"110-130",
+          tier:"growth",
+          bpmRange:"medium",
+          subgenres:["Log Drum","Sgija"],
+          description:"ЮАР-пиано-хаус.",
+          image:"https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60"
+        }
+      ];
     }
-  ];
+    filteredGenres = [...genresData];
+    renderGenres(genresData);
+  }
 
-  let filteredGenres = [...genresData];
-  let activeFilters = { trend:'all', bpm:'all', group:'all' };
-
-  const el = (id)=>document.getElementById(id);
-  const favorites = new Set(JSON.parse(localStorage.getItem('favorites') || '[]'));
-  let groups = JSON.parse(localStorage.getItem('groups') || '{}');
-
-  const landingPage = el('landingPage');
-  const appPage = el('appPage');
+  loadGenres();
 
   el('togglePageBtn').onclick = showApp;
   el('ctaButton').onclick = showApp;
   el('backBtn').onclick = showLanding;
   el('searchBtn').onclick = handleSearch;
-  el('searchInput').onkeypress = (e)=> e.key==='Enter' && handleSearch();
+  el('searchInput').oninput = handleSearch;
   el('clearBtn').onclick = clearFilters;
-  el('sortSelect').onchange = applyFilters;
-  el('createGroupBtn').onclick = createGroup;
-  el('mixBtn').onclick = mixGenres;
-  el('closeDialog').onclick = ()=> el('detailsDialog').close();
 
   document.querySelectorAll('.filter-tag').forEach(tag=>{
-    tag.onclick = ()=> applyFilter(tag);
+    tag.onclick = ()=>applyFilter(tag);
   });
 
-  function showApp(){ landingPage.classList.add('hidden'); appPage.classList.remove('hidden'); renderGenres(genresData); }
-  function showLanding(){ appPage.classList.add('hidden'); landingPage.classList.remove('hidden'); }
+  function showApp(){el('landingPage').classList.add('hidden');el('appPage').classList.remove('hidden');}
+  function showLanding(){el('appPage').classList.add('hidden');el('landingPage').classList.remove('hidden');}
 
   function handleSearch(){
     const term = el('searchInput').value.toLowerCase().trim();
-    filteredGenres = term ? genresData.filter(g =>
-      g.name.toLowerCase().includes(term) ||
-      g.artists.toLowerCase().includes(term) ||
-      g.description.toLowerCase().includes(term)
-    ) : [...genresData];
+    filteredGenres = term ? genresData.filter(g=>g.name.toLowerCase().includes(term) || g.description.toLowerCase().includes(term)) : [...genresData];
     applyFilters();
   }
 
@@ -452,160 +179,46 @@
 
   function applyFilters(){
     let result = [...filteredGenres];
-
-    if(activeFilters.trend !== 'all') result = result.filter(g=>g.tier === activeFilters.trend);
-    if(activeFilters.bpm !== 'all') result = result.filter(g=>g.bpmRange === activeFilters.bpm);
-    if(activeFilters.group !== 'all' && groups[activeFilters.group])
-      result = result.filter(g=> groups[activeFilters.group].includes(g.id));
-
-    const sort = el('sortSelect').value;
-    if(sort === 'name') result.sort((a,b)=>a.name.localeCompare(b.name));
-    if(sort === 'growth') result.sort((a,b)=>parseInt(b.growth)-parseInt(a.growth));
-    if(sort === 'bpm') result.sort((a,b)=>avgBpm(a.bpm)-avgBpm(b.bpm));
-
+    if(activeFilters.trend !== "all") result = result.filter(g=>g.tier === activeFilters.trend);
+    if(activeFilters.bpm !== "all") result = result.filter(g=>g.bpmRange === activeFilters.bpm);
     renderGenres(result);
   }
 
   function clearFilters(){
-    activeFilters = { trend:'all', bpm:'all', group:'all' };
+    activeFilters = { trend:"all", bpm:"all" };
     document.querySelectorAll('.filter-tag').forEach(t=>t.classList.remove('active'));
     document.querySelector('.filter-tag[data-group="trend"][data-filter="all"]').classList.add('active');
     document.querySelector('.filter-tag[data-group="bpm"][data-filter="all"]').classList.add('active');
-    el('searchInput').value = '';
+    el('searchInput').value = "";
     filteredGenres = [...genresData];
-    applyFilters();
+    renderGenres(genresData);
   }
 
   function renderGenres(genres){
     const container = el('genresContainer');
-    container.innerHTML = '';
+    container.innerHTML = "";
     el('resultsText').textContent = `Показано ${genres.length} из ${genresData.length}`;
-
-    if(!genres.length){ el('noResults').classList.remove('hidden'); return; }
+    if(!genres.length){el('noResults').classList.remove('hidden');return;}
     el('noResults').classList.add('hidden');
 
     genres.forEach(g=>{
       const card = document.createElement('div');
-      card.className = 'genre-card';
-      card.dataset.id = g.id;
-      card.innerHTML = `
-        <div class="genre-header">
-          <div class="genre-name">${g.name}</div>
-          <div class="genre-bpm">${g.bpm}</div>
+      card.className="genre-card";
+      card.innerHTML=`
+        <div class="card-cover" style="background-image:url('${g.image||''}')">
+          <span class="tag">${g.bpm||'BPM'}</span>
         </div>
-        <div class="genre-image">${g.image}</div>
-        <p>${g.description}</p>
-        <div class="genre-actions">
-          <button class="btn-icon details">Details</button>
-          <button class="btn-icon fav ${favorites.has(g.id) ? 'active':''}">★</button>
+        <div class="genre-title">${g.name}</div>
+        <div class="meta">${g.description||''}</div>
+        <div class="chips">${(g.subgenres||[]).map(s=>`<span class="chip">${s}</span>`).join("")}</div>
+        <div class="actions">
+          <button class="btn">Details</button>
+          <button class="btn btn-primary">Media</button>
         </div>
       `;
       container.appendChild(card);
     });
-    updateFavoritesUI();
   }
-
-  function updateFavoritesUI(){
-    const favList = el('favoritesList');
-    favList.innerHTML = '';
-    [...favorites].forEach(id=>{
-      const genre = genresData.find(g=>g.id===id);
-      if(genre){
-        const chip = document.createElement('div');
-        chip.className = 'chip';
-        chip.textContent = genre.name;
-        favList.appendChild(chip);
-      }
-    });
-
-    const groupsList = el('groupsList');
-    groupsList.innerHTML = '';
-    const allChip = document.createElement('div');
-    allChip.className = 'chip ' + (activeFilters.group==='all'?'active':'');
-    allChip.textContent = 'All Groups';
-    allChip.onclick = ()=>{ activeFilters.group='all'; applyFilters(); };
-    groupsList.appendChild(allChip);
-
-    Object.keys(groups).forEach(name=>{
-      const chip = document.createElement('div');
-      chip.className = 'chip ' + (activeFilters.group===name?'active':'');
-      chip.textContent = name;
-      chip.onclick = ()=>{ activeFilters.group=name; applyFilters(); };
-      groupsList.appendChild(chip);
-    });
-  }
-
-  function createGroup(){
-    const favs = [...favorites];
-    if(!favs.length) return alert("Добавь избранные жанры!");
-    const name = prompt("Название группы:");
-    if(!name) return;
-    groups[name] = favs;
-    localStorage.setItem('groups', JSON.stringify(groups));
-    updateFavoritesUI();
-  }
-
-  function mixGenres(){
-    const a = el('mixA').value, b = el('mixB').value;
-    const g1 = genresData.find(g=>g.id===a), g2 = genresData.find(g=>g.id===b);
-    if(!g1 || !g2) return;
-    const bpm = Math.round((avgBpm(g1.bpm) + avgBpm(g2.bpm))/2);
-    el('mixResult').innerHTML = `🔥 Mix: <b>${g1.name}</b> + <b>${g2.name}</b> → Средний BPM ≈ ${bpm}`;
-  }
-
-  function avgBpm(range){
-    const nums = range.match(/\d+/g)?.map(n=>parseInt(n)) || [120];
-    return Math.round(nums.reduce((a,b)=>a+b,0) / nums.length);
-  }
-
-  // Event delegation
-  el('genresContainer').addEventListener('click', (e)=>{
-    const card = e.target.closest('.genre-card');
-    if(!card) return;
-    const id = card.dataset.id;
-    const genre = genresData.find(g=>g.id===id);
-
-    if(e.target.classList.contains('fav')){
-      if(favorites.has(id)) favorites.delete(id); else favorites.add(id);
-      localStorage.setItem('favorites', JSON.stringify([...favorites]));
-      renderGenres(filteredGenres);
-    }
-
-    if(e.target.classList.contains('details')){
-      el('detailTitle').textContent = genre.name;
-      el('detailDesc').textContent = genre.description;
-      el('detailOrigin').textContent = genre.origin;
-      el('detailStructure').textContent = genre.structure;
-      el('detailArtists').textContent = genre.artists;
-      el('detailSubs').textContent = genre.subgenres.join(', ');
-      el('detailExamples').textContent = genre.examples.join(', ');
-      el('detailLink').href = genre.historyLink;
-      el('detailsDialog').showModal();
-    }
-  });
-
-  function initStats(){
-    el('statGenres').textContent = genresData.length;
-    el('statSub').textContent = genresData.reduce((a,g)=>a+g.subgenres.length,0);
-    const artists = new Set();
-    genresData.forEach(g=>g.artists.split(',').forEach(a=>artists.add(a.trim())));
-    el('statArtists').textContent = artists.size;
-  }
-
-  function initMixSelectors(){
-    const selA = el('mixA'), selB = el('mixB');
-    genresData.forEach(g=>{
-      const opt = new Option(g.name, g.id);
-      selA.add(opt.cloneNode(true));
-      selB.add(opt.cloneNode(true));
-    });
-    selA.value = genresData[0]?.id;
-    selB.value = genresData[1]?.id;
-  }
-
-  initStats();
-  initMixSelectors();
-  renderGenres(genresData);
 </script>
 </body>
 </html>
