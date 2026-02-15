@@ -61,7 +61,6 @@
     .meta{color:var(--muted);font-size:.85rem;}
     .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0;}
     .chip{padding:.35rem .7rem;border-radius:999px;border:1px solid var(--border);font-size:.75rem;color:var(--muted);}
-    .actions{display:flex;gap:.6rem;margin-top:.7rem;}
     @media(max-width:768px){.search-box{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -120,7 +119,6 @@
   let genresData = [];
   let filteredGenres = [];
   let activeFilters = { trend:"all", bpm:"all" };
-
   const el = id => document.getElementById(id);
 
   async function loadGenres() {
@@ -139,7 +137,9 @@
           bpmRange:"medium",
           subgenres:["Log Drum","Sgija"],
           description:"ЮАР-пиано-хаус.",
-          image:"https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60"
+          image:"https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+          audio:"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+          video:"https://www.w3schools.com/html/mov_bbb.mp4"
         }
       ];
     }
@@ -165,7 +165,7 @@
 
   function handleSearch(){
     const term = el('searchInput').value.toLowerCase().trim();
-    filteredGenres = term ? genresData.filter(g=>g.name.toLowerCase().includes(term) || g.description.toLowerCase().includes(term)) : [...genresData];
+    filteredGenres = term ? genresData.filter(g=>g.name.toLowerCase().includes(term) || (g.description||"").toLowerCase().includes(term)) : [...genresData];
     applyFilters();
   }
 
@@ -208,13 +208,17 @@
         <div class="card-cover" style="background-image:url('${g.image||''}')">
           <span class="tag">${g.bpm||'BPM'}</span>
         </div>
+
         <div class="genre-title">${g.name}</div>
         <div class="meta">${g.description||''}</div>
-        <div class="chips">${(g.subgenres||[]).map(s=>`<span class="chip">${s}</span>`).join("")}</div>
-        <div class="actions">
-          <button class="btn">Details</button>
-          <button class="btn btn-primary">Media</button>
+
+        <div class="chips">
+          ${(g.subgenres||[]).slice(0,4).map(s=>`<span class="chip">${s}</span>`).join("")}
         </div>
+
+        ${g.audio ? `<div style="margin-top:10px;"><audio controls style="width:100%"><source src="${g.audio}" type="audio/mpeg"></audio></div>` : ""}
+
+        ${g.video ? `<div style="margin-top:10px;"><video controls style="width:100%;border-radius:12px;"><source src="${g.video}" type="video/mp4"></video></div>` : ""}
       `;
       container.appendChild(card);
     });
