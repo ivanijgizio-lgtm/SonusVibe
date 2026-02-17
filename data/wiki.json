@@ -1,0 +1,402 @@
+{
+  "house": {
+    "name": "House",
+    "summary": "House music, or simply house, is a genre of electronic dance music characterized by a repetitive four-on-the-floor beat and a typical tempo of 115–130 beats per minute. It was created by DJs and music producers from Chicago's underground club culture and evolved slowly in the early/mid 1980s as DJs began altering disco songs to give them a more mechanical beat. By early 1988, house became mainstream and supplanted the typical '80s music beat."
+  },
+  "deep-house": {
+    "name": "Deep House",
+    "summary": "Deep house is a subgenre of house music that originated in the 1980s, initially fusing elements of Chicago house with the lush chords of 1980s jazz-funk and touches of soul music. Its origins are attributed to the early recordings of Larry Heard, including his influential track \"Can You Feel It\"."
+  },
+  "tech-house": {
+    "name": "Tech House",
+    "summary": "Tech house is a house music subgenre that prominently incorporates stylistic features from techno. The term tech house developed as a shorthand record store name for a category of electronic dance music that combined musical aspects of techno, such as \"rugged basslines\" and \"steely beats\", with the harmonies and grooves of progressive house. Tech house originally featured the clean and minimal production style associated with techno from Detroit and the UK."
+  },
+  "progressive-house": {
+    "name": "Progressive House",
+    "summary": "Progressive house is a subgenre of house music. The progressive house style emerged in the early 1990s. It initially developed in the United Kingdom as a natural progression of North American and European house music of the late 1980s."
+  },
+  "future-house": {
+    "name": "Future House",
+    "summary": "Future house is a house music genre that emerged in the 2010s in the United Kingdom, described as a fusion of deep house, UK garage and incorporating other elements and techniques of other EDM genres. It is high in energy, generally consisting of big drops, 4/4 beats and is sonically bass heavy."
+  },
+  "tropical-house": {
+    "name": "Tropical House",
+    "summary": "Описание для Tropical House не найдено."
+  },
+  "slap-house": {
+    "name": "Slap House",
+    "summary": "Описание для Slap House не найдено."
+  },
+  "electro-house": {
+    "name": "Electro House",
+    "summary": "Electro house is a genre of electronic dance music and a subgenre of house music characterized by heavy bass and a tempo around 125–135 beats per minute. The term has been used to describe the music of many DJ Mag Top 100 DJs, including Benny Benassi, Skrillex, Steve Aoki, and Deadmau5."
+  },
+  "big-room": {
+    "name": "Big Room",
+    "summary": "Big room house or simply big room is a fusion subgenre of house music that gained popularity in the early 2010s. Although the term \"big room\" started appearing in news articles circa 2007, the current state of this subgenre emerged around 2010—12 and was popularized by songs such as \"Epic\" and \"Cannonball\". From 2013 on, artists like Martin Garrix, KSHMR, Dimitri Vegas & Like Mike, Hardwell, Blasterjaxx, W&W, R3HAB and others began experimenting with this sound in their compositions."
+  },
+  "acid-house": {
+    "name": "Acid House",
+    "summary": "Acid house is a subgenre of house music developed in the early-1980s in Mumbai and the mid-1980s in Chicago. The style is defined primarily by the squelching sounds and basslines of the Roland TB-303 electronic bass synthesizer-sequencer, an innovation attributed to Chicago artists Phuture and Sleezy D circa 1986."
+  },
+  "techno": {
+    "name": "Techno",
+    "summary": "Techno is a genre of electronic dance music which is generally produced for use in a continuous DJ set, with tempos being in the range from 120 to 150 beats per minute (bpm). The central rhythm is typically in common time and often characterized by a repetitive four on the floor beat. Artists may use electronic instruments such as drum machines, sequencers, and synthesizers, as well as digital audio workstations. Drum machines from the 1980s such as Roland's Roland TR-808 and Roland TR-909 are highly prized, and software emulations of such retro instruments are popular in this style."
+  },
+  "minimal-techno": {
+    "name": "Minimal Techno",
+    "summary": "Minimal techno is a subgenre of techno music. It is characterized by a stripped-down aesthetic that exploits the use of repetition and understated development. Minimal techno is thought to have been originally developed in the early 1990s by Detroit-based producers Robert Hood and Daniel Bell."
+  },
+  "melodic-techno": {
+    "name": "Melodic Techno",
+    "summary": "Описание для Melodic Techno не найдено."
+  },
+  "hard-techno": {
+    "name": "Hard Techno",
+    "summary": "Описание для Hard Techno не найдено."
+  },
+  "industrial-techno": {
+    "name": "Industrial Techno",
+    "summary": "Industrial techno is a subgenre of techno and industrial dance music that originated in the 1990s. Characteristically, it incorporates influences from the bleak, noisy sound and aesthetics of early industrial music acts, particularly Cabaret Voltaire and Throbbing Gristle. American industrial music label Wax Trax! also had a profound influence over the genre's development."
+  },
+  "trance": {
+    "name": "Trance",
+    "summary": "Trance is a genre of electronic dance music that emerged from the techno and EBM scene in Frankfurt, Germany, in the late 1980s and early 1990s, and quickly spread throughout Europe."
+  },
+  "progressive-trance": {
+    "name": "Progressive Trance",
+    "summary": "Trance is a genre of electronic dance music that emerged from the techno and EBM scene in Frankfurt, Germany, in the late 1980s and early 1990s, and quickly spread throughout Europe."
+  },
+  "uplifting-trance": {
+    "name": "Uplifting Trance",
+    "summary": "Uplifting trance is a broad subgenre of trance music. The name, which emerged in the wake of progressive trance in 1996, is derived from the feeling which listeners claim to get. The genre is popular in the trance scene. Classical music strongly influenced the development of uplifting trance both in the 1990s and in the 2000s, with film music also considered influential."
+  },
+  "psytrance": {
+    "name": "Psytrance",
+    "summary": "Psychedelic trance, psytrance, or psy is a subgenre of trance music characterized by arrangements of rhythms and layered melodies created by high tempo riffs. The genre offers variety in terms of mood, tempo, and style. Some examples include full on, darkpsy, forest, minimal (Zenonesque), hitech psy, progressive, suomi, psy-chill, psycore, psybient, psybreaks, or \"adapted\" tracks from other music genres. Goa trance preceded psytrance; when digital media became more commonly used, psytrance evolved. Goa continues to develop alongside the other genres."
+  },
+  "goa-trance": {
+    "name": "Goa Trance",
+    "summary": "Goa trance is an electronic dance music style that originated in the early 1990s in the Indian state of Goa. Goa trance often has drone-like basslines, similar to the techno minimalism of 21st century psychedelic trance (psytrance). Psychedelic trance developed from Goa trance. The typically long songs built on progressive beat changes are said to put the listener in a \"trance\"."
+  },
+  "drum-and-bass": {
+    "name": "Drum and Bass",
+    "summary": "Drum and bass (D&B), also known as drum 'n' bass, is a genre of electronic dance music that emerged in the United Kingdom in the early 1990s. It is characterised by fast breakbeats with heavy bass and sub-bass lines, samples, and synthesizers."
+  },
+  "liquid-dnb": {
+    "name": "Liquid DnB",
+    "summary": "Liquid drum and bass, liquid DnB, melodic drum & bass, liquid funk, or sometimes just liquid is a subgenre of drum and bass. While it uses similar basslines and bar layouts to other styles, it contains fewer bar-oriented samples and more instrumental layers, harmonies, melodies and ambiance, producing a sentimental atmosphere directed at home listeners as well as nightclub and rave audiences. Music genres such as jazz, soul and sometimes blues have a pivotal influence on liquid drum and bass."
+  },
+  "neurofunk": {
+    "name": "Neurofunk",
+    "summary": "Neurofunk is a subgenre of drum and bass which emerged from England in the mid-to-late 1990s as a stylistic diversion from techstep."
+  },
+  "jump-up": {
+    "name": "Jump Up",
+    "summary": "Jump Up may refer to:"
+  },
+  "jungle": {
+    "name": "Jungle",
+    "summary": "Jungle is a genre of electronic music that developed in the 1990s out of the UK rave scene and Jamaican sound system culture. Emerging from breakbeat hardcore, the style is characterised by rapid breakbeats, heavily syncopated percussive loops, samples and synthesised effects, combined with the deep basslines, melodies and vocal samples found in dub, reggae and dancehall, as well as hip-hop and funk. Many producers frequently sampled the \"Amen break\" or other breakbeats from funk and jazz recordings. Jungle was a direct precursor to the drum and bass genre which emerged in the mid-1990s."
+  },
+  "breakbeat": {
+    "name": "Breakbeat",
+    "summary": "Breakbeat is a broad type of electronic music that uses drum breaks, often sampled from early recordings of funk, jazz, and R&B. Breakbeats have been used in styles such as Florida breaks, hip-hop, jungle, drum and bass, big beat, breakbeat hardcore, and UK garage styles."
+  },
+  "uk-garage": {
+    "name": "UK Garage",
+    "summary": "UK garage, abbreviated as UKG, is a genre of electronic music which originated in England in the early to mid-1990s. It is defined by percussive, shuffled rhythms with syncopated hi-hats, cymbals, and snares, and may include either 4/4 house kick patterns or more irregular \"2-step\" rhythms. Garage tracks also commonly feature \"chopped up\" and time-stretched or pitch-shifted vocal samples complementing the underlying rhythmic structure at a tempo usually around 130 BPM. The genre was influenced by garage house, jungle, Jamaican soundsystem, ragga, dancehall, gospel music, R&B, and rave culture."
+  },
+  "grime": {
+    "name": "Grime",
+    "summary": "Grime is a genre of electronic dance music (EDM) that emerged in London in the early 2000s. It developed out of the earlier UK dance style UK garage, and draws influences from jungle, dancehall, and Hip-hop. The style is typified by rapid, syncopated breakbeats, generally around 140 beats per minute, and often features an aggressive or jagged electronic sound. Emceeing is a significant element of the style, and lyrics often revolve around gritty depictions of urban life."
+  },
+  "dubstep": {
+    "name": "Dubstep",
+    "summary": "Dubstep is a genre of electronic dance music that originated in South London in the early 2000s. The style, whose roots trace to the Jamaican sound system party scene in the early 1980s, emerged as a UK garage offshoot that blended 2-step rhythms and sparse dub production, as well as incorporating elements of broken beat, grime, and drum and bass."
+  },
+  "riddim": {
+    "name": "Riddim",
+    "summary": "Riddim is a subgenre of dubstep known for its heavy use of repetitive and minimalist sub-bass and triplet percussion arrangements. It shares the same name as the Jamaican genre that influenced both it and dubstep, which originally derived from dub, reggae, and dancehall. Originating in the United Kingdom, specifically Croydon, in the early 2010s as a resurgence of the style used by early dubstep works, riddim started to gain mainstream presence in the electronic music scene around 2015."
+  },
+  "tearout": {
+    "name": "Tearout",
+    "summary": "Описание для Tearout не найдено."
+  },
+  "future-bass": {
+    "name": "Future Bass",
+    "summary": "Future bass is a style of electronic dance music which developed in the 2010s that mixes elements of dubstep and EDM trap with warmer, less abrasive rhythms. The genre was pioneered by producers such as Rustie, Hudson Mohawke, Lido, San Holo and Cashmere Cat, and it was popularised in the mid to late-2010s by artists such as Flume, Martin Garrix, Illenium, Louis the Child and Mura Masa. 2016 was seen as the breakout year for the genre."
+  },
+  "trap": {
+    "name": "Trap",
+    "summary": "Trap music, also known simply as trap, is a subgenre of hip-hop music that originated in the Southern United States. Lyrical references to trap started in 1991 but the modern sound of trap appeared in 1999. The genre gets its name from the Atlanta term \"trap house\", a drug house. Trap music features simple, rhythmic, minimalistic productions that use synthesized drums and is characterized by complex hi-hat drum beats, snare drums, bass drums, some tuned with a long decay to emit a bass frequency. Lyrics often focus on drug use and urban violence."
+  },
+  "phonk": {
+    "name": "Phonk",
+    "summary": "Phonk is a subgenre of hip hop and trap music directly inspired by 1990s Memphis rap. The genre is characterized by its use of vintage Memphis rap vocals, chopped and screwed production techniques, and samples from early 1990s hip hop, often combined with samples from jazz and funk."
+  },
+  "lo-fi": {
+    "name": "Lo-Fi",
+    "summary": "Low Fidelity is a music or production quality in which elements usually regarded as imperfections in the context of a recording or performance are present, sometimes as a deliberate stylistic choice. The standards of sound quality (fidelity) and music production have evolved over the decades, meaning that some older examples of lo-fi may not have been originally recognized as such. Lo-fi began to be recognized as a style of popular music in the 1990s, when it became alternately referred to as DIY music. Some subsets of lo-fi music have become popular for their perceived nostalgic or relaxing qualities, which originate from the imperfections that define the genre."
+  },
+  "chillhop": {
+    "name": "Chillhop",
+    "summary": "Lofi hip-hop is a style of lo-fi music that combines hip-hop beats with elements of chill-out. The word lofi, refers to the unpolished production techniques common in the style. It was popularized in the 2010s on YouTube."
+  },
+  "ambient": {
+    "name": "Ambient",
+    "summary": "Ambient or ambiance or ambience may refer to:"
+  },
+  "dark-ambient": {
+    "name": "Dark Ambient",
+    "summary": "Dark ambient is a subgenre of post-industrial music, that originally emerged in the mid-1980s. It draws primary influence from ambient music and is characterized by ominous, dark drones, discordant overtones and a gloomy, monumental or catacomb-inspired atmosphere. Although mostly an electronic genre, artists frequently sample traditional instruments and make use of semi-acoustic recording procedures."
+  },
+  "drone": {
+    "name": "Drone",
+    "summary": "Drone or The Drones may refer to:"
+  },
+  "downtempo": {
+    "name": "Downtempo",
+    "summary": "Downtempo is a broad label for electronic music that features an atmospheric sound and slower beats than would typically be found in dance music. Closely related to ambient music but with greater emphasis on rhythm, the style may be played in relaxation clubs or as \"warm-up or cool-down\" music during a DJ set. Examples of downtempo subgenres include trip hop, ambient house, chillwave, psybient and lofi hip hop."
+  },
+  "trip-hop": {
+    "name": "Trip Hop",
+    "summary": "Trip hop is a music genre defined as a psychedelic fusion of hip-hop and electronica with slow tempos and an atmospheric sound. The style emerged as a more experimental variant of breakbeat from the Bristol sound scene of the late 1980s and early 1990s, incorporating influences from jazz, soul, funk, dub, rap, as well as sampling from movie soundtracks and other eclectic sources."
+  },
+  "idm": {
+    "name": "IDM",
+    "summary": "Intelligent dance music (IDM) is a style of electronic music originating in the early 1990s, defined by idiosyncratic experimentation rather than specific genre constraints. The music often described with the term originally emerged in the early 1990s from the culture and sound palette of styles of electronic dance music such as acid house, ambient techno, Detroit techno and breakbeat; it has been regarded as better suited to home listening than dancing. Prominent artists in the style include Aphex Twin, Autechre, Squarepusher, μ-Ziq, the Black Dog, the Future Sound of London, and Orbital."
+  },
+  "glitch": {
+    "name": "Glitch",
+    "summary": "A glitch is a brief technical fault, such as a transient one that corrects itself, making it difficult to troubleshoot. The term is particularly common in the computing and electronics industries, in circuit bending, as well as among players of video games, although any purposely organized structure, such as speech, may experience glitches."
+  },
+  "synthwave": {
+    "name": "Synthwave",
+    "summary": "Synthwave is an electronic music microgenre that is based predominantly on the music associated with the soundtracks of action, science fiction, and horror films of the 1970s and 1980s. Other influences are drawn from the decade's art and video games. Synthwave musicians often espouse nostalgia for 1980s culture and attempt to capture the era's atmosphere and celebrate it."
+  },
+  "vaporwave": {
+    "name": "Vaporwave",
+    "summary": "Vaporwave is a microgenre of electronic music, an Internet aesthetic and meme that emerged in the late 2000s-early 2010s and became well known in 2015. It is defined partly by its slowed-down, chopped and screwed samples of smooth jazz, elevator music, R&B, and lounge music from the 1980s and 1990s, similar to synthwave. The surrounding subculture is sometimes associated with an ambiguous or satirical take on consumer capitalism and pop culture, and tends to be characterized by a nostalgic or surrealist engagement with the popular entertainment, technology and advertising of previous decades. Visually, it incorporates 1990s Web design and imagery, glitch art, anime, stylized Ancient Greek or Roman sculptures, Memphis Design geometric shapes, 3D-rendered objects, and cyberpunk tropes in its cover artwork and music videos."
+  },
+  "chiptune": {
+    "name": "Chiptune",
+    "summary": "Chiptune, also called 8-bit music, is a style of electronic music, and its associated subculture, made using the programmable sound generator (PSG) sound chips or synthesizers in vintage arcade machines, computers and video game consoles. The term is commonly used to refer to tracker format music using extremely basic and small samples that an old computer or console could produce, as well as music that combines PSG sounds with modern musical styles. It has been described as \"an interpretation of many genres\". Any existing song can be arranged in a chiptune style. It can be defined by choice of instrument, by timbre more than specific style elements."
+  },
+  "electro": {
+    "name": "Electro",
+    "summary": "Electro is a genre of electronic dance music that emerged in the early 1980s. It is defined by the prominent use of the Roland TR-808 drum machine, and draws direct influence from early hip-hop and funk music."
+  },
+  "garage-house": {
+    "name": "Garage House",
+    "summary": "Garage house is a dance music style that was developed alongside Chicago house music. The genre was popular in the 1980s in the United States and the 1990s in the United Kingdom, where it developed into UK garage and speed garage."
+  },
+  "amapiano": {
+    "name": "Amapiano",
+    "summary": "Amapiano is a genre of music from South Africa that became popular in the early 2020s. It is a hybrid of kwaito, deep house, gqom, jazz, soul, and lounge music characterized by synths and wide, percussive basslines. The word \"amapiano\" derives from the IsiZulu word for \"pianos\"."
+  },
+  "gqom": {
+    "name": "Gqom",
+    "summary": "Gqom, igqomu, gqom tech, sgubhu, 3-step or G.Q.O.M is an African electronic dance music genre and subgenre of house music, that emerged in the early 2010s from Durban, South Africa, pioneered and innovated by music producers Naked Boyz, Rudeboyz, Sbucardo, Griffit Vigo, Nasty Boyz, DJ Lag, Menzi Shabane, Distruction Boyz and Citizen Boy."
+  },
+  "afro-house": {
+    "name": "Afro House",
+    "summary": "Afro house is a sub-genre of house music mainly developed in South Africa. The genre emerged in the 1990s. This musical style fuses elements of traditional house with African rhythms and sounds, incorporating instruments such as the saxophone, piano and synthesizers, as well as vocals in various African languages."
+  },
+  "afrobeats": {
+    "name": "Afrobeats",
+    "summary": "Afrobeats, not to be confused with Afrobeat or Afroswing, is an umbrella term to describe popular music from West Africa and the diaspora that initially developed in Nigeria, Ghana, and the UK in the 2000s and 2010s. Afrobeats is less of a style per se, and more of a descriptor for the fusion of sounds flowing out of Nigeria and Ghana. Genres such as hiplife, jùjú music, highlife, azonto music, and naija beats, among others, were amalgamated under the \"Afrobeats\" umbrella."
+  },
+  "dancehall": {
+    "name": "Dancehall",
+    "summary": "Dancehall is a genre of Jamaican popular music that originated in the late 1970s. Initially, dancehall was a more sparse version of reggae than the roots style, which had dominated much of the 1970s. This music genre was not officially named until the 1980s, when the two words Dance and Hall were joined to form Dancehall, which was then promoted internationally for the first time. At that time digital instrumentation became more prevalent, changing the sound considerably, with digital dancehall becoming increasingly characterized by faster rhythms. Key elements of dancehall music include its extensive use of Jamaican Patois rather than Jamaican standard English and a focus on the track instrumentals."
+  },
+  "reggae": {
+    "name": "Reggae",
+    "summary": "Reggae is a music genre that originated in Jamaica in the late 1960s. The term also refers to the modern popular music of Jamaica and its diaspora. The 1968 single by Toots and the Maytals titled \"Do the Reggay\" was the first popular song to use the word reggae, effectively naming the genre and introducing it to a global audience."
+  },
+  "reggaeton": {
+    "name": "Reggaeton",
+    "summary": "Reggaeton is a style of popular and electronic music that originated in Panama during the late 1980s. It has been popularized and dominated by artists from Puerto Rico since the early 1990s."
+  },
+  "salsa": {
+    "name": "Salsa",
+    "summary": "Salsa most often refers to:Salsa (food), a variety of sauces used as condiments\nSalsa music, a popular style of Latin American music\nSalsa (dance), a Latin dance associated with Salsa music"
+  },
+  "bachata": {
+    "name": "Bachata",
+    "summary": "Bachata may refer to:Bachata (music), a musical genre which originated in the Dominican Republic \nTraditional bachata, a subgenre of bachata music\nBachata (dance), a dance form\nBachatón, a hybrid bachata/reggaeton music style\n\"Bachata\" (song), a song by Lou Bega\n\"La Bachata\", a song by Manuel Turizo\nBachata: A Social History of a Dominican Popular Music"
+  },
+  "cumbia": {
+    "name": "Cumbia",
+    "summary": "Cumbia refers to a number of musical rhythms and folk dance traditions of Latin America, generally involving musical and cultural elements from American Indigenous peoples, Europeans, and Africans during colonial times. Cumbia is said to have come from funeral traditions in the Afro-Colombian community."
+  },
+  "bossa-nova": {
+    "name": "Bossa Nova",
+    "summary": "Bossa nova is a relaxed style of samba developed in the late 1950s and early 1960s in Rio de Janeiro, Brazil. It is mainly characterized by a calm syncopated rhythm with chords and fingerstyle mimicking the beat of a samba groove, as if it was a simplification and stylization on the guitar of the rhythm produced by a samba school band. Another defining characteristic of the style is the use of unconventional chords in some cases with complex progressions and \"ambiguous\" harmonies. A common misconception is that these complex chords and harmonies were derived from jazz, but samba guitar players have been using similar arrangement structures since the early 1920s, indicating a case of parallel evolution of styles rather than a simple transference from jazz to bossa nova. Nevertheless, bossa nova was influenced by jazz, both in the harmonies used and also by the instrumentation of songs, and today many bossa nova songs are considered jazz standards. The popularity of bossa nova has helped to renew samba and contributed to the modernization of Brazilian music in general."
+  },
+  "samba": {
+    "name": "Samba",
+    "summary": "Samba is a broad term for many of the rhythms that compose the better known Brazilian music genres that originated in the Afro-Brazilian communities of Bahia in the late 19th century and early 20th century, It is a name or prefix used for several rhythmic variants, such as samba urbano carioca, samba de roda, among many other forms of samba, mostly originated in the Rio de Janeiro and Bahia states. Having its roots in West African musical traditions, especially those linked to the primitive rural samba of the colonial and imperial periods, is considered one of the most important cultural phenomena in Brazil and one of the country symbols. Present in the Portuguese language at least since the 19th century, the word \"samba\" was originally used to designate a \"popular dance\". Over time, its meaning has been extended to a \"batuque-like circle dance\", a dance style, and also to a \"music genre\". This process of establishing itself as a musical genre began in the 1910s and it had its inaugural landmark in the song \"Pelo Telefone\", launched in 1917. Despite being identified by its creators, the public, and the Brazilian music industry as \"samba\", this pioneering style was much more connected from the rhythmic and instrumental point of view to maxixe than to samba itself."
+  },
+  "jazz": {
+    "name": "Jazz",
+    "summary": "Jazz is a music genre that originated in the African-American communities of New Orleans, Louisiana, in the late 19th and early 20th centuries. Its roots are in blues, ragtime, European harmony, African rhythmic rituals, spirituals, hymns, marches, vaudeville song, and dance music. Since the 1920s Jazz Age, it has been recognized as a major form of musical expression in traditional and popular music. Jazz is characterized by swing and blue notes, complex chords, call and response vocals, polyrhythms and improvisation."
+  },
+  "bebop": {
+    "name": "Bebop",
+    "summary": "Bebop or bop is a style of jazz developed in the early to mid-1940s in the United States. It is characterized by a fast tempo, complex chord progressions—with rapid chord changes, changes of key, and substitute chords—along with virtuosic improvisation based on a combination of harmonic structure, scales, and occasional references to the melody."
+  },
+  "cool-jazz": {
+    "name": "Cool Jazz",
+    "summary": "Cool jazz is a style and genre of modern jazz music inspired by bebop and big band that arose in the United States after World War II. It is characterized by relaxed tempos and a lighter tone than that used in the fast and complex bebop style. Cool jazz often employs formal arrangements and incorporates elements of classical music. Broadly, the genre refers to a number of post-war jazz styles employing a more subdued approach than that of contemporaneous jazz idioms. As Paul Tanner, Maurice Gerow, and David Megill suggest, \"the tonal sonorities of these conservative players could be compared to pastel colors, while the solos of [Dizzy] Gillespie and his followers could be compared to fiery red colors.\""
+  },
+  "swing": {
+    "name": "Swing",
+    "summary": "Swing or swinging may refer to:"
+  },
+  "blues": {
+    "name": "Blues",
+    "summary": "Blues is a music genre and musical form that originated among African Americans in the Deep South of the United States around the 1860s. Blues has incorporated spirituals, work songs, field hollers, shouts, chants, and rhymed simple narrative ballads from the African-American culture. The blues form is ubiquitous in jazz, rhythm and blues, and rock and roll, and is characterized by the call-and-response pattern, the blues scale, and specific chord progressions, of which the twelve-bar blues is the most common. Blue notes, usually thirds, fifths or sevenths flattened in pitch, are also an essential part of the sound. Blues shuffles or walking bass reinforce the trance-like rhythm and form a repetitive effect known as the groove."
+  },
+  "rock": {
+    "name": "Rock",
+    "summary": "Rock most often refers to:Rock (geology), a naturally occurring solid aggregate of minerals or mineraloids\nRock music, a genre of popular music"
+  },
+  "hard-rock": {
+    "name": "Hard Rock",
+    "summary": "Hard rock or heavy rock is a heavier subgenre of rock music typified by aggressive vocals and distorted electric guitars. Hard rock began in the mid-1960s with the garage, psychedelic and blues rock movements. Some of the earliest hard rock music was produced by the Kinks, the Who, The Yardbirds, the Rolling Stones, Cream, Vanilla Fudge, and the Jimi Hendrix Experience. In the late 1960s, bands such as Blue Cheer, the Jeff Beck Group, Iron Butterfly, Led Zeppelin, Creedence Clearwater Revival, Golden Earring, Steppenwolf, Grand Funk Railroad, Free, and Deep Purple also produced hard rock."
+  },
+  "punk-rock": {
+    "name": "Punk Rock",
+    "summary": "Punk rock is a music genre."
+  },
+  "post-punk": {
+    "name": "Post-Punk",
+    "summary": "Post-punk is a loosely defined music genre and period that emerged in late 1977 in the wake of punk rock. The concept was originally outlined by Jon Savage in his \"New Musick\" editorial for Sounds magazine in November 1977. The term has been noted for lacking a universally agreed-upon definition. Post-punk musicians departed from punk's fundamental elements and raw simplicity, adopting instead a broader, more experimental approach that incorporated a variety of avant-garde sensibilities and non-rock influences. Inspired by punk's energy and DIY ethic but determined to move beyond rock clichés, artists drew influence from German krautrock and experimented with styles such as funk, electronic music, jazz, and dance music; the production techniques of dub and disco; and ideas from modernist art, cinema, literature, and politics. They also established independent record labels, created visual art, staged multimedia performances, and produced fanzines. Among the early post-punk bands, only Siouxsie and the Banshees and Public Image Ltd. achieved commercial success in 1978, with debut singles reaching the top ten of the UK Chart."
+  },
+  "new-wave": {
+    "name": "New Wave",
+    "summary": "New wave is a music genre that encompasses pop-oriented styles that emerged in the mid- to late 1970s as a lighter and more melodic \"broadening of punk culture\". The term new wave initially held distinct regional differences between the United States and United Kingdom. In the US, \"new wave\" had originally been used by music critics to label New York punk bands during the early-to mid 1970s. The term was later adopted by Sire Records founder Seymour Stein, who launched the \"Don't Call It Punk\" campaign in October 1977 to replace \"punk\" with \"new wave\". In the UK, new wave was less rooted in punk and had a more diverse definition. Over time, the genre became a catch-all for several musical styles that emerged after the initial popularity of punk rock, such as synth-pop, alternative dance and post-punk."
+  },
+  "grunge": {
+    "name": "Grunge",
+    "summary": "Grunge is an alternative rock genre and subculture that emerged during the mid-1980s in the U.S. state of Washington, particularly in Seattle and Olympia, and other nearby cities. Grunge fuses elements of punk rock and heavy metal, and features the distorted electric guitar sound used in both genres, as well as bass guitar, drums, and vocals. Grunge also incorporates influences from indie rock bands such as Sonic Youth, Pixies, and Dinosaur Jr. Lyrics are typically angst-filled and introspective, often addressing themes such as social alienation, self-doubt, abuse, neglect, betrayal, social and emotional isolation, addiction, psychological trauma, and a desire for freedom."
+  },
+  "shoegaze": {
+    "name": "Shoegaze",
+    "summary": "Shoegaze is a subgenre of indie and alternative rock characterised by ethereal soundscapes, obscured vocals, and extensive use of guitar effects and distortion, often producing an immersive \"wall of sound\". The style originated in the UK, particularly in London and the greater Thames Valley region, in the late 1980s and early 1990s. The term was coined by music executive Andy Ross and was later used by the British music press to describe shoegaze bands' motionless stage presence, during which musicians directed their look down toward their effects pedals."
+  },
+  "indie-rock": {
+    "name": "Indie Rock",
+    "summary": "Indie rock is a subgenre of rock music that originated in the United Kingdom, United States and New Zealand in the early to mid-1980s. Although the term was originally used to describe rock music released through independent record labels, by the 1990s it became more widely associated with the music such bands produced."
+  },
+  "alternative-rock": {
+    "name": "Alternative Rock",
+    "summary": "Alternative rock is a category of rock music that evolved from the independent music underground of the 1970s. Alternative rock acts achieved mainstream success in the 1990s with the likes of the grunge subgenre in the United States, and the Britpop and shoegaze subgenres in the United Kingdom and Ireland. During this period, many record labels were looking for \"alternatives\", as many corporate rock, hard rock, and glam metal acts from the 1980s were beginning to grow stale throughout the music industry. The emergence of Generation X as a cultural force in the 1990s also contributed greatly to the rise of alternative music."
+  },
+  "metal": {
+    "name": "Metal",
+    "summary": "Heavy metal is a genre of rock music that developed in the late 1960s and early 1970s, largely in the United Kingdom and United States. With roots in blues rock, psychedelic rock and acid rock, heavy metal bands developed a thick, monumental sound characterized by distorted guitars, extended guitar solos, emphatic beats and loudness."
+  },
+  "heavy-metal": {
+    "name": "Heavy Metal",
+    "summary": "Heavy metal is a genre of rock music that developed in the late 1960s and early 1970s, largely in the United Kingdom and United States. With roots in blues rock, psychedelic rock and acid rock, heavy metal bands developed a thick, monumental sound characterized by distorted guitars, extended guitar solos, emphatic beats and loudness."
+  },
+  "thrash-metal": {
+    "name": "Thrash Metal",
+    "summary": "Thrash metal is an extreme subgenre of heavy metal music characterized by its overall aggression and fast tempo. The songs usually use fast percussive beats and low-register guitar riffs, overlaid with shredding-style lead guitar work."
+  },
+  "death-metal": {
+    "name": "Death Metal",
+    "summary": "Death metal is an extreme subgenre of heavy metal music. It typically employs heavily distorted and low-tuned guitars, played with techniques such as palm muting and tremolo picking; deep growling vocals; aggressive, powerful drumming, featuring double kick and blast beat techniques; minor keys or atonality; abrupt tempo, key, and time signature changes; and chromatic chord progressions. The lyrical themes of death metal may include slasher film-style violence, political conflict, religion, nature, philosophy, true crime and science fiction."
+  },
+  "black-metal": {
+    "name": "Black Metal",
+    "summary": "Black metal is an extreme subgenre of heavy metal music. Common traits include fast tempos, a shrieking vocal style, heavily distorted guitars played with tremolo picking, raw (lo-fi) recording, unconventional song structures, and an emphasis on atmosphere. Artists often appear in corpse paint and adopt pseudonyms."
+  },
+  "doom-metal": {
+    "name": "Doom Metal",
+    "summary": "Doom metal is an extreme subgenre of heavy metal music that typically uses slower tempos, low-tuned guitars and a much \"thicker\" or \"heavier\" sound than other heavy metal genres. Both the music and the lyrics are intended to evoke a sense of despair, dread, and impending doom. The genre is strongly influenced by the early work of Black Sabbath, who formed a prototype for doom metal. During the first half of the 1980s, a number of bands such as Witchfinder General and Pagan Altar from England, American bands Pentagram, Saint Vitus, the Obsessed, Trouble, and Cirith Ungol, and Swedish band Candlemass defined doom metal as a distinct genre."
+  },
+  "sludge-metal": {
+    "name": "Sludge Metal",
+    "summary": "Sludge metal is an extreme subgenre of heavy metal music that combines elements of doom metal and hardcore punk. The genre generally includes slow tempos, down-tuned guitars and nihilistic lyrics discussing poverty, drug addiction and pollution."
+  },
+  "metalcore": {
+    "name": "Metalcore",
+    "summary": "Metalcore is a broadly defined fusion genre combining elements of heavy metal and hardcore punk, originating in the 1990s United States and becoming popular in the 2000s. Metalcore typically has aggressive verses and melodic choruses, combined with slow, intense passages called breakdowns. Other defining traits are low-tuned, percussive guitar riffs, double bass drumming, and highly polished production. Vocalists typically switch between clean vocals and harsh vocals. Lyrics are often personal, introspective and emotive. It is debated whether metalcore is a subgenre of metal and hardcore, or a genre of its own. Many metalheads do not regard metalcore as a heavy metal subgenre."
+  },
+  "nu-metal": {
+    "name": "Nu Metal",
+    "summary": "Nu metal is a subgenre of alternative metal that combines elements of heavy metal music with elements of other music genres such as hip-hop, funk, industrial, and grunge. Nu metal rarely features guitar solos or other displays of musical technique and emphasizes rhythm with instrumentation that is heavily syncopated. Nu metal guitarists often use seven-string guitars that are down-tuned to produce a heavier sound. Vocal styles are often rhythmic and influenced by hip hop, and include singing, rapping, screaming and sometimes growling. DJs are occasionally featured to provide instrumentation such as sampling, turntable scratching and electronic background music. Nu metal is one of the key genres of the new wave of American heavy metal."
+  },
+  "pop": {
+    "name": "Pop",
+    "summary": "Pop music, or simply pop, is a genre of popular music that originated in its modern form during the mid-1950s in the United States and the United Kingdom. During the 1950s and 1960s, pop music encompassed rock and roll and the youth-oriented styles it influenced. Rock and pop music remained roughly synonymous until the late 1960s, after which pop became associated with music that was more commercial, ephemeral, and accessible."
+  },
+  "synthpop": {
+    "name": "Synthpop",
+    "summary": "Synth-pop is a music genre that first became prominent in the late 1970s and features the synthesizer as the dominant musical instrument. It was prefigured in the 1960s and early 1970s by the use of synthesizers in progressive rock, electronic, art rock, disco, and particularly the Krautrock of bands like Kraftwerk. It arose as a distinct genre in Japan and the United Kingdom in the post-punk era as part of the new wave movement of the late 1970s."
+  },
+  "hyperpop": {
+    "name": "Hyperpop",
+    "summary": "Hyperpop is an electronic music movement and loosely defined microgenre that originated in the early 2010s in the United Kingdom. It is characterised by an exaggerated or maximalist take on 21st century popular music tropes. The genre is often associated with LGBTQ+ artists and queer culture, and typically integrates pop and avant-garde sensibilities while drawing on elements commonly found in electronic, rock, hip hop, and dance music. The origins of hyperpop are primarily traced back to the output of English musician A. G. Cook's record label and art collective PC Music, with associated artists Sophie, GFOTY, Hayden Dunham, Hannah Diamond and Charli XCX, helping to pioneer a musical style that was later known as \"bubblegum bass\"."
+  },
+  "k-pop": {
+    "name": "K-Pop",
+    "summary": "K-pop is a form of popular music originating in South Korea. The music genre that the term is used to refer to colloquially emerged in the 1990s as a form of youth subculture, with Korean musicians influenced by Western dance music, hip-hop, R&B and rock. Today, K-pop commonly refers to the musical output of teen idol acts, chiefly girl groups and boy bands, who emphasize visual appeal and performance. As a pop genre, K-pop is characterized by its melodic quality and cultural hybridity."
+  },
+  "j-pop": {
+    "name": "J-Pop",
+    "summary": "J-pop, natively known simply as pops , is the name for a form of popular music that entered the musical mainstream of Japan in the 1990s. Modern J-pop has its roots in traditional music of Japan, and significantly in 1960s pop and rock music. J-pop replaced kayōkyoku, a term for Japanese popular music from the 1920s to the 1980s in the Japanese music scene."
+  },
+  "r-b": {
+    "name": "R&B",
+    "summary": "Rhythm and blues, frequently abbreviated as R&B or R'n'B, is a genre of popular music that originated within African American communities in the 1940s. The term was originally used by record companies to describe recordings marketed predominantly to African Americans, at a time when \"rocking, jazz based music ... [with a] heavy, insistent beat\" was starting to become more popular.\nIn the commercial rhythm and blues music typical of the 1950s through the 1970s, the bands usually consisted of a piano, one or two guitars, bass, drums, one or more saxophones, and sometimes background vocalists. R&B lyrical themes often encapsulate the African-American history and experience of pain and the quest for freedom and joy, as well as triumphs and failures in terms of societal racism, oppression, relationships, economics, and aspirations."
+  },
+  "soul": {
+    "name": "Soul",
+    "summary": "Soul music is a popular music genre that originated in African-American communities throughout the United States in the late 1950s and early 1960s. Catchy rhythms, stressed by handclaps and extemporaneous body movements, are an important hallmark of soul. Other characteristics are a call and response between the lead and backing vocalists, an especially tense vocal sound, and occasional improvisational additions, twirls, and auxiliary sounds. Soul music is known for reflecting African-American identity and stressing the importance of African-American culture."
+  },
+  "funk": {
+    "name": "Funk",
+    "summary": "Funk is a music genre that originated in African-American communities in the mid-1960s when musicians created a rhythmic, danceable new form of music through a mixture of various music genres that were popular among African-Americans in the mid-20th century. It deemphasizes melody and chord progressions and focuses on a strong rhythmic groove of a bassline played by an electric bassist and a drum part played by a percussionist, often at slower tempos than other popular music. Funk typically consists of a complex percussive groove with rhythm instruments playing interlocking grooves that create a \"hypnotic\" and \"danceable\" feel. Early funk, specifically James Brown, fused jazz and blues, and added a syncopated drum groove."
+  },
+  "disco": {
+    "name": "Disco",
+    "summary": "Disco is a genre of dance music and a subculture that emerged in the late 1960s from the United States' urban nightlife scene, particularly in African-American, Italian-American, Latino and queer communities. Its sound is typified by four-on-the-floor beats, syncopated basslines, string sections, brass and horns, electric pianos, synthesizers, and electric rhythm guitars."
+  },
+  "classical": {
+    "name": "Classical",
+    "summary": "Classical may refer to:"
+  },
+  "orchestral": {
+    "name": "Orchestral",
+    "summary": "An orchestra is a large instrumental ensemble typical of classical music, which combines instruments from different families. There are typically four main sections of instruments:The string section, including the violin, viola, cello, and double bass\nThe woodwind section, including the flute, oboe, clarinet, bassoon, and occasionally saxophone\nThe brass section, including the French horn, trumpet, trombone, cornet, and tuba, and sometimes euphonium\nThe percussion section, including the timpani, snare drum, bass drum, cymbals, triangle, tambourine, tam-tam and mallet percussion instruments"
+  },
+  "cinematic": {
+    "name": "Cinematic",
+    "summary": "Cinematic describes anything related to cinema. It may refer to: any movie updates, cinema nights, cinematic review"
+  },
+  "soundtrack": {
+    "name": "Soundtrack",
+    "summary": "A soundtrack is a recorded audio signal accompanying and synchronised to the images of a book, drama, motion picture, radio program, television program, or video game; colloquially, a commercially released soundtrack album of music as featured in the soundtrack of a film, video, or television presentation; or the physical area of a film that contains the synchronised recorded sound."
+  },
+  "folk": {
+    "name": "Folk",
+    "summary": "Folk or Folks may refer to:"
+  },
+  "country": {
+    "name": "Country",
+    "summary": "A country is an area of land with defined borders, culture, and government. Usually, the term country is applied to occupied areas of land, however it can be used to refer to uninhabited areas or wastelands. When referring to a specific polity, the term \"country\" may refer to a sovereign state, a state with limited recognition, a constituent country, or a dependent territory. Most sovereign states, but not all countries, are members of the United Nations."
+  },
+  "bluegrass": {
+    "name": "Bluegrass",
+    "summary": "Bluegrass or Blue Grass may refer to:"
+  },
+  "singer-songwriter": {
+    "name": "Singer-Songwriter",
+    "summary": "A singer-songwriter is a musician who writes, composes, and performs their own musical material, including lyrics and melodies. In the United States, the category is built on the folk-acoustic tradition with a guitar, although this role has transmuted through different eras of popular music. Traditionally, these musicians would write and sing songs personal to them. Singer-songwriters often provide the sole musical accompaniment to an entire song. The piano is also an instrument of choice."
+  }
+}
