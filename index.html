@@ -12,22 +12,23 @@
   <style>
     * {margin:0;padding:0;box-sizing:border-box;}
     :root {
-      --bg:#0b0b12;
-      --card:#11121a;
-      --surface:rgba(255,255,255,0.06);
+      --bg:#0a0b12;
+      --card:#111827;
+      --surface:rgba(255,255,255,0.04);
       --border:rgba(255,255,255,0.08);
-      --text:#f6f7ff;
-      --muted:#a2a4c5;
-      --accent:#7c3aed;
-      --accent2:#22d3ee;
+      --text:#f8fafc;
+      --muted:#b7c0d6;
+      --accent:#6d28d9;
+      --accent2:#06b6d4;
       --radius:16px;
-      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --shadow:0 18px 40px rgba(2,6,23,.45);
     }
     body {
       font-family:"Plus Jakarta Sans",sans-serif;
-      background:radial-gradient(1200px 600px at 20% -10%, rgba(124,58,237,0.2), transparent 60%),
-                 radial-gradient(1000px 600px at 100% 0%, rgba(34,211,238,0.18), transparent 60%),
-                 var(--bg);
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(109,40,217,0.25), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(6,182,212,0.22), transparent 60%),
+        var(--bg);
       color:var(--text);
     }
     h1,h2,h3,.logo{font-family:"Space Grotesk",sans-serif;}
@@ -36,12 +37,37 @@
     .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,18,0.8);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:1rem 0;}
     .nav{display:flex;justify-content:space-between;align-items:center;}
     .logo{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+
+    .nav-links {display:flex;gap:1.2rem;}
+    .nav-links a {color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;}
+    .nav-links a:hover {color:var(--text);}
+
     .btn{border:1px solid var(--border);background:var(--surface);color:var(--text);padding:.7rem 1.4rem;border-radius:12px;cursor:pointer;font-weight:600;transition:.2s;}
     .btn:hover{transform:translateY(-1px);border-color:var(--accent);}
     .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:white;box-shadow:0 10px 30px rgba(124,58,237,.3);}
-    .hero{padding-top:140px;text-align:center;}
+    .btn-ghost {background:transparent;border:1px solid var(--border);color:var(--text);}
+    .btn-hero {padding:1rem 2.2rem;font-size:1.05rem;border-radius:14px;}
+
+    .hero {padding-top:160px;text-align:center;min-height:70vh;display:flex;flex-direction:column;align-items:center;gap:1.2rem;}
+    .hero-kicker {font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);}
     .hero-title{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;}
-    .hero-subtitle{color:var(--muted);max-width:700px;margin:1rem auto 2rem;}
+    .hero-subtitle{color:var(--muted);max-width:720px;margin:0 auto;}
+    .hero-actions {display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;}
+
+    .hero-stats {display:flex;gap:2rem;margin-top:1.2rem;flex-wrap:wrap;justify-content:center;}
+    .stat-number {font-size:1.3rem;font-weight:700;display:block;}
+    .stat-label {color:var(--muted);font-size:.85rem;}
+
+    .section {padding:3rem 0;}
+    .section-title {text-align:center;margin-bottom:1.6rem;}
+    .section-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;}
+    .card-min {background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;}
+    .feature-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
+    .feature-card {background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:14px;text-align:center;}
+    .step-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
+    .step-card {background:var(--surface);border:1px solid var(--border);padding:1.2rem;border-radius:14px;display:flex;gap:.8rem;align-items:center;}
+    .step-card span {background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;padding:.35rem .7rem;border-radius:999px;font-weight:700;}
+
     .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem;backdrop-filter:blur(10px);position:relative;z-index:2;}
     .input,.select{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.2rem;color:var(--text);width:100%;pointer-events:auto;user-select:text;}
     .search-box{display:grid;grid-template-columns:1fr auto;gap:.8rem;}
@@ -61,7 +87,10 @@
     .meta{color:var(--muted);font-size:.85rem;}
     .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0;}
     .chip{padding:.35rem .7rem;border-radius:999px;border:1px solid var(--border);font-size:.75rem;color:var(--muted);}
-    @media(max-width:768px){.search-box{grid-template-columns:1fr;}}
+    @media(max-width:768px){
+      .search-box{grid-template-columns:1fr;}
+      .nav-links{display:none;}
+    }
   </style>
 </head>
 <body>
@@ -69,15 +98,72 @@
 <header class="header">
   <div class="container nav">
     <div class="logo">SonusVibe</div>
-    <button id="togglePageBtn" class="btn btn-primary">Launch App</button>
+
+    <nav class="nav-links">
+      <a href="#overview">Обзор</a>
+      <a href="#features">Фичи</a>
+      <a href="#how">Как работает</a>
+    </nav>
   </div>
 </header>
 
 <section id="landingPage">
   <div class="container hero">
-    <h1 class="hero-title">Music Genres Explorer</h1>
-    <p class="hero-subtitle">Электронный справочник жанров с историей, примерами и структурой треков.</p>
-    <button id="ctaButton" class="btn btn-primary">Explore Now</button>
+    <span class="hero-kicker">Curated Music Atlas</span>
+    <h1 class="hero-title">Открой музыку по настроению, темпу и эпохе</h1>
+    <p class="hero-subtitle">
+      SonusVibe — минималистичный справочник жанров с историей, структурами треков
+      и живыми примерами. Создан для продюсеров, диджеев и меломанов.
+    </p>
+
+    <div class="hero-actions">
+      <button id="togglePageBtn" class="btn btn-primary btn-hero">Launch App</button>
+      <a href="#features" class="btn btn-ghost">Подробнее</a>
+    </div>
+
+    <div class="hero-stats">
+      <div><span class="stat-number">100+</span><span class="stat-label">жанров</span></div>
+      <div><span class="stat-number">3</span><span class="stat-label">типа фильтров</span></div>
+      <div><span class="stat-number">2024</span><span class="stat-label">актуальные тренды</span></div>
+    </div>
+  </div>
+
+  <div id="overview" class="container section">
+    <div class="section-grid">
+      <div class="card-min">
+        <h3>Просто и чисто</h3>
+        <p>Минималистичная подача, без перегруза. Быстро находишь нужный стиль.</p>
+      </div>
+      <div class="card-min">
+        <h3>Данные наглядно</h3>
+        <p>Темп, настроение, эпохи и ключевые особенности сразу на виду.</p>
+      </div>
+      <div class="card-min">
+        <h3>Тренды и развитие</h3>
+        <p>Смотри, какие жанры растут и где концентрация новых звучаний.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="features" class="container section">
+    <h2 class="section-title">Ключевые фичи</h2>
+    <div class="feature-grid">
+      <div class="feature-card">⚡ Быстрый поиск жанров</div>
+      <div class="feature-card">🎚️ Фильтры по BPM</div>
+      <div class="feature-card">🌒 Навигация по настроению</div>
+      <div class="feature-card">🗓️ Эпохи и стили</div>
+      <div class="feature-card">📌 Избранное (скоро)</div>
+      <div class="feature-card">🎧 Аудио‑примеры</div>
+    </div>
+  </div>
+
+  <div id="how" class="container section">
+    <h2 class="section-title">Как работает</h2>
+    <div class="step-grid">
+      <div class="step-card"><span>1</span> Выбираешь настроение и темп</div>
+      <div class="step-card"><span>2</span> Просматриваешь жанры</div>
+      <div class="step-card"><span>3</span> Сохраняешь любимые</div>
+    </div>
   </div>
 </section>
 
@@ -150,7 +236,6 @@
   loadGenres();
 
   el('togglePageBtn').onclick = showApp;
-  el('ctaButton').onclick = showApp;
   el('backBtn').onclick = showLanding;
   el('searchBtn').onclick = handleSearch;
   el('searchInput').oninput = handleSearch;
