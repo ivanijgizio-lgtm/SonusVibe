@@ -180,25 +180,55 @@
     </div>
 
     <div class="panel">
-      <h3>Filters</h3>
-      <div class="filter-options" style="margin:.7rem 0;">
-        <button class="filter-tag active" data-group="trend" data-filter="all">All</button>
-        <button class="filter-tag" data-group="trend" data-filter="top">Top</button>
-        <button class="filter-tag" data-group="trend" data-filter="growth">Growth</button>
-      </div>
-      <div class="filter-options">
-        <button class="filter-tag active" data-group="bpm" data-filter="all">Any BPM</button>
-        <button class="filter-tag" data-group="bpm" data-filter="slow">60–110</button>
-        <button class="filter-tag" data-group="bpm" data-filter="medium">110–140</button>
-        <button class="filter-tag" data-group="bpm" data-filter="fast">140+</button>
-      </div>
-      <button id="clearBtn" class="btn" style="margin-top:1rem;">Clear</button>
-    </div>
+     <div class="panel">
+  <h3>Filters</h3>
 
-    <div id="resultsText" style="margin-bottom:1rem;color:var(--muted);"></div>
-    <div id="genresContainer" class="genres-grid"></div>
-    <div id="noResults" class="hidden">Нет результатов</div>
+  <div class="filter-group">
+    <div class="filter-title">Trend</div>
+    <div class="filter-options">
+      <button class="filter-tag active" data-group="trend" data-filter="all">All</button>
+      <button class="filter-tag" data-group="trend" data-filter="top">Top</button>
+      <button class="filter-tag" data-group="trend" data-filter="growth">Growth</button>
+    </div>
   </div>
+
+  <div class="filter-group">
+    <div class="filter-title">BPM</div>
+    <div class="filter-options">
+      <button class="filter-tag active" data-group="bpm" data-filter="all">Any BPM</button>
+      <button class="filter-tag" data-group="bpm" data-filter="b50">60–90</button>
+      <button class="filter-tag" data-group="bpm" data-filter="b80">70–100</button>
+      <button class="filter-tag" data-group="bpm" data-filter="b100">100–120</button>
+      <button class="filter-tag" data-group="bpm" data-filter="b120">120–130</button>
+      <button class="filter-tag" data-group="bpm" data-filter="b140">140–150</button>
+      <button class="filter-tag" data-group="bpm" data-filter="b160">150–200</button>
+    </div>
+  </div>
+  <div class="filter-group">
+    <div class="filter-title">Mood</div>
+    <div class="filter-options">
+      <button class="filter-tag active" data-group="mood" data-filter="all">Any</button>
+      <button class="filter-tag" data-group="mood" data-filter="calm">Calm</button>
+      <button class="filter-tag" data-group="mood" data-filter="chill">Chill</button>
+      <button class="filter-tag" data-group="mood" data-filter="groovy">Groovy</button>
+      <button class="filter-tag" data-group="mood" data-filter="energetic">Energetic</button>
+      <button class="filter-tag" data-group="mood" data-filter="intense">Intense</button>
+      <button class="filter-tag" data-group="mood" data-filter="aggressive">Aggressive</button>
+    </div>
+  </div>
+
+  <div class="filter-group">
+    <div class="filter-title">Era</div>
+    <div class="filter-options">
+      <button class="filter-tag active" data-group="era" data-filter="all">Any</button>
+      <button class="filter-tag" data-group="era" data-filter="classic">Classic</button>
+      <button class="filter-tag" data-group="era" data-filter="modern">Modern</button>
+      <button class="filter-tag" data-group="era" data-filter="emerging">Emerging</button>
+    </div>
+  </div>
+
+  <button id="clearBtn" class="btn" style="margin-top:1rem;">Clear</button>
+</div>
 </section>
 
 <script>
