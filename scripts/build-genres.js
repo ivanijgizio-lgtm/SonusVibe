@@ -16,7 +16,6 @@ const genres = [
   "Classical","Orchestral","Cinematic","Soundtrack","Folk","Country","Bluegrass","Singer-Songwriter"
 ];
 
-// изображения по стилям
 const imageMap = [
   {match:/black metal|death metal|thrash metal|metalcore|doom metal|sludge metal|heavy metal|metal/i, url:"https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60"},
   {match:/house|techno|trance|electro|garage|big room|dubstep|dnb|drum and bass|breakbeat|riddim|future bass|grime/i, url:"https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60"},
@@ -78,6 +77,18 @@ function pickStructure(name){
   return "Intro → Verse → Chorus → Verse → Chorus → Outro";
 }
 
+function pickMood(bpmType){
+  const map = {
+    b50: "calm",
+    b80: "chill",
+    b100: "groovy",
+    b120: "energetic",
+    b140: "intense",
+    b160: "aggressive"
+  };
+  return map[bpmType] || "groovy";
+}
+
 function prompts(name,bpm){
   return [
     `Create a ${name} track at ${bpm} BPM with clean modern mix and strong groove.`,
@@ -102,17 +113,6 @@ const result = genres.map(name=>{
     name,
     bpm,
     bpmType,
+    mood: pickMood(bpmType),
     tier: pickTier(name),
-    era: pickEra(name),
-    region: pickRegion(name),
-    image: pickImage(name),
-    description: `${name} — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.`,
-    history: `${name} сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.`,
-    structure: pickStructure(name),
-    prompts: prompts(name,bpm),
-    subgenres: []
-  };
-});
-
-fs.writeFileSync('data/genres.json', JSON.stringify(result, null, 2));
-console.log("✅ Создано 100 жанров в data/genres.json");
+    ## era:
