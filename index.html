@@ -40,9 +40,6 @@
     body[data-theme="light"] .header{background:rgba(244,246,251,0.85);}
     .nav{display:flex;justify-content:space-between;align-items:center;}
     .logo{font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-    .nav-links {display:flex;gap:1.2rem;}
-    .nav-links a {color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem;}
-    .nav-links a:hover {color:var(--text);}
 
     .btn{
       border:1px solid var(--border);background:var(--surface);color:var(--text);
@@ -51,7 +48,6 @@
     }
     .btn:hover{transform:translateY(-1px);border-color:var(--accent);}
     .btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none;color:white;box-shadow:0 10px 30px rgba(124,58,237,.3);}
-    .btn-ghost {background:transparent;border:1px solid var(--border);color:var(--text);}
     .btn-hero {padding:1rem 2.2rem;font-size:1.05rem;border-radius:14px;}
 
     .hero {padding-top:160px;text-align:center;min-height:70vh;display:flex;flex-direction:column;align-items:center;gap:1.2rem;}
@@ -59,14 +55,6 @@
     .hero-title{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;}
     .hero-subtitle{color:var(--muted);max-width:720px;margin:0 auto;}
     .hero-actions {display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;}
-
-    .section {padding:3rem 0;}
-    .section-title {text-align:center;margin-bottom:1.6rem;}
-    .section-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;}
-    .card-min, .feature-card, .step-card {background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow-soft);}
-    .feature-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
-    .step-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;}
-    .step-card span {background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;padding:.35rem .7rem;border-radius:999px;font-weight:700;}
 
     .panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;margin-bottom:2rem;box-shadow:var(--shadow-soft);}
     .input,.select{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.9rem 1.2rem;color:var(--text);width:100%;box-shadow:var(--shadow-inset);}
@@ -84,8 +72,7 @@
     .card-cover .tag{background:rgba(0,0,0,.4);padding:.3rem .7rem;border-radius:999px;font-size:.75rem;}
     .genre-title{font-size:1.2rem;font-weight:700;margin-bottom:.4rem;}
     .meta{color:var(--muted);font-size:.85rem;}
-    .chips{display:flex;flex-wrap:wrap;gap:.4rem;margin:.8rem 0;}
-    .chip{padding:.35rem .7rem;border-radius:999px;border:1px solid var(--border);font-size:.75rem;color:var(--muted);}
+
     .fav-btn{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);border:1px solid var(--border);color:white;padding:.35rem .5rem;border-radius:10px;font-size:.9rem;cursor:pointer;z-index:2;}
     .fav-btn.active{background:var(--accent);border-color:var(--accent);}
 
@@ -95,18 +82,13 @@
     .modal.show .modal-content {transform: scale(1);opacity: 1;}
     .modal-content img {width: 100%;border-radius: 12px;margin-bottom: 12px;}
     .modal-close {float: right;background: transparent;border: none;font-size: 26px;color: var(--text);cursor: pointer;}
+
     .copy-btn {margin-top: 12px;background: var(--accent);color: white;border: none;padding: .6rem 1rem;border-radius: 10px;cursor: pointer;font-weight: 600;}
     .copy-btn:active { transform: scale(0.98); }
 
     .toolbar{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;}
     .select{max-width:220px;}
-    .theme-toggle{min-width:120px;}
-
     .pager{display:flex;gap:.6rem;align-items:center;margin-top:1rem;flex-wrap:wrap;}
-    .pager button{min-width:44px;}
-    .export-actions{display:flex;gap:.6rem;flex-wrap:wrap;}
-
-    @media(max-width:768px){.search-box{grid-template-columns:1fr;} .nav-links{display:none;}}
   </style>
 </head>
 <body data-theme="dark">
@@ -114,11 +96,6 @@
 <header class="header">
   <div class="container nav">
     <div class="logo">SonusVibe</div>
-    <nav class="nav-links">
-      <a href="#overview">Обзор</a>
-      <a href="#features">Фичи</a>
-      <a href="#how">Как работает</a>
-    </nav>
   </div>
 </header>
 
@@ -126,10 +103,12 @@
   <div class="container hero">
     <span class="hero-kicker">Curated Music Atlas</span>
     <h1 class="hero-title">Открой музыку по настроению, темпу и эпохе</h1>
-    <p class="hero-subtitle">SonusVibe — минималистичный справочник жанров с историей, структурами треков и живыми примерами.</p>
+    <p class="hero-subtitle">
+      SonusVibe — минималистичный справочник жанров с историей, структурами треков
+      и живыми примерами. Создан для продюсеров, диджеев и меломанов.
+    </p>
     <div class="hero-actions">
       <button id="togglePageBtn" class="btn btn-primary btn-hero">Launch App</button>
-      <a href="#features" class="btn btn-ghost">Подробнее</a>
     </div>
   </div>
 </section>
@@ -153,18 +132,63 @@
           <option value="bpmDesc">Sort: BPM ↓</option>
         </select>
         <button id="favToggle" class="btn">★ Favorites only</button>
-        <button id="themeToggle" class="btn theme-toggle">🌙 Dark</button>
-      </div>
-
-      <div class="export-actions" style="margin-top:1rem;">
-        <button id="exportJson" class="btn">Export JSON</button>
-        <button id="exportCsv" class="btn">Export CSV</button>
+        <button id="themeToggle" class="btn">🌙 Dark</button>
       </div>
     </div>
 
     <div class="panel">
-      <button id="clearBtn" class="btn">Clear Filters</button>
-      <div id="resultsText" style="margin-top:.8rem;"></div>
+      <h3>Filters</h3>
+
+      <div class="filter-group">
+        <div class="filter-title">Trend</div>
+        <div class="filter-options">
+          <button class="filter-tag active" data-group="trend" data-filter="all">All</button>
+          <button class="filter-tag" data-group="trend" data-filter="top">Top</button>
+          <button class="filter-tag" data-group="trend" data-filter="growth">Growth</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">BPM</div>
+        <div class="filter-options">
+          <button class="filter-tag active" data-group="bpm" data-filter="all">Any BPM</button>
+          <button class="filter-tag" data-group="bpm" data-filter="b50">60–90</button>
+          <button class="filter-tag" data-group="bpm" data-filter="b80">70–100</button>
+          <button class="filter-tag" data-group="bpm" data-filter="b100">100–120</button>
+          <button class="filter-tag" data-group="bpm" data-filter="b120">120–130</button>
+          <button class="filter-tag" data-group="bpm" data-filter="b140">140–150</button>
+          <button class="filter-tag" data-group="bpm" data-filter="b160">150–200</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">Mood</div>
+        <div class="filter-options">
+          <button class="filter-tag active" data-group="mood" data-filter="all">Any</button>
+          <button class="filter-tag" data-group="mood" data-filter="calm">Calm</button>
+          <button class="filter-tag" data-group="mood" data-filter="chill">Chill</button>
+          <button class="filter-tag" data-group="mood" data-filter="groovy">Groovy</button>
+          <button class="filter-tag" data-group="mood" data-filter="energetic">Energetic</button>
+          <button class="filter-tag" data-group="mood" data-filter="intense">Intense</button>
+          <button class="filter-tag" data-group="mood" data-filter="aggressive">Aggressive</button>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-title">Era</div>
+        <div class="filter-options">
+          <button class="filter-tag active" data-group="era" data-filter="all">Any</button>
+          <button class="filter-tag" data-group="era" data-filter="classic">Classic</button>
+          <button class="filter-tag" data-group="era" data-filter="modern">Modern</button>
+          <button class="filter-tag" data-group="era" data-filter="emerging">Emerging</button>
+        </div>
+      </div>
+
+      <button id="clearBtn" class="btn" style="margin-top:1rem;">Clear</button>
+    </div>
+
+    <div class="panel">
+      <div id="resultsText"></div>
       <div id="noResults" class="hidden" style="margin-top:1rem;color:var(--muted);">Ничего не найдено</div>
       <div id="genresContainer" class="genres-grid" style="margin-top:1rem;"></div>
 
@@ -193,277 +217,304 @@
     <div id="modalPrompts"></div>
     <button id="copyPrompts" class="copy-btn">Copy prompts</button>
     <button id="modalFav" class="btn" style="margin-top:10px;">★ Favorite</button>
-    <button id="quickPrompt" class="btn" style="margin-top:10px;">⚡ Prompt for AI</button>
   </div>
 </div>
 
 <script>
-  class App {
-    constructor() {
-      this.genresData = [];
-      this.filteredGenres = [];
-      this.activeFilters = { trend:"all", bpm:"all", mood:"all", era:"all" };
-      this.favorites = new Set(JSON.parse(localStorage.getItem("sv_favs") || "[]"));
-      this.showFavorites = false;
-      this.sortBy = "az";
-      this.currentModalId = null;
-      this.theme = "dark";
-      this.page = 1;
-      this.pageSize = 12;
+class App {
+  constructor() {
+    this.genresData = [];
+    this.filteredGenres = [];
+    this.activeFilters = { trend:"all", bpm:"all", mood:"all", era:"all" };
+    this.favorites = new Set(JSON.parse(localStorage.getItem("sv_favs") || "[]"));
+    this.showFavorites = false;
+    this.sortBy = "az";
+    this.currentModalId = null;
+    this.theme = "dark";
+    this.page = 1;
+    this.pageSize = 12;
 
-      this.cacheElements();
-      this.loadState();
-      this.bindEvents();
-      this.loadGenres();
-    }
-
-    cacheElements() {
-      this.modal = document.getElementById("genreModal");
-      this.modalClose = document.getElementById("modalClose");
-      this.copyBtn = document.getElementById("copyPrompts");
-      this.modalFav = document.getElementById("modalFav");
-      this.quickPrompt = document.getElementById("quickPrompt");
-
-      this.togglePageBtn = document.getElementById("togglePageBtn");
-      this.backBtn = document.getElementById("backBtn");
-      this.searchBtn = document.getElementById("searchBtn");
-      this.searchInput = document.getElementById("searchInput");
-      this.clearBtn = document.getElementById("clearBtn");
-      this.favToggle = document.getElementById("favToggle");
-      this.sortSelect = document.getElementById("sortSelect");
-      this.themeToggle = document.getElementById("themeToggle");
-      this.resultsText = document.getElementById("resultsText");
-      this.noResults = document.getElementById("noResults");
-      this.container = document.getElementById("genresContainer");
-
-      this.exportJsonBtn = document.getElementById("exportJson");
-      this.exportCsvBtn = document.getElementById("exportCsv");
-
-      this.prevPage = document.getElementById("prevPage");
-      this.nextPage = document.getElementById("nextPage");
-      this.pageInfo = document.getElementById("pageInfo");
-      this.pageSizeSelect = document.getElementById("pageSize");
-    }
-
-    bindEvents() {
-      this.togglePageBtn.onclick = () => this.showApp();
-      this.backBtn.onclick = () => this.showLanding();
-      this.searchBtn.onclick = () => this.handleSearch();
-      this.searchInput.oninput = () => this.handleSearch();
-      this.clearBtn.onclick = () => this.clearFilters();
-      this.favToggle.onclick = () => this.toggleFavorites();
-      this.sortSelect.onchange = () => { this.sortBy = this.sortSelect.value; this.page = 1; this.applyFilters(); };
-      this.themeToggle.onclick = () => this.toggleTheme();
-
-      this.exportJsonBtn.onclick = () => this.exportJSON();
-      this.exportCsvBtn.onclick = () => this.exportCSV();
-
-      this.prevPage.onclick = () => { if(this.page>1){this.page--; this.applyFilters(false);} };
-      this.nextPage.onclick = () => { if(this.page<this.totalPages){this.page++; this.applyFilters(false);} };
-      this.pageSizeSelect.onchange = () => { this.pageSize = parseInt(this.pageSizeSelect.value); this.page=1; this.applyFilters(); };
-
-      this.modalClose.onclick = () => this.closeModal();
-      this.modal.onclick = (e) => { if (e.target === this.modal) this.closeModal(); };
-      document.addEventListener("keydown", (e) => { if (e.key === "Escape") this.closeModal(); });
-
-      this.copyBtn.onclick = () => this.copyPrompts();
-      this.modalFav.onclick = () => this.toggleFavorite(this.currentModalId, true);
-      this.quickPrompt.onclick = () => this.copyQuickPrompt();
-    }
-
-    loadState() {
-      const state = JSON.parse(localStorage.getItem("sv_state") || "{}");
-      if (state.sortBy) this.sortBy = state.sortBy;
-      if (state.showFavorites !== undefined) this.showFavorites = state.showFavorites;
-      if (state.search !== undefined) this.searchInput.value = state.search;
-      if (state.theme) this.theme = state.theme;
-      if (state.pageSize) this.pageSize = state.pageSize;
-
-      document.body.setAttribute("data-theme", this.theme);
-      this.themeToggle.textContent = this.theme === "dark" ? "🌙 Dark" : "☀️ Light";
-      this.sortSelect.value = this.sortBy;
-      this.pageSizeSelect.value = this.pageSize;
-      this.favToggle.textContent = this.showFavorites ? "★ Favorites only (ON)" : "★ Favorites only";
-      this.favToggle.classList.toggle("active", this.showFavorites);
-    }
-
-    saveState() {
-      localStorage.setItem("sv_state", JSON.stringify({
-        sortBy: this.sortBy,
-        showFavorites: this.showFavorites,
-        search: this.searchInput.value,
-        theme: this.theme,
-        pageSize: this.pageSize
-      }));
-    }
-
-    async loadGenres() {
-      const res = await fetch('data/genres.json');
-      this.genresData = await res.json();
-      this.filteredGenres = this.searchInput.value ? this.genresData.filter(g=>g.name.toLowerCase().includes(this.searchInput.value.toLowerCase())) : [...this.genresData];
-      this.applyFilters();
-    }
-
-    toggleTheme() {
-      this.theme = this.theme === "dark" ? "light" : "dark";
-      document.body.setAttribute("data-theme", this.theme);
-      this.themeToggle.textContent = this.theme === "dark" ? "🌙 Dark" : "☀️ Light";
-      this.saveState();
-    }
-
-    showApp(){document.getElementById('landingPage').classList.add('hidden');document.getElementById('appPage').classList.remove('hidden');}
-    showLanding(){document.getElementById('appPage').classList.add('hidden');document.getElementById('landingPage').classList.remove('hidden');}
-
-    handleSearch(){
-      const term = this.searchInput.value.toLowerCase().trim();
-      this.filteredGenres = term ? this.genresData.filter(g=>g.name.toLowerCase().includes(term) || (g.description||"").toLowerCase().includes(term)) : [...this.genresData];
-      this.page=1;
-      this.applyFilters();
-      this.saveState();
-    }
-
-    toggleFavorites(){
-      this.showFavorites = !this.showFavorites;
-      this.favToggle.classList.toggle("active", this.showFavorites);
-      this.favToggle.textContent = this.showFavorites ? "★ Favorites only (ON)" : "★ Favorites only";
-      this.page=1;
-      this.applyFilters();
-      this.saveState();
-    }
-
-    clearFilters(){
-      this.searchInput.value = "";
-      this.filteredGenres = [...this.genresData];
-      this.page=1;
-      this.applyFilters();
-      this.saveState();
-    }
-
-    applyFilters(renderSave=true){
-      let result = [...this.filteredGenres];
-      if(this.showFavorites) result = result.filter(g=>this.favorites.has(g.id));
-      result = this.sortGenres(result);
-      this.totalPages = Math.max(1, Math.ceil(result.length / this.pageSize));
-      if(this.page > this.totalPages) this.page = this.totalPages;
-
-      const start = (this.page-1) * this.pageSize;
-      const pageList = result.slice(start, start + this.pageSize);
-
-      this.pageInfo.textContent = `Page ${this.page} / ${this.totalPages}`;
-      this.renderGenres(pageList);
-
-      if(renderSave) this.saveState();
-    }
-
-    sortGenres(list){
-      const bpmValue = (bpm) => parseInt(String(bpm).match(/\d+/)?.[0] || 0);
-      if(this.sortBy === "az") return list.sort((a,b)=>a.name.localeCompare(b.name));
-      if(this.sortBy === "za") return list.sort((a,b)=>b.name.localeCompare(a.name));
-      if(this.sortBy === "bpmAsc") return list.sort((a,b)=>bpmValue(a.bpm)-bpmValue(b.bpm));
-      if(this.sortBy === "bpmDesc") return list.sort((a,b)=>bpmValue(b.bpm)-bpmValue(a.bpm));
-      return list;
-    }
-
-    renderGenres(genres){
-      this.container.innerHTML = "";
-      this.resultsText.textContent = `Показано ${genres.length} на странице`;
-
-      if(!genres.length){this.noResults.classList.remove('hidden');return;}
-      this.noResults.classList.add('hidden');
-
-      const observer = new IntersectionObserver((entries)=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){
-            const card = entry.target;
-            const cover = card.querySelector(".card-cover");
-            const bg = cover.dataset.bg;
-            if(bg) cover.style.backgroundImage = `linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.25)), url('${bg}')`;
-            card.classList.add("in-view");
-            observer.unobserve(card);
-          }
-        });
-      }, {threshold:0.2});
-
-      genres.forEach((g, i)=>{
-        const card = document.createElement('div');
-        card.className="genre-card";
-        card.style.animationDelay = `${i * 0.02}s`;
-
-        card.innerHTML=`
-          <button class="fav-btn ${this.favorites.has(g.id) ? "active" : ""}" title="Favorite">★</button>
-          <div class="card-cover" data-bg="${g.image||''}">
-            <span class="tag">${g.bpm||'BPM'}</span>
-          </div>
-          <div class="genre-title">${g.name}</div>
-          <div class="meta">${g.description||''}</div>
-        `;
-
-        card.querySelector(".fav-btn").onclick = (e) => {
-          e.stopPropagation();
-          this.toggleFavorite(g.id);
-        };
-
-        card.addEventListener("click", () => this.openModal(g));
-        this.container.appendChild(card);
-        observer.observe(card);
-      });
-    }
-
-    openModal(genre){
-      this.currentModalId = genre.id;
-      document.getElementById("modalImage").src = genre.image || "";
-      document.getElementById("modalTitle").textContent = genre.name || "";
-      document.getElementById("modalDescription").textContent = genre.description || "";
-      document.getElementById("modalHistory").textContent = genre.history || "История недоступна.";
-      document.getElementById("modalStructure").textContent = genre.structure || "Структура не указана.";
-      document.getElementById("modalPrompts").innerHTML = (genre.prompts && genre.prompts.length)
-        ? "<strong>Prompt идеи:</strong><ul>" + genre.prompts.map(p => `<li>${p}</li>`).join("") + "</ul>"
-        : "";
-      this.modal.classList.remove("hidden");
-      this.modal.classList.add("show");
-    }
-
-    closeModal(){this.modal.classList.remove("show");setTimeout(()=> this.modal.classList.add("hidden"), 150);}
-
-    toggleFavorite(id){ if(this.favorites.has(id)) this.favorites.delete(id); else this.favorites.add(id);
-      localStorage.setItem("sv_favs", JSON.stringify([...this.favorites])); this.applyFilters();
-    }
-
-    copyPrompts(){
-      const list = document.querySelectorAll("#modalPrompts li");
-      const text = Array.from(list).map(li => li.textContent).join("\n");
-      if (text) navigator.clipboard.writeText(text);
-    }
-
-    copyQuickPrompt(){
-      const title = document.getElementById("modalTitle").textContent;
-      const desc = document.getElementById("modalDescription").textContent;
-      const prompt = `Create a ${title} track. ${desc}`;
-      navigator.clipboard.writeText(prompt);
-    }
-
-    exportJSON(){
-      const data = JSON.stringify(this.genresData, null, 2);
-      this.downloadFile("genres.json", data);
-    }
-
-    exportCSV(){
-      const headers = ["id","name","bpm","tier","mood","era","description"];
-      const rows = this.genresData.map(g=>headers.map(h=>`"${(g[h]||"").toString().replace(/"/g,'""')}"`).join(","));
-      const csv = [headers.join(","), ...rows].join("\n");
-      this.downloadFile("genres.csv", csv);
-    }
-
-    downloadFile(filename, content){
-      const blob = new Blob([content], {type:"text/plain"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url; a.download = filename; a.click();
-      URL.revokeObjectURL(url);
-    }
+    this.cacheElements();
+    this.loadState();
+    this.bindEvents();
+    this.loadGenres();
   }
 
-  new App();
+  cacheElements() {
+    this.modal = document.getElementById("genreModal");
+    this.modalClose = document.getElementById("modalClose");
+    this.copyBtn = document.getElementById("copyPrompts");
+    this.modalFav = document.getElementById("modalFav");
+
+    this.togglePageBtn = document.getElementById("togglePageBtn");
+    this.backBtn = document.getElementById("backBtn");
+    this.searchBtn = document.getElementById("searchBtn");
+    this.searchInput = document.getElementById("searchInput");
+    this.clearBtn = document.getElementById("clearBtn");
+    this.favToggle = document.getElementById("favToggle");
+    this.sortSelect = document.getElementById("sortSelect");
+    this.themeToggle = document.getElementById("themeToggle");
+    this.resultsText = document.getElementById("resultsText");
+    this.noResults = document.getElementById("noResults");
+    this.container = document.getElementById("genresContainer");
+
+    this.prevPage = document.getElementById("prevPage");
+    this.nextPage = document.getElementById("nextPage");
+    this.pageInfo = document.getElementById("pageInfo");
+    this.pageSizeSelect = document.getElementById("pageSize");
+  }
+
+  bindEvents() {
+    this.togglePageBtn.onclick = () => this.showApp();
+    this.backBtn.onclick = () => this.showLanding();
+    this.searchBtn.onclick = () => this.handleSearch();
+    this.searchInput.oninput = () => this.handleSearch();
+    this.clearBtn.onclick = () => this.clearFilters();
+    this.favToggle.onclick = () => this.toggleFavorites();
+    this.sortSelect.onchange = () => { this.sortBy = this.sortSelect.value; this.page = 1; this.applyFilters(); };
+    this.themeToggle.onclick = () => this.toggleTheme();
+
+    this.prevPage.onclick = () => { if(this.page>1){this.page--; this.applyFilters(false);} };
+    this.nextPage.onclick = () => { if(this.page<this.totalPages){this.page++; this.applyFilters(false);} };
+    this.pageSizeSelect.onchange = () => { this.pageSize = parseInt(this.pageSizeSelect.value); this.page=1; this.applyFilters(); };
+
+    document.querySelectorAll('.filter-tag').forEach(tag=>{
+      tag.onclick = ()=>this.applyFilter(tag);
+    });
+
+    this.modalClose.onclick = () => this.closeModal();
+    this.modal.onclick = (e) => { if (e.target === this.modal) this.closeModal(); };
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") this.closeModal(); });
+
+    this.copyBtn.onclick = () => this.copyPrompts();
+    this.modalFav.onclick = () => this.toggleFavorite(this.currentModalId, true);
+  }
+
+  loadState() {
+    const state = JSON.parse(localStorage.getItem("sv_state") || "{}");
+    if (state.filters) this.activeFilters = state.filters;
+    if (state.sortBy) this.sortBy = state.sortBy;
+    if (state.showFavorites !== undefined) this.showFavorites = state.showFavorites;
+    if (state.search !== undefined) this.searchInput.value = state.search;
+    if (state.theme) this.theme = state.theme;
+    if (state.pageSize) this.pageSize = state.pageSize;
+
+    document.body.setAttribute("data-theme", this.theme);
+    this.themeToggle.textContent = this.theme === "dark" ? "🌙 Dark" : "☀️ Light";
+    this.sortSelect.value = this.sortBy;
+    this.pageSizeSelect.value = this.pageSize;
+    this.favToggle.textContent = this.showFavorites ? "★ Favorites only (ON)" : "★ Favorites only";
+    this.favToggle.classList.toggle("active", this.showFavorites);
+
+    Object.keys(this.activeFilters).forEach(group=>{
+      document.querySelectorAll(`.filter-tag[data-group="${group}"]`).forEach(t=>t.classList.remove('active'));
+      const activeBtn = document.querySelector(`.filter-tag[data-group="${group}"][data-filter="${this.activeFilters[group]}"]`);
+      if (activeBtn) activeBtn.classList.add("active");
+    });
+  }
+
+  saveState() {
+    localStorage.setItem("sv_state", JSON.stringify({
+      filters: this.activeFilters,
+      sortBy: this.sortBy,
+      showFavorites: this.showFavorites,
+      search: this.searchInput.value,
+      theme: this.theme,
+      pageSize: this.pageSize
+    }));
+  }
+
+  async loadGenres() {
+    const res = await fetch('data/genres.json');
+    this.genresData = await res.json();
+    this.filteredGenres = this.searchInput.value ? this.genresData.filter(g=>g.name.toLowerCase().includes(this.searchInput.value.toLowerCase())) : [...this.genresData];
+    this.applyFilters();
+  }
+
+  toggleTheme() {
+    this.theme = this.theme === "dark" ? "light" : "dark";
+    document.body.setAttribute("data-theme", this.theme);
+    this.themeToggle.textContent = this.theme === "dark" ? "🌙 Dark" : "☀️ Light";
+    this.saveState();
+  }
+
+  showApp(){document.getElementById('landingPage').classList.add('hidden');document.getElementById('appPage').classList.remove('hidden');}
+  showLanding(){document.getElementById('appPage').classList.add('hidden');document.getElementById('landingPage').classList.remove('hidden');}
+
+  handleSearch(){
+    const term = this.searchInput.value.toLowerCase().trim();
+    this.filteredGenres = term ? this.genresData.filter(g=>g.name.toLowerCase().includes(term) || (g.description||"").toLowerCase().includes(term)) : [...this.genresData];
+    this.page=1;
+    this.applyFilters();
+    this.saveState();
+  }
+
+  applyFilter(tag){
+    const group = tag.dataset.group;
+    document.querySelectorAll(`.filter-tag[data-group="${group}"]`).forEach(t=>t.classList.remove('active'));
+    tag.classList.add('active');
+    this.activeFilters[group] = tag.dataset.filter;
+    this.page=1;
+    this.applyFilters();
+    this.saveState();
+  }
+
+  toggleFavorites(){
+    this.showFavorites = !this.showFavorites;
+    this.favToggle.classList.toggle("active", this.showFavorites);
+    this.favToggle.textContent = this.showFavorites ? "★ Favorites only (ON)" : "★ Favorites only";
+    this.page=1;
+    this.applyFilters();
+    this.saveState();
+  }
+
+  clearFilters(){
+    this.activeFilters = { trend:"all", bpm:"all", mood:"all", era:"all" };
+    document.querySelectorAll('.filter-tag').forEach(t=>t.classList.remove('active'));
+    document.querySelector('.filter-tag[data-group="trend"][data-filter="all"]').classList.add('active');
+    document.querySelector('.filter-tag[data-group="bpm"][data-filter="all"]').classList.add('active');
+    document.querySelector('.filter-tag[data-group="mood"][data-filter="all"]').classList.add('active');
+    document.querySelector('.filter-tag[data-group="era"][data-filter="all"]').classList.add('active');
+    this.searchInput.value = "";
+    this.filteredGenres = [...this.genresData];
+    this.page=1;
+    this.applyFilters();
+    this.saveState();
+  }
+
+  applyFilters(renderSave=true){
+    let result = [...this.filteredGenres];
+    if(this.activeFilters.trend !== "all") result = result.filter(g=>g.tier === this.activeFilters.trend);
+    if(this.activeFilters.bpm !== "all") result = result.filter(g=>g.bpmType === this.activeFilters.bpm);
+    if(this.activeFilters.mood !== "all") result = result.filter(g=>g.mood === this.activeFilters.mood);
+    if(this.activeFilters.era !== "all") result = result.filter(g=>g.era === this.activeFilters.era);
+    if(this.showFavorites) result = result.filter(g=>this.favorites.has(g.id));
+
+    result = this.sortGenres(result);
+    this.totalPages = Math.max(1, Math.ceil(result.length / this.pageSize));
+    if(this.page > this.totalPages) this.page = this.totalPages;
+
+    const start = (this.page-1) * this.pageSize;
+    const pageList = result.slice(start, start + this.pageSize);
+
+    this.pageInfo.textContent = `Page ${this.page} / ${this.totalPages}`;
+    this.renderGenres(pageList, result.length);
+
+    if(renderSave) this.saveState();
+  }
+
+  sortGenres(list){
+    const bpmValue = (bpm) => parseInt(String(bpm).match(/\d+/)?.[0] || 0);
+    if(this.sortBy === "az") return list.sort((a,b)=>a.name.localeCompare(b.name));
+    if(this.sortBy === "za") return list.sort((a,b)=>b.name.localeCompare(a.name));
+    if(this.sortBy === "bpmAsc") return list.sort((a,b)=>bpmValue(a.bpm)-bpmValue(b.bpm));
+    if(this.sortBy === "bpmDesc") return list.sort((a,b)=>bpmValue(b.bpm)-bpmValue(a.bpm));
+    return list;
+  }
+
+  // ====== ДИНАМИЧЕСКИЕ ОПИСАНИЯ ======
+  buildDescription(g){
+    const mood = g.mood ? `Настроение: ${g.mood}. ` : "";
+    const era = g.era ? `Эпоха: ${g.era}. ` : "";
+    const bpm = g.bpm ? `Темп ${g.bpm} BPM. ` : "";
+    const tier = g.tier ? `Тренд: ${g.tier}. ` : "";
+    const subs = g.subgenres?.length ? `Поджанры: ${g.subgenres.slice(0,3).join(", ")}.` : "";
+    return `${g.name} — жанр с выразительным звучанием и характерной ритмикой. ${mood}${era}${bpm}${tier}${subs}`.trim();
+  }
+
+  buildHistory(g){
+    const era = g.era ? g.era : "современной";
+    return `${g.name} сформировался на стыке культурных влияний и продакшн‑подходов. В ${era} сцене его звучание получило развитие и сегодня активно развивается в цифровых платформах.`;
+  }
+
+  buildStructure(g){
+    const bpm = g.bpm ? `Темп ${g.bpm} BPM.` : "Темп варьируется.";
+    return `Основные элементы: ритмическая основа, атмосферные слои и узнаваемые тембры. ${bpm}`;
+  }
+
+  renderGenres(genres, totalCount){
+    this.container.innerHTML = "";
+    this.resultsText.textContent = `Показано ${genres.length} из ${totalCount}`;
+    if(!genres.length){this.noResults.classList.remove('hidden');return;}
+    this.noResults.classList.add('hidden');
+
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          const card = entry.target;
+          const cover = card.querySelector(".card-cover");
+          const bg = cover.dataset.bg;
+          if(bg) cover.style.backgroundImage = `linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.25)), url('${bg}')`;
+          card.classList.add("in-view");
+          observer.unobserve(card);
+        }
+      });
+    }, {threshold:0.2});
+
+    genres.forEach((g, i)=>{
+      const card = document.createElement('div');
+      card.className="genre-card";
+      card.style.animationDelay = `${i * 0.02}s`;
+
+      const desc = this.buildDescription(g);
+      const short = desc.length > 140 ? desc.slice(0,140)+"..." : desc;
+
+      card.innerHTML=`
+        <button class="fav-btn ${this.favorites.has(g.id) ? "active" : ""}" title="Favorite">★</button>
+        <div class="card-cover" data-bg="${g.image||''}">
+          <span class="tag">${g.bpm||'BPM'}</span>
+        </div>
+        <div class="genre-title">${g.name}</div>
+        <div class="meta">${short}</div>
+      `;
+
+      card.querySelector(".fav-btn").onclick = (e) => {
+        e.stopPropagation();
+        this.toggleFavorite(g.id);
+      };
+
+      card.addEventListener("click", () => this.openModal(g));
+      this.container.appendChild(card);
+      observer.observe(card);
+    });
+  }
+
+  openModal(genre){
+    this.currentModalId = genre.id;
+    document.getElementById("modalImage").src = genre.image || "";
+    document.getElementById("modalTitle").textContent = genre.name || "";
+    document.getElementById("modalDescription").textContent = this.buildDescription(genre);
+    document.getElementById("modalHistory").textContent = this.buildHistory(genre);
+    document.getElementById("modalStructure").textContent = this.buildStructure(genre);
+
+    const promptsBox = document.getElementById("modalPrompts");
+    if (genre.prompts && genre.prompts.length) {
+      promptsBox.innerHTML = "<strong>Prompt идеи:</strong><ul>" + genre.prompts.map(p => `<li>${p}</li>`).join("") + "</ul>";
+    } else promptsBox.innerHTML = "";
+
+    this.modalFav.classList.toggle("active", this.favorites.has(genre.id));
+    this.modal.classList.remove("hidden");
+    this.modal.classList.add("show");
+  }
+
+  closeModal(){this.modal.classList.remove("show");setTimeout(()=> this.modal.classList.add("hidden"), 150);}
+
+  toggleFavorite(id, fromModal=false){
+    if(this.favorites.has(id)) this.favorites.delete(id);
+    else this.favorites.add(id);
+    localStorage.setItem("sv_favs", JSON.stringify([...this.favorites]));
+    if(fromModal) this.modalFav.classList.toggle("active", this.favorites.has(id));
+    this.applyFilters();
+  }
+
+  copyPrompts(){
+    const list = document.querySelectorAll("#modalPrompts li");
+    const text = Array.from(list).map(li => li.textContent).join("\n");
+    if (text) navigator.clipboard.writeText(text);
+  }
+}
+
+new App();
 </script>
 </body>
 </html>
