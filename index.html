@@ -64,30 +64,44 @@
     .filter-group {margin:.9rem 0;}
     .filter-title {color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
     .filter-tag.active{background:var(--accent);border-color:var(--accent);}
-    .genres-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;}
+    .genres-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
     .genre-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;box-shadow:var(--shadow-soft);transition:.2s;position:relative;overflow:hidden;cursor:pointer;opacity:0;transform:translateY(10px);}
     .genre-card.in-view{opacity:1;transform:translateY(0);animation: fadeUp .4s ease forwards;}
     @keyframes fadeUp {from {opacity:0; transform:translateY(12px);} to {opacity:1; transform:translateY(0);}}
-    .card-cover{height:140px;border-radius:12px;background-size:cover;background-position:center;margin-bottom:1rem;display:flex;align-items:end;padding:0.8rem;background-image:linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.25));}
+    .card-cover{height:160px;border-radius:12px;background-size:cover;background-position:center;margin-bottom:1rem;display:flex;align-items:end;padding:0.8rem;background-image:linear-gradient(135deg,rgba(124,58,237,.35),rgba(34,211,238,.25));}
     .card-cover .tag{background:rgba(0,0,0,.4);padding:.3rem .7rem;border-radius:999px;font-size:.75rem;}
-    .genre-title{font-size:1.2rem;font-weight:700;margin-bottom:.4rem;}
-    .meta{color:var(--muted);font-size:.85rem;}
+    .genre-title{font-size:1.25rem;font-weight:700;margin-bottom:.4rem;}
+    .meta{color:var(--muted);font-size:.85rem;line-height:1.4;}
+
+    .badges{display:flex;gap:.4rem;flex-wrap:wrap;margin:.6rem 0;}
+    .badge{font-size:.72rem;padding:.25rem .6rem;border-radius:999px;border:1px solid var(--border);color:var(--muted);}
+
+    .elements{display:flex;flex-wrap:wrap;gap:.4rem;margin:.6rem 0;}
+    .element{font-size:.72rem;padding:.25rem .6rem;border-radius:999px;background:rgba(124,58,237,.15);color:#dcd4ff;}
+
+    .wave{
+      display:flex;gap:4px;align-items:end;height:26px;margin-top:.6rem;
+    }
+    .wave span{
+      width:4px;border-radius:6px;background:linear-gradient(180deg,var(--accent2),var(--accent));
+      animation: wave 1.6s ease-in-out infinite;
+    }
+    .wave span:nth-child(odd){animation-delay:.2s;}
+    .wave span:nth-child(3n){animation-delay:.4s;}
+    @keyframes wave{0%,100%{height:8px}50%{height:26px}}
 
     .fav-btn{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.4);border:1px solid var(--border);color:white;padding:.35rem .5rem;border-radius:10px;font-size:.9rem;cursor:pointer;z-index:2;}
     .fav-btn.active{background:var(--accent);border-color:var(--accent);}
 
     .modal.hidden { display: none; }
     .modal {position: fixed;inset: 0;background: rgba(0,0,0,0.7);display: flex;align-items: center;justify-content: center;z-index: 999;}
-    .modal-content {background: var(--surface);color: var(--text);max-width: 650px;width: 92%;padding: 20px;border-radius: 16px;transform: scale(0.96);opacity: 0;transition: all .2s ease;box-shadow: var(--shadow-soft);}
+    .modal-content {background: var(--surface);color: var(--text);max-width: 700px;width: 92%;padding: 20px;border-radius: 16px;transform: scale(0.96);opacity: 0;transition: all .2s ease;box-shadow: var(--shadow-soft);}
     .modal.show .modal-content {transform: scale(1);opacity: 1;}
     .modal-content img {width: 100%;border-radius: 12px;margin-bottom: 12px;}
     .modal-close {float: right;background: transparent;border: none;font-size: 26px;color: var(--text);cursor: pointer;}
 
     .copy-btn {margin-top: 12px;background: var(--accent);color: white;border: none;padding: .6rem 1rem;border-radius: 10px;cursor: pointer;font-weight: 600;}
-    .copy-btn:active { transform: scale(0.98); }
-
     .toolbar{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem;}
-    .select{max-width:220px;}
     .pager{display:flex;gap:.6rem;align-items:center;margin-top:1rem;flex-wrap:wrap;}
   </style>
 </head>
@@ -175,12 +189,16 @@
       </div>
 
       <div class="filter-group">
-        <div class="filter-title">Era</div>
+        <div class="filter-title">Decade</div>
         <div class="filter-options">
-          <button class="filter-tag active" data-group="era" data-filter="all">Any</button>
-          <button class="filter-tag" data-group="era" data-filter="classic">Classic</button>
-          <button class="filter-tag" data-group="era" data-filter="modern">Modern</button>
-          <button class="filter-tag" data-group="era" data-filter="emerging">Emerging</button>
+          <button class="filter-tag active" data-group="decade" data-filter="all">Any</button>
+          <button class="filter-tag" data-group="decade" data-filter="60s">60s</button>
+          <button class="filter-tag" data-group="decade" data-filter="70s">70s</button>
+          <button class="filter-tag" data-group="decade" data-filter="80s">80s</button>
+          <button class="filter-tag" data-group="decade" data-filter="90s">90s</button>
+          <button class="filter-tag" data-group="decade" data-filter="00s">2000s</button>
+          <button class="filter-tag" data-group="decade" data-filter="10s">2010s</button>
+          <button class="filter-tag" data-group="decade" data-filter="20s">2020s</button>
         </div>
       </div>
 
@@ -225,7 +243,7 @@ class App {
   constructor() {
     this.genresData = [];
     this.filteredGenres = [];
-    this.activeFilters = { trend:"all", bpm:"all", mood:"all", era:"all" };
+    this.activeFilters = { trend:"all", bpm:"all", mood:"all", decade:"all" };
     this.favorites = new Set(JSON.parse(localStorage.getItem("sv_favs") || "[]"));
     this.showFavorites = false;
     this.sortBy = "az";
@@ -326,9 +344,36 @@ class App {
 
   async loadGenres() {
     const res = await fetch('data/genres.json');
-    this.genresData = await res.json();
+    const raw = await res.json();
+    this.genresData = raw.map(g => this.normalizeGenre(g));
     this.filteredGenres = this.searchInput.value ? this.genresData.filter(g=>g.name.toLowerCase().includes(this.searchInput.value.toLowerCase())) : [...this.genresData];
     this.applyFilters();
+  }
+
+  normalizeGenre(g){
+    // bpmType
+    if (!g.bpmType && g.bpm) {
+      const num = parseInt(String(g.bpm).match(/\d+/)?.[0] || 0);
+      if (num <= 90) g.bpmType="b50";
+      else if (num<=100) g.bpmType="b80";
+      else if (num<=120) g.bpmType="b100";
+      else if (num<=130) g.bpmType="b120";
+      else if (num<=150) g.bpmType="b140";
+      else g.bpmType="b160";
+    }
+
+    // decade
+    if (!g.decade) {
+      const year = g.year || g.startYear;
+      if (year) {
+        const d = Math.floor(year/10)*10;
+        g.decade = String(d).slice(-2)+"s";
+      } else if (g.era) {
+        g.decade = g.era; // если уже 60s/70s...
+      }
+    }
+
+    return g;
   }
 
   toggleTheme() {
@@ -369,12 +414,12 @@ class App {
   }
 
   clearFilters(){
-    this.activeFilters = { trend:"all", bpm:"all", mood:"all", era:"all" };
+    this.activeFilters = { trend:"all", bpm:"all", mood:"all", decade:"all" };
     document.querySelectorAll('.filter-tag').forEach(t=>t.classList.remove('active'));
     document.querySelector('.filter-tag[data-group="trend"][data-filter="all"]').classList.add('active');
     document.querySelector('.filter-tag[data-group="bpm"][data-filter="all"]').classList.add('active');
     document.querySelector('.filter-tag[data-group="mood"][data-filter="all"]').classList.add('active');
-    document.querySelector('.filter-tag[data-group="era"][data-filter="all"]').classList.add('active');
+    document.querySelector('.filter-tag[data-group="decade"][data-filter="all"]').classList.add('active');
     this.searchInput.value = "";
     this.filteredGenres = [...this.genresData];
     this.page=1;
@@ -387,7 +432,7 @@ class App {
     if(this.activeFilters.trend !== "all") result = result.filter(g=>g.tier === this.activeFilters.trend);
     if(this.activeFilters.bpm !== "all") result = result.filter(g=>g.bpmType === this.activeFilters.bpm);
     if(this.activeFilters.mood !== "all") result = result.filter(g=>g.mood === this.activeFilters.mood);
-    if(this.activeFilters.era !== "all") result = result.filter(g=>g.era === this.activeFilters.era);
+    if(this.activeFilters.decade !== "all") result = result.filter(g=>g.decade === this.activeFilters.decade);
     if(this.showFavorites) result = result.filter(g=>this.favorites.has(g.id));
 
     result = this.sortGenres(result);
@@ -412,24 +457,25 @@ class App {
     return list;
   }
 
-  // ====== ДИНАМИЧЕСКИЕ ОПИСАНИЯ ======
   buildDescription(g){
+    if (g.wiki) return g.wiki;
     const mood = g.mood ? `Настроение: ${g.mood}. ` : "";
-    const era = g.era ? `Эпоха: ${g.era}. ` : "";
+    const decade = g.decade ? `Эпоха: ${g.decade}. ` : "";
     const bpm = g.bpm ? `Темп ${g.bpm} BPM. ` : "";
-    const tier = g.tier ? `Тренд: ${g.tier}. ` : "";
     const subs = g.subgenres?.length ? `Поджанры: ${g.subgenres.slice(0,3).join(", ")}.` : "";
-    return `${g.name} — жанр с выразительным звучанием и характерной ритмикой. ${mood}${era}${bpm}${tier}${subs}`.trim();
+    return `${g.name} — музыкальный стиль с характерной атмосферой и звучанием. ${mood}${decade}${bpm}${subs}`.trim();
   }
 
   buildHistory(g){
-    const era = g.era ? g.era : "современной";
-    return `${g.name} сформировался на стыке культурных влияний и продакшн‑подходов. В ${era} сцене его звучание получило развитие и сегодня активно развивается в цифровых платформах.`;
+    if (g.history) return g.history;
+    const decade = g.decade ? g.decade : "современности";
+    return `${g.name} сформировался под влиянием культурных и технологических изменений. В ${decade} он получил широкое распространение и продолжает развиваться.`;
   }
 
   buildStructure(g){
+    if (g.structure) return g.structure;
     const bpm = g.bpm ? `Темп ${g.bpm} BPM.` : "Темп варьируется.";
-    return `Основные элементы: ритмическая основа, атмосферные слои и узнаваемые тембры. ${bpm}`;
+    return `Типичная структура включает атмосферные слои, ритмическую основу и характерные тембры. ${bpm}`;
   }
 
   renderGenres(genres, totalCount){
@@ -457,7 +503,8 @@ class App {
       card.style.animationDelay = `${i * 0.02}s`;
 
       const desc = this.buildDescription(g);
-      const short = desc.length > 140 ? desc.slice(0,140)+"..." : desc;
+      const short = desc.length > 160 ? desc.slice(0,160)+"..." : desc;
+      const elements = g.elements?.length ? g.elements : (g.subgenres || []).slice(0,3);
 
       card.innerHTML=`
         <button class="fav-btn ${this.favorites.has(g.id) ? "active" : ""}" title="Favorite">★</button>
@@ -465,7 +512,18 @@ class App {
           <span class="tag">${g.bpm||'BPM'}</span>
         </div>
         <div class="genre-title">${g.name}</div>
+        <div class="badges">
+          ${g.decade ? `<span class="badge">${g.decade}</span>`:""}
+          ${g.mood ? `<span class="badge">${g.mood}</span>`:""}
+          ${g.tier ? `<span class="badge">${g.tier}</span>`:""}
+        </div>
         <div class="meta">${short}</div>
+        <div class="elements">
+          ${(elements||[]).map(e=>`<span class="element">${e}</span>`).join("")}
+        </div>
+        <div class="wave">
+          ${Array.from({length:12}).map(()=>"<span></span>").join("")}
+        </div>
       `;
 
       card.querySelector(".fav-btn").onclick = (e) => {
@@ -513,7 +571,6 @@ class App {
     if (text) navigator.clipboard.writeText(text);
   }
 }
-
 new App();
 </script>
 </body>
