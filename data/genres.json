@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "id": "deep-house",
     "name": "Deep House",
     "description": "Плавный, мелодичный хаус с глубокими басами и атмосферными падами. Характерен грув 120–125 BPM, джазовые аккорды и вокал. Идеально для расслабленных сетов и утренних вечеринок.",
@@ -18,11 +19,63 @@
       "Produce Deep House with a warm, analog sound and subtle percussion.",
       "Make Deep House with a long, evolving breakdown and a gentle drop.",
       "Compose Deep House with a melodic bassline and lush string pads."
+=======
+    "id": "house",
+    "name": "House",
+    "bpm": "120–130",
+    "bpmType": "b120",
+    "tier": "top",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Frankie Knuckles",
+      "Larry Heard",
+      "Kerri Chandler"
+    ]
+  },
+  {
+    "id": "deep-house",
+    "name": "Deep House",
+    "bpm": "120–130",
+    "bpmType": "b120",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Deep House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Deep House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Deep House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Deep House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Deep House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Deep House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Deep House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Miguel Migs",
+      "Lars Behrenroth",
+      "Osunlade"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "tech-house",
     "name": "Tech House",
+<<<<<<< HEAD
     "description": "Смесь минимал-техно и хауса с акцентом на ритмику и синтезаторные рифы. Темп 124–128 BPM, сухие барабаны, саб-бас и повторяющиеся вокальные сэмплы. Энергично, но без излишней агрессии.",
     "history": "Появился в Великобритании в начале 2000-х как реакция на коммерческий хаус. Популяризирован такими лейблами, как Saved Records и Hot Creations.",
     "structure": "Intro (короче) → Percussive Build → Drop (ритм-секция) → Minimal Breakdown → Drop с вариацией → Outro",
@@ -39,11 +92,35 @@
       "Produce Tech House with punchy kicks, hi-hats, and synth stabs.",
       "Make Tech House with a short intro and a powerful drop.",
       "Compose Tech House with a repetitive but infectious synth riff."
+=======
+    "bpm": "120–130",
+    "bpmType": "b120",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Tech House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Tech House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Tech House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Tech House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Tech House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Tech House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Tech House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Hot Since 82",
+      "Patrick Topping",
+      "Solardo"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "progressive-house",
     "name": "Progressive House",
+<<<<<<< HEAD
     "description": "Эпический хаус с долгими нарастаниями, мечтательными синтами и прогрессивной структурой. Темп 122–128 BPM, характерен для крупных фестивалей и клубов.",
     "history": "Зародился в Великобритании в начале 90-х, популяризирован Sasha и John Digweed. Пережил возрождение в 2010-х благодаря таким лейблам, как Anjunabeats.",
     "structure": "Intro (32) → Atmospheric build (16) → Main drop (32) → Breakdown (16) → Second build (16) → Drop (32) → Outro (16)",
@@ -60,11 +137,35 @@
       "Produce Progressive House with layered melodies, driving bass, and wide stereo.",
       "Make Progressive House with a journey-like structure and uplifting chord progressions.",
       "Compose Progressive House with arpeggiated leads and a powerful climax."
+=======
+    "bpm": "120–130",
+    "bpmType": "b120",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Progressive House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Progressive House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Progressive House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Progressive House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Progressive House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Progressive House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Progressive House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Sasha",
+      "John Digweed",
+      "Hernan Cattaneo"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "future-house",
     "name": "Future House",
+<<<<<<< HEAD
     "description": "Современный хаус с характерными синтезаторными рифами, глубокими басами и эффектными вставками. Темп 124–130 BPM, энергичный и танцевальный.",
     "history": "Появился в середине 2010-х благодаря таким продюсерам, как Oliver Heldens и Tchami. Быстро стал популярным благодаря TikTok и фестивалям.",
     "structure": "Intro (16) → Verse (16) → Build (8) → Drop (32) → Breakdown (16) → Build (8) → Drop (32) → Outro (8)",
@@ -81,6 +182,29 @@
       "Produce Future House with a modern, polished sound and tight groove.",
       "Make Future House with a strong build and a satisfying drop.",
       "Compose Future House with an infectious melody and dancefloor energy."
+=======
+    "bpm": "120–130",
+    "bpmType": "b120",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Future House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Future House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Future House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Future House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Future House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Future House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Future House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Don Diablo",
+      "Oliver Heldens",
+      "Tchami"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -93,6 +217,7 @@
     "mood": "chill",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/tropical-house.jpg",
     "tags": ["electronic", "house", "tropical", "summer"],
     "artists": ["Kygo", "Thomas Jack", "Matoma"],
@@ -102,6 +227,26 @@
       "Produce Tropical House with warm chords, plucky synths, and gentle percussion.",
       "Make Tropical House with a bright, uplifting mood and beach atmosphere.",
       "Compose Tropical House with a simple, sing-along chorus."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Tropical House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Tropical House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Tropical House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Tropical House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Tropical House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Tropical House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Tropical House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Kygo",
+      "Thomas Jack",
+      "Matoma"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -114,6 +259,7 @@
     "mood": "groovy",
     "decade": "2020s",
     "tier": "growth",
+<<<<<<< HEAD
     "image": "images/slap-house.jpg",
     "tags": ["electronic", "house", "slap", "bass"],
     "artists": ["Alok", "Vintage Culture", "Cat Dealers"],
@@ -123,6 +269,26 @@
       "Produce Slap House with punchy kicks, hi-hats, and bass drops.",
       "Make Slap House with a short intro and an explosive drop.",
       "Compose Slap House with a danceable groove and modern sound."
+=======
+    "era": "emerging",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Slap House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Slap House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Slap House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Slap House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Slap House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Slap House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Slap House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Alok",
+      "Vintage Culture",
+      "Cat Dealers"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -135,6 +301,7 @@
     "mood": "energetic",
     "decade": "2000s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/electro-house.jpg",
     "tags": ["electronic", "house", "festival"],
     "artists": ["Deadmau5", "Feed Me", "Wolfgang Gartner"],
@@ -144,6 +311,26 @@
       "Produce Electro House with aggressive leads, glitchy effects, and punchy kicks.",
       "Make Electro House with a driving bassline and catchy synth riffs.",
       "Compose Electro House with a festival-ready arrangement and explosive energy."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Electro House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Electro House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Electro House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Electro House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Electro House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Electro House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Electro House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Deadmau5",
+      "Feed Me",
+      "Wolfgang Gartner"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -156,6 +343,7 @@
     "mood": "energetic",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/big-room.jpg",
     "tags": ["electronic", "edm", "festival"],
     "artists": ["Hardwell", "W&W", "Dimitri Vegas & Like Mike"],
@@ -165,6 +353,25 @@
       "Produce Big Room with layered synths, powerful kicks, and dramatic risers.",
       "Make Big Room with a festival-ready mix and explosive climax.",
       "Compose Big Room with a catchy hook and a sense of grandeur."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Big Room — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Big Room сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Big Room track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Big Room with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Big Room focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Big Room with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Hardwell",
+      "W&W",
+      "Dimitri Vegas & Like Mike"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -177,6 +384,7 @@
     "mood": "groovy",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/acid-house.jpg",
     "tags": ["electronic", "house", "acid", "vintage"],
     "artists": ["Phuture", "808 State", "A Guy Called Gerald"],
@@ -186,6 +394,26 @@
       "Produce Acid House with vintage gear emulation, lo-fi grit, and rhythmic patterns.",
       "Make Acid House with an old-school rave vibe and repetitive acid riff.",
       "Compose Acid House with a strong groove and minimal arrangement."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Acid House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Acid House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Acid House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Acid House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Acid House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Acid House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Acid House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Phuture",
+      "808 State",
+      "A Guy Called Gerald"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -198,6 +426,7 @@
     "mood": "energetic",
     "decade": "1980s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/techno.jpg",
     "tags": ["electronic", "industrial", "minimal"],
     "artists": ["Jeff Mills", "Richie Hawtin", "Carl Cox"],
@@ -207,6 +436,26 @@
       "Produce Techno with a dark, atmospheric sound and repetitive groove.",
       "Make Techno with a relentless energy and a sense of hypnotism.",
       "Compose Techno with a machine-like precision and evolving layers."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Techno — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Techno сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Percussive layer (16) → Main groove (32) → Breakdown (16) → Build (8) → Drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Techno track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Produce Techno with a hypnotic drum machine groove, industrial textures, and minimal but effective changes.",
+      "Write Techno with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Techno focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Techno with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Jeff Mills",
+      "Richie Hawtin",
+      "Carl Cox"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -219,6 +468,7 @@
     "mood": "intense",
     "decade": "2000s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/minimal-techno.jpg",
     "tags": ["electronic", "techno", "minimal"],
     "artists": ["Ricardo Villalobos", "Magda", "Richie Hawtin"],
@@ -228,6 +478,26 @@
       "Produce Minimal Techno with clean, precise sound design and a deep sense of space.",
       "Make Minimal Techno with a steady rhythm and gradual development.",
       "Compose Minimal Techno with a focus on sound quality and rhythmic interplay."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Minimal Techno — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Minimal Techno сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Percussive layer (16) → Main groove (32) → Breakdown (16) → Build (8) → Drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Minimal Techno track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Produce Minimal Techno with a hypnotic drum machine groove, industrial textures, and minimal but effective changes.",
+      "Write Minimal Techno with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Minimal Techno focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Minimal Techno with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Ricardo Villalobos",
+      "Magda",
+      "Richie Hawtin"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -240,6 +510,7 @@
     "mood": "chill",
     "decade": "2010s",
     "tier": "growth",
+<<<<<<< HEAD
     "image": "images/melodic-techno.jpg",
     "tags": ["electronic", "techno", "melodic"],
     "artists": ["Tale Of Us", "Adriatique", "Stephan Bodzin"],
@@ -249,6 +520,26 @@
       "Produce Melodic Techno with rich harmonic content and a powerful drop.",
       "Make Melodic Techno with a journey-like structure and a sense of euphoria.",
       "Compose Melodic Techno with a blend of club energy and artistry."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Melodic Techno — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Melodic Techno сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Percussive layer (16) → Main groove (32) → Breakdown (16) → Build (8) → Drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Melodic Techno track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Produce Melodic Techno with a hypnotic drum machine groove, industrial textures, and minimal but effective changes.",
+      "Write Melodic Techno with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Melodic Techno focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Melodic Techno with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Tale Of Us",
+      "Adriatique",
+      "Stephan Bodzin"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -261,6 +552,7 @@
     "mood": "aggressive",
     "decade": "1990s",
     "tier": "growth",
+<<<<<<< HEAD
     "image": "images/hard-techno.jpg",
     "tags": ["electronic", "techno", "hard", "industrial"],
     "artists": ["Paula Temple", "Perc", "I Hate Models"],
@@ -270,6 +562,26 @@
       "Produce Hard Techno with aggressive synthesis, heavy distortion, and a punishing groove.",
       "Make Hard Techno with a relentless drive and a sense of danger.",
       "Compose Hard Techno with a raw, unpolished sound and chaotic elements."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Hard Techno — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Hard Techno сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Percussive layer (16) → Main groove (32) → Breakdown (16) → Build (8) → Drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Hard Techno track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Produce Hard Techno with a hypnotic drum machine groove, industrial textures, and minimal but effective changes.",
+      "Write Hard Techno with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Hard Techno focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Hard Techno with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Paula Temple",
+      "Perc",
+      "I Hate Models"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -282,6 +594,7 @@
     "mood": "aggressive",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/industrial-techno.jpg",
     "tags": ["electronic", "techno", "industrial"],
     "artists": ["Ancient Methods", "Adam X", "Paula Temple"],
@@ -291,6 +604,26 @@
       "Produce Industrial Techno with raw, untreated sounds and a sense of decay.",
       "Make Industrial Techno with a relentless, pounding groove and heavy distortion.",
       "Compose Industrial Techno with a dark, cinematic feel and industrial elements."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Industrial Techno — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Industrial Techno сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Percussive layer (16) → Main groove (32) → Breakdown (16) → Build (8) → Drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Industrial Techno track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Produce Industrial Techno with a hypnotic drum machine groove, industrial textures, and minimal but effective changes.",
+      "Write Industrial Techno with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Industrial Techno focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Industrial Techno with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Ancient Methods",
+      "Adam X",
+      "Paula Temple"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -303,6 +636,7 @@
     "mood": "intense",
     "decade": "1990s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/trance.jpg",
     "tags": ["electronic", "uplifting", "melodic"],
     "artists": ["Armin van Buuren", "Paul van Dyk", "Tiësto"],
@@ -312,6 +646,26 @@
       "Produce Trance with long builds, massive drops, and a sense of journey.",
       "Make Trance with layered arpeggios, emotional pads, and a climactic release.",
       "Compose Trance with a focus on melody and emotional resonance."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Trance — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Trance сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (32) → Atmospheric pad (16) → Melodic build (16) → Drop (32) → Breakdown (16) → Second drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Trance track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Make Trance with epic synth arpeggios, emotional chord progressions, and a massive breakdown.",
+      "Write Trance with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Trance focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Trance with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Armin van Buuren",
+      "Paul van Dyk",
+      "Tiësto"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -324,6 +678,7 @@
     "mood": "chill",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/progressive-trance.jpg",
     "tags": ["electronic", "trance", "progressive"],
     "artists": ["Above & Beyond", "Gabriel & Dresden", "Oliver Smith"],
@@ -333,6 +688,26 @@
       "Produce Progressive Trance with lush soundscapes and a sense of space.",
       "Make Progressive Trance with a gradual build and a euphoric climax.",
       "Compose Progressive Trance with layered textures and melodic interplay."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Progressive Trance — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Progressive Trance сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (32) → Atmospheric pad (16) → Melodic build (16) → Drop (32) → Breakdown (16) → Second drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Progressive Trance track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Make Progressive Trance with epic synth arpeggios, emotional chord progressions, and a massive breakdown.",
+      "Write Progressive Trance with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Progressive Trance focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Progressive Trance with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Above & Beyond",
+      "Gabriel & Dresden",
+      "Oliver Smith"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -345,6 +720,7 @@
     "mood": "energetic",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/uplifting-trance.jpg",
     "tags": ["electronic", "trance", "uplifting"],
     "artists": ["Aly & Fila", "Sean Tyas", "John O'Callaghan"],
@@ -354,6 +730,26 @@
       "Produce Uplifting Trance with bright synths, energetic percussion, and epic builds.",
       "Make Uplifting Trance with a sense of hope and a powerful climax.",
       "Compose Uplifting Trance with a memorable hook and energetic groove."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Uplifting Trance — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Uplifting Trance сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (32) → Atmospheric pad (16) → Melodic build (16) → Drop (32) → Breakdown (16) → Second drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Uplifting Trance track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Make Uplifting Trance with epic synth arpeggios, emotional chord progressions, and a massive breakdown.",
+      "Write Uplifting Trance with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Uplifting Trance focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Uplifting Trance with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Aly & Fila",
+      "Sean Tyas",
+      "John O'Callaghan"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -366,6 +762,7 @@
     "mood": "intense",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/psytrance.jpg",
     "tags": ["electronic", "trance", "psychedelic"],
     "artists": ["Infected Mushroom", "Astrix", "Simon Patterson"],
@@ -375,6 +772,26 @@
       "Produce Psytrance with layered percussion, swirling synths, and a driving energy.",
       "Make Psytrance with a fast pace, acid-like sounds, and mind-bending textures.",
       "Compose Psytrance with a focus on rhythm and psychedelic atmosphere."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Psytrance — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Psytrance сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (32) → Atmospheric pad (16) → Melodic build (16) → Drop (32) → Breakdown (16) → Second drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Psytrance track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Make Psytrance with epic synth arpeggios, emotional chord progressions, and a massive breakdown.",
+      "Write Psytrance with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Psytrance focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Psytrance with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Infected Mushroom",
+      "Astrix",
+      "Simon Patterson"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -387,6 +804,7 @@
     "mood": "energetic",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/goa-trance.jpg",
     "tags": ["electronic", "trance", "goa", "psychedelic"],
     "artists": ["Hallucinogen", "Juno Reactor", "Man With No Name"],
@@ -396,6 +814,26 @@
       "Produce Goa Trance with a blend of acoustic and electronic elements, and a global feel.",
       "Make Goa Trance with a fast tempo, joyful energy, and colorful soundscape.",
       "Compose Goa Trance with a sense of spiritual journey and dancefloor energy."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Goa Trance — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Goa Trance сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (32) → Atmospheric pad (16) → Melodic build (16) → Drop (32) → Breakdown (16) → Second drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Goa Trance track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Make Goa Trance with epic synth arpeggios, emotional chord progressions, and a massive breakdown.",
+      "Write Goa Trance with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Goa Trance focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Goa Trance with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Hallucinogen",
+      "Juno Reactor",
+      "Man With No Name"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -408,6 +846,7 @@
     "mood": "aggressive",
     "decade": "1990s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/dnb.jpg",
     "tags": ["drum-and-bass", "breakbeat", "bass"],
     "artists": ["Goldie", "Roni Size", "Andy C"],
@@ -417,6 +856,26 @@
       "Produce Drum and Bass with a blend of jungle breaks and modern sound design.",
       "Make Drum and Bass with a relentless, danceable groove and intense energy.",
       "Compose Drum and Bass with a fusion of jazz samples and bass-heavy beats."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Drum and Bass — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Drum and Bass сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Amen break (16) → Verse (16) → Chorus (16) → Breakdown (8) → Build (8) → Drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Drum and Bass track at 160–180 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Drum and Bass with fast breakbeats, heavy sub-bass, and atmospheric pads. Tempo 160–180 BPM.",
+      "Write Drum and Bass with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Drum and Bass focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Drum and Bass with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Goldie",
+      "Roni Size",
+      "Andy C"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -433,11 +892,24 @@
     "tags": ["drum-and-bass", "liquid", "chill"],
     "artists": ["High Contrast", "Calibre", "Lenzman"],
     "prompts": [
+<<<<<<< HEAD
       "Create a Liquid DnB track at 160–170 BPM with smooth melodies, warm bass, and soulful vocals.",
       "Write Liquid DnB with lush pads, rolling breaks, and a relaxed vibe.",
       "Produce Liquid DnB with a blend of drum and bass energy and musicality.",
       "Make Liquid DnB with a deep, emotional feel and crisp production.",
       "Compose Liquid DnB with a focus on harmony and atmosphere."
+=======
+      "Create a Liquid DnB track at 160–180 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Liquid DnB with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Liquid DnB focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Liquid DnB with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "High Contrast",
+      "Calibre",
+      "Lenzman"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -450,6 +922,7 @@
     "mood": "aggressive",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/neurofunk.jpg",
     "tags": ["drum-and-bass", "neuro", "bass"],
     "artists": ["Noisia", "Spor", "Black Sun Empire"],
@@ -459,6 +932,25 @@
       "Produce Neurofunk with intricate percussion, gated synths, and a powerful mix.",
       "Make Neurofunk with a relentless, machine-like groove and deep sub-bass.",
       "Compose Neurofunk with a focus on sound design and rhythmic complexity."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Neurofunk — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Neurofunk сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Neurofunk track at 160–180 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Neurofunk with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Neurofunk focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Neurofunk with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Noisia",
+      "Spor",
+      "Black Sun Empire"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -471,6 +963,7 @@
     "mood": "energetic",
     "decade": "2000s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/jump-up.jpg",
     "tags": ["drum-and-bass", "jump-up", "bass"],
     "artists": ["Hazard", "Macky Gee", "Sub Zero"],
@@ -480,6 +973,25 @@
       "Produce Jump Up with heavy bass, punchy snares, and crowd-pleasing elements.",
       "Make Jump Up with an upbeat, party vibe and dynamic drum patterns.",
       "Compose Jump Up with a focus on dancefloor impact and repetitive riffs."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Jump Up — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Jump Up сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Jump Up track at 160–180 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Jump Up with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Jump Up focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Jump Up with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Hazard",
+      "Macky Gee",
+      "Sub Zero"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -492,6 +1004,7 @@
     "mood": "energetic",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/jungle.jpg",
     "tags": ["jungle", "breakbeat", "bass"],
     "artists": ["Rebel MC", "Congo Natty", "Shy FX"],
@@ -501,6 +1014,25 @@
       "Produce Jungle with chopped breaks, dub basslines, and a dancehall vibe.",
       "Make Jungle with a fast, energetic groove and old-school rave feel.",
       "Compose Jungle with a fusion of Jamaican and UK sounds."
+=======
+    "era": "modern",
+    "region": "eu",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Jungle — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Jungle сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Jungle track at 160–180 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Jungle with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Jungle focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Jungle with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Rebel MC",
+      "Congo Natty",
+      "Shy FX"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -513,6 +1045,7 @@
     "mood": "groovy",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/breakbeat.jpg",
     "tags": ["breakbeat", "electronic", "funky"],
     "artists": ["The Chemical Brothers", "The Prodigy", "Fatboy Slim"],
@@ -522,6 +1055,25 @@
       "Produce Breakbeat with a blend of electronic and organic elements.",
       "Make Breakbeat with a driving beat and catchy hooks.",
       "Compose Breakbeat with a focus on rhythm and dancefloor energy."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Breakbeat — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Breakbeat сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Breakbeat track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Breakbeat with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Breakbeat focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Breakbeat with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "The Chemical Brothers",
+      "The Prodigy",
+      "Fatboy Slim"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -538,11 +1090,24 @@
     "tags": ["uk garage", "house", "bass"],
     "artists": ["MJ Cole", "Wookie", "Disclosure"],
     "prompts": [
+<<<<<<< HEAD
       "Create a UK Garage track at 130–135 BPM with off-beat rhythms, deep bass, and vocal chops.",
       "Write UK Garage with a swing groove, warm chords, and a relaxed vibe.",
       "Produce UK Garage with a blend of house and jungle elements, and a smooth mix.",
       "Make UK Garage with a rhythmic complexity and a danceable groove.",
       "Compose UK Garage with a focus on harmony and rhythmic interplay."
+=======
+      "Create a UK Garage track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write UK Garage with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce UK Garage focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose UK Garage with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "MJ Cole",
+      "Wookie",
+      "Disclosure"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -555,6 +1120,7 @@
     "mood": "aggressive",
     "decade": "2000s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/grime.jpg",
     "tags": ["grime", "electronic", "uk"],
     "artists": ["Wiley", "Skepta", "Stormzy"],
@@ -564,6 +1130,25 @@
       "Produce Grime with distorted synths, sub-bass, and a gritty atmosphere.",
       "Make Grime with a minimal but powerful beat and a sense of urgency.",
       "Compose Grime with a focus on rhythm and vocal performance."
+=======
+    "era": "modern",
+    "region": "eu",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Grime — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Grime сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Grime track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Grime with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Grime focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Grime with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Wiley",
+      "Skepta",
+      "Stormzy"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -576,6 +1161,7 @@
     "mood": "aggressive",
     "decade": "2000s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/dubstep.jpg",
     "tags": ["dubstep", "bass", "electronic"],
     "artists": ["Skream", "Bengala", "Mala"],
@@ -585,6 +1171,26 @@
       "Produce Dubstep with heavy bass, intricate percussion, and cinematic sound design.",
       "Make Dubstep with a sense of tension and release, and a club-ready mix.",
       "Compose Dubstep with a fusion of bass music and experimental sounds."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Dubstep — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Dubstep сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Half-time groove (16) → Build (8) → Drop (32) → Breakdown (16) → Second drop (32) → Outro (16)",
+    "prompts": [
+      "Create a Dubstep track at 140–150 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Dubstep with half-time drums, wobble bass, and deep sub-bass. Build tension with risers.",
+      "Write Dubstep with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Dubstep focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Dubstep with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Skream",
+      "Bengala",
+      "Mala"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -597,6 +1203,7 @@
     "mood": "energetic",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/riddim.jpg",
     "tags": ["dubstep", "riddim", "bass"],
     "artists": ["Virtual Riot", "Chibs", "Boogie T"],
@@ -606,6 +1213,25 @@
       "Produce Riddim with a clean, punchy mix and a focus on the bass drop.",
       "Make Riddim with a danceable groove and a sense of tension.",
       "Compose Riddim with a minimalistic approach and massive bass impact."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Riddim — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Riddim сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Riddim track at 140–150 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Riddim with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Riddim focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Riddim with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Virtual Riot",
+      "Chibs",
+      "Boogie T"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -618,6 +1244,7 @@
     "mood": "aggressive",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/tearout.jpg",
     "tags": ["dubstep", "tearout", "bass"],
     "artists": ["Marauda", "Svdden Death", "Ubur"],
@@ -627,6 +1254,25 @@
       "Produce Tearout with a raw, unpolished sound and extreme bass drops.",
       "Make Tearout with a sense of danger and a relentless groove.",
       "Compose Tearout with complex sound design and high-impact drops."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Tearout — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Tearout сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Tearout track at 140–150 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Tearout with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Tearout focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Tearout with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Marauda",
+      "Svdden Death",
+      "Ubur"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -639,6 +1285,7 @@
     "mood": "energetic",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/future-bass.jpg",
     "tags": ["electronic", "bass", "melodic"],
     "artists": ["Flume", "San Holo", "Illenium"],
@@ -648,6 +1295,25 @@
       "Produce Future Bass with bright synths, punchy drums, and wide stereo.",
       "Make Future Bass with a sense of euphoria and a festival-ready mix.",
       "Compose Future Bass with a blend of electronic and pop elements."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Future Bass — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Future Bass сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Future Bass track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Future Bass with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Future Bass focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Future Bass with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Flume",
+      "San Holo",
+      "Illenium"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -660,6 +1326,7 @@
     "mood": "aggressive",
     "decade": "1990s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/trap.jpg",
     "tags": ["trap", "hip-hop", "bass"],
     "artists": ["TNGHT", "Baauer", "RL Grime"],
@@ -669,6 +1336,26 @@
       "Produce Trap with a clean mix, distorted 808s, and atmospheric synths.",
       "Make Trap with a strong groove and a sense of energy.",
       "Compose Trap with a focus on rhythm and low-end power."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Trap — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Trap сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Bridge (8) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Trap track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Make Trap with 808 bass, hi-hat rolls, and hard-hitting drums. Use dark melodies and vocal chops.",
+      "Write Trap with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Trap focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Trap with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "TNGHT",
+      "Baauer",
+      "RL Grime"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -681,6 +1368,7 @@
     "mood": "groovy",
     "decade": "2010s",
     "tier": "growth",
+<<<<<<< HEAD
     "image": "images/phonk.jpg",
     "tags": ["phonk", "electronic", "bass"],
     "artists": ["DJ Yung Vamp", "Soudiere", "Ryan Celsius"],
@@ -690,6 +1378,25 @@
       "Produce Phonk with analog synthesis and raw, distorted drums.",
       "Make Phonk with a dark, urban atmosphere and a danceable rhythm.",
       "Compose Phonk with a blend of hip-hop and electronic music elements."
+=======
+    "era": "emerging",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Phonk — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Phonk сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Phonk track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Phonk with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Phonk focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Phonk with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "DJ Yung Vamp",
+      "Soudiere",
+      "Ryan Celsius"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -702,6 +1409,7 @@
     "mood": "chill",
     "decade": "2000s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/lo-fi.jpg",
     "tags": ["lo-fi", "chill", "instrumental"],
     "artists": ["J Dilla", "Nujabes", "bsd.u"],
@@ -711,6 +1419,25 @@
       "Produce Lo-Fi with a dusty, analogue sound and a sense of nostalgia.",
       "Make Lo-Fi with a smooth, repetitive groove and a soothing mood.",
       "Compose Lo-Fi with a focus on melody and texture."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Lo-Fi — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Lo-Fi сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Lo-Fi track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Lo-Fi with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Lo-Fi focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Lo-Fi with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "J Dilla",
+      "Nujabes",
+      "bsd.u"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -723,6 +1450,7 @@
     "mood": "chill",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/chillhop.jpg",
     "tags": ["chillhop", "hip-hop", "jazz"],
     "artists": ["Jinsang", "Saib", "IAMNOBODY"],
@@ -732,6 +1460,25 @@
       "Produce Chillhop with warm, organic sounds and a lazy, laid-back feel.",
       "Make Chillhop with a simple structure and a focus on atmosphere.",
       "Compose Chillhop with a sense of calm and easy listening."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Chillhop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Chillhop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Chillhop track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Chillhop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Chillhop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Chillhop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Jinsang",
+      "Saib",
+      "IAMNOBODY"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -744,6 +1491,7 @@
     "mood": "calm",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/ambient.jpg",
     "tags": ["ambient", "experimental", "atmospheric"],
     "artists": ["Brian Eno", "Aphex Twin", "Stars of the Lid"],
@@ -753,11 +1501,31 @@
       "Produce Ambient with a focus on soundscape and emotional resonance.",
       "Make Ambient with a calming, immersive atmosphere.",
       "Compose Ambient with a minimalist approach and rich harmonic content."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Ambient — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Ambient сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Atmosphere (long) → Theme → Development → Resolution",
+    "prompts": [
+      "Create a Ambient track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Ambient with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Ambient focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Ambient with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Brian Eno",
+      "Aphex Twin",
+      "Stars of the Lid"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "dark-ambient",
     "name": "Dark Ambient",
+<<<<<<< HEAD
     "description": "Мрачный, индустриальный вариант эмбиента с шумами, дронами и устрашающей атмосферой. Часто используется в фильмах ужасов и игровой индустрии.",
     "history": "Зародился в 80-х, популяризирован такими артистами, как Lustmord и Atrium Carceri.",
     "structure": "Intro → Atmosphere → Theme → Development → Outro",
@@ -774,6 +1542,28 @@
       "Produce Dark Ambient with a stark, minimalistic approach and heavy atmosphere.",
       "Make Dark Ambient with a slow, evolving narrative and a foreboding mood.",
       "Compose Dark Ambient with a focus on tension and sound design."
+=======
+    "bpm": "60–90",
+    "bpmType": "b50",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Dark Ambient — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Dark Ambient сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Atmosphere (long) → Theme → Development → Resolution",
+    "prompts": [
+      "Create a Dark Ambient track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Dark Ambient with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Dark Ambient focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Dark Ambient with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Lustmord",
+      "Atrium Carceri",
+      "Robert Rich"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -786,6 +1576,7 @@
     "mood": "calm",
     "decade": "1960s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/drone.jpg",
     "tags": ["drone", "experimental", "ambient"],
     "artists": ["Tim Hecker", "Sunn O)))", "Earth"],
@@ -795,6 +1586,25 @@
       "Produce Drone with rich, layered sound and a meditative quality.",
       "Make Drone with a hypnotic, immersive experience.",
       "Compose Drone with a simple structure and deep sonic exploration."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Drone — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Drone сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Drone track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Drone with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Drone focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Drone with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Tim Hecker",
+      "Sunn O)))",
+      "Earth"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -807,6 +1617,7 @@
     "mood": "chill",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/downtempo.jpg",
     "tags": ["downtempo", "chill", "electronic"],
     "artists": ["Kruder & Dorfmeister", "Tosca", "Thievery Corporation"],
@@ -816,6 +1627,25 @@
       "Produce Downtempo with warm, analog sounds and a chill-out atmosphere.",
       "Make Downtempo with a laid-back vibe and a sense of sophistication.",
       "Compose Downtempo with a focus on melody and texture."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Downtempo — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Downtempo сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Downtempo track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Downtempo with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Downtempo focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Downtempo with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Kruder & Dorfmeister",
+      "Tosca",
+      "Thievery Corporation"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -828,6 +1658,7 @@
     "mood": "chill",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/trip-hop.jpg",
     "tags": ["trip-hop", "electronic", "chill"],
     "artists": ["Massive Attack", "Portishead", "Tricky"],
@@ -837,6 +1668,25 @@
       "Produce Trip Hop with a gritty, urban sound and cinematic textures.",
       "Make Trip Hop with a slow, hypnotic groove and a sense of mystery.",
       "Compose Trip Hop with a focus on mood and sound design."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Trip Hop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Trip Hop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Trip Hop track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Trip Hop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Trip Hop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Trip Hop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Massive Attack",
+      "Portishead",
+      "Tricky"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -849,6 +1699,7 @@
     "mood": "intense",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/idm.jpg",
     "tags": ["idm", "experimental", "electronic"],
     "artists": ["Aphex Twin", "Autechre", "Squarepusher"],
@@ -858,6 +1709,25 @@
       "Produce IDM with a blend of electronic and acoustic textures.",
       "Make IDM with a sense of exploration and intellectual depth.",
       "Compose IDM with a focus on experimentation and sonic innovation."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "IDM — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "IDM сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a IDM track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write IDM with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce IDM focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose IDM with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Aphex Twin",
+      "Autechre",
+      "Squarepusher"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -870,6 +1740,7 @@
     "mood": "intense",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/glitch.jpg",
     "tags": ["glitch", "experimental", "electronic"],
     "artists": ["Alva Noto", "Ryoji Ikeda", "Xanopticon"],
@@ -879,11 +1750,31 @@
       "Produce Glitch with a focus on sound manipulation and unusual timbres.",
       "Make Glitch with a dark, industrial feel and a sense of disorientation.",
       "Compose Glitch with a blend of noise and structured rhythm."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Glitch — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Glitch сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Glitch track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Glitch with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Glitch focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Glitch with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Alva Noto",
+      "Ryoji Ikeda",
+      "Xanopticon"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "synthwave",
     "name": "Synthwave",
+<<<<<<< HEAD
     "description": "Ретро-футуристичный жанр, вдохновлённый 80-ми, с использованием аналоговых синтезаторов и ностальгической атмосферой. Темп 100–120 BPM.",
     "history": "Появился в середине 2000-х, популяризирован Kavinsky и Carpenter Brut. Стал основой для киберпанк-эстетики.",
     "structure": "Intro → Build → Drop → Breakdown → Second Drop → Outro",
@@ -900,6 +1791,28 @@
       "Produce Synthwave with analog synthesizer emulations and classic drum machines.",
       "Make Synthwave with a sense of 80s action movie soundtrack.",
       "Compose Synthwave with strong melodies and a futuristic edge."
+=======
+    "bpm": "100–120",
+    "bpmType": "b100",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Synthwave — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Synthwave сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Synthwave track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Synthwave with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Synthwave focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Synthwave with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Kavinsky",
+      "Carpenter Brut",
+      "Perturbator"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -912,6 +1825,7 @@
     "mood": "chill",
     "decade": "2010s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/vaporwave.jpg",
     "tags": ["vaporwave", "retro", "experimental"],
     "artists": ["Macintosh Plus", "Luxury Elite", "Blank Banshee"],
@@ -921,11 +1835,31 @@
       "Produce Vaporwave with lo-fi aesthetics, heavy sidechain compression, and retro textures.",
       "Make Vaporwave with a surreal, ambient quality and a sense of nostalgia.",
       "Compose Vaporwave with a focus on mood and atmosphere."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Vaporwave — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Vaporwave сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Vaporwave track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Vaporwave with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Vaporwave focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Vaporwave with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Macintosh Plus",
+      "Luxury Elite",
+      "Blank Banshee"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "chiptune",
     "name": "Chiptune",
+<<<<<<< HEAD
     "description": "Музыка, созданная с использованием звуков старых игровых приставок и компьютеров. Характерный бит и синтезаторные арпеджио.",
     "history": "Зародился в 80-х вместе с развитием видеоигр, популяризирован такими артистами, как Anamanaguchi и Chipzel.",
     "structure": "Intro → Verse → Chorus → Verse → Chorus → Outro",
@@ -942,6 +1876,28 @@
       "Produce Chiptune with vintage console emulation and classic arpeggios.",
       "Make Chiptune with a cheerful, upbeat energy and catchy hooks.",
       "Compose Chiptune with a focus on melodic simplicity and rhythmic drive."
+=======
+    "bpm": "100–120",
+    "bpmType": "b100",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=800&q=60",
+    "description": "Chiptune — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Chiptune сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Chiptune track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Chiptune with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Chiptune focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Chiptune with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Anamanaguchi",
+      "Chipzel",
+      "Sabrepulse"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -958,11 +1914,24 @@
     "tags": ["electro", "electronic", "funk"],
     "artists": ["Kraftwerk", "Afrika Bambaataa", "Drexciya"],
     "prompts": [
+<<<<<<< HEAD
       "Create an Electro track at 120–130 BPM with synthetic bass, robotic rhythms, and a funky groove.",
       "Write Electro with a driving beat, vocoder vocals, and a sci-fi theme.",
       "Produce Electro with vintage drum machines and analog synth leads.",
       "Make Electro with a danceable rhythm and a futuristic feel.",
       "Compose Electro with a blend of funk and electronic elements."
+=======
+      "Create a Electro track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Electro with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Electro focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Electro with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Kraftwerk",
+      "Afrika Bambaataa",
+      "Drexciya"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -975,6 +1944,7 @@
     "mood": "groovy",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/garage-house.jpg",
     "tags": ["house", "garage", "vocal"],
     "artists": ["Masters At Work", "Todd Terry", "Erick Morillo"],
@@ -984,6 +1954,26 @@
       "Produce Garage House with a classic 90s sound and a polished mix.",
       "Make Garage House with a groove that makes people dance.",
       "Compose Garage House with a focus on vocal delivery and harmonic richness."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Garage House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Garage House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Garage House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Garage House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Garage House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Garage House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Garage House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Masters At Work",
+      "Todd Terry",
+      "Erick Morillo"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -996,6 +1986,7 @@
     "mood": "groovy",
     "decade": "2020s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/amapiano.jpg",
     "tags": ["afro", "piano", "deep", "groove"],
     "artists": ["DJ Maphorisa", "Kabza De Small", "Focalistic"],
@@ -1005,6 +1996,25 @@
       "Produce Amapiano with warm, organic sounds and a danceable feel.",
       "Make Amapiano with a blend of traditional African instruments and modern production.",
       "Compose Amapiano with a focus on rhythm and melody."
+=======
+    "era": "emerging",
+    "region": "africa",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Amapiano — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Amapiano сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Piano riff (16) → Verse (16) → Chorus (16) → Breakdown (8) → Drop (32) → Outro (8)",
+    "prompts": [
+      "Create a Amapiano track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Amapiano with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Amapiano focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Amapiano with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "DJ Maphorisa",
+      "Kabza De Small",
+      "Focalistic"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1017,6 +2027,7 @@
     "mood": "intense",
     "decade": "2010s",
     "tier": "growth",
+<<<<<<< HEAD
     "image": "images/gqom.jpg",
     "tags": ["afro", "electronic", "bass"],
     "artists": ["DJ Lag", "Distruction Boyz", "Tribal X"],
@@ -1026,6 +2037,25 @@
       "Produce Gqom with dark, raw textures and a stripped-back mix.",
       "Make Gqom with a slow but powerful energy and a sense of tension.",
       "Compose Gqom with a focus on rhythm and atmosphere."
+=======
+    "era": "emerging",
+    "region": "africa",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Gqom — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Gqom сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Gqom track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Gqom with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Gqom focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Gqom with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "DJ Lag",
+      "Distruction Boyz",
+      "Tribal X"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1038,6 +2068,7 @@
     "mood": "groovy",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/afro-house.jpg",
     "tags": ["afro", "house", "electronic"],
     "artists": ["Black Coffee", "DJ Angelo", "Culoe De Song"],
@@ -1047,6 +2078,26 @@
       "Produce Afro House with a blend of traditional instruments and modern production.",
       "Make Afro House with a warm, uplifting vibe and a danceable groove.",
       "Compose Afro House with a focus on rhythm and cultural fusion."
+=======
+    "era": "modern",
+    "region": "africa",
+    "image": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=60",
+    "description": "Afro House — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Afro House сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (16) → Bassline entry (8) → Verse (16) → Chorus (16) → Breakdown (8) → Build-up (8) → Drop (16) → Outro (8)",
+    "prompts": [
+      "Create a Afro House track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Create Afro House with a classic 4/4 kick, funky bassline, and soulful vocal chops. Tempo 120–130 BPM.",
+      "Write Afro House with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Afro House focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Afro House with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Black Coffee",
+      "DJ Angelo",
+      "Culoe De Song"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1059,6 +2110,7 @@
     "mood": "energetic",
     "decade": "2010s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/afrobeats.jpg",
     "tags": ["afro", "pop", "dance"],
     "artists": ["Burna Boy", "Wizkid", "Davido"],
@@ -1068,6 +2120,25 @@
       "Produce Afrobeats with a bright, polished sound and a festival-ready mix.",
       "Make Afrobeats with a sing-along chorus and a danceable groove.",
       "Compose Afrobeats with a focus on melody and rhythm."
+=======
+    "era": "modern",
+    "region": "africa",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Afrobeats — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Afrobeats сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Afrobeats track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Afrobeats with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Afrobeats focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Afrobeats with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Burna Boy",
+      "Wizkid",
+      "Davido"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1080,6 +2151,7 @@
     "mood": "energetic",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/dancehall.jpg",
     "tags": ["reggae", "dancehall", "caribbean"],
     "artists": ["Sean Paul", "Shabba Ranks", "Beenie Man"],
@@ -1089,11 +2161,31 @@
       "Produce Dancehall with punchy drums, sub-bass, and a raw, street feel.",
       "Make Dancehall with a party atmosphere and a sense of urgency.",
       "Compose Dancehall with a focus on rhythm and vocal performance."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Dancehall — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Dancehall сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Dancehall track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Dancehall with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Dancehall focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Dancehall with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Sean Paul",
+      "Shabba Ranks",
+      "Beenie Man"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
     "id": "reggae",
     "name": "Reggae",
+<<<<<<< HEAD
     "description": "Ритмический стиль с акцентом на вторую и четвертую доли, глубокий бас и карибский грув. Темп 70–90 BPM. Отличается расслабленной атмосферой и социальными текстами.",
     "history": "Родился на Ямайке в конце 60-х из ска и рокстеди. Популяризирован Бобом Марли и стал символом борьбы за свободу.",
     "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Bridge (8) → Chorus (16) → Outro (8)",
@@ -1110,6 +2202,28 @@
       "Produce Reggae with a warm, analog sound and a live band feel.",
       "Make Reggae with a laid-back vibe and a sense of peace.",
       "Compose Reggae with a focus on rhythm and social consciousness."
+=======
+    "bpm": "70–100",
+    "bpmType": "b80",
+    "tier": "all",
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Reggae — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Reggae сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Instrumental (8) → Outro (8)",
+    "prompts": [
+      "Create a Reggae track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Reggae with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Reggae focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Reggae with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Bob Marley",
+      "Peter Tosh",
+      "Jimmy Cliff"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1122,6 +2236,7 @@
     "mood": "groovy",
     "decade": "1990s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/reggaeton.jpg",
     "tags": ["reggaeton", "latin", "dance"],
     "artists": ["Daddy Yankee", "Bad Bunny", "J Balvin"],
@@ -1131,6 +2246,25 @@
       "Produce Reggaeton with heavy 808s, bright synths, and a polished mix.",
       "Make Reggaeton with a sense of energy and party atmosphere.",
       "Compose Reggaeton with a focus on rhythm and vocal delivery."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Reggaeton — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Reggaeton сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Instrumental (8) → Outro (8)",
+    "prompts": [
+      "Create a Reggaeton track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Reggaeton with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Reggaeton focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Reggaeton with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Daddy Yankee",
+      "Bad Bunny",
+      "J Balvin"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1143,6 +2277,7 @@
     "mood": "energetic",
     "decade": "1960s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/salsa.jpg",
     "tags": ["latin", "salsa", "dance"],
     "artists": ["Celia Cruz", "Marc Anthony", "Tito Puente"],
@@ -1152,6 +2287,25 @@
       "Produce Salsa with a live band feel and a rich, dynamic mix.",
       "Make Salsa with a danceable rhythm and a joyful atmosphere.",
       "Compose Salsa with a focus on rhythmic interplay and melodic solos."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Salsa — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Salsa сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Salsa track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Salsa with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Salsa focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Salsa with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Celia Cruz",
+      "Marc Anthony",
+      "Tito Puente"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1164,6 +2318,7 @@
     "mood": "chill",
     "decade": "1960s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/bachata.jpg",
     "tags": ["latin", "bachata", "romantic"],
     "artists": ["Aventura", "Romeo Santos", "Monchy & Alexandra"],
@@ -1173,6 +2328,25 @@
       "Produce Bachata with a warm, intimate sound and a focus on the vocal performance.",
       "Make Bachata with a sensual groove and a relaxed vibe.",
       "Compose Bachata with a blend of traditional and modern elements."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Bachata — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Bachata сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Bachata track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Bachata with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Bachata focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Bachata with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Aventura",
+      "Romeo Santos",
+      "Monchy & Alexandra"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1185,6 +2359,7 @@
     "mood": "energetic",
     "decade": "1800s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/cumbia.jpg",
     "tags": ["latin", "cumbia", "folk"],
     "artists": ["Los Ángeles Azules", "Grupo Cañaveral", "Sonora Dinamita"],
@@ -1194,6 +2369,25 @@
       "Produce Cumbia with a vibrant, energetic mix and a danceable groove.",
       "Make Cumbia with a sense of celebration and community.",
       "Compose Cumbia with a focus on melody and rhythmic drive."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Cumbia — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Cumbia сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Cumbia track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Cumbia with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Cumbia focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Cumbia with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Los Ángeles Azules",
+      "Grupo Cañaveral",
+      "Sonora Dinamita"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1206,6 +2400,7 @@
     "mood": "chill",
     "decade": "1950s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/bossa-nova.jpg",
     "tags": ["bossa-nova", "jazz", "brazilian"],
     "artists": ["João Gilberto", "Antônio Carlos Jobim", "Astrud Gilberto"],
@@ -1215,6 +2410,25 @@
       "Produce Bossa Nova with a clean, acoustic sound and intimate atmosphere.",
       "Make Bossa Nova with a calm, sensual groove and a summer vibe.",
       "Compose Bossa Nova with a focus on melody and harmonic elegance."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Bossa Nova — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Bossa Nova сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Bossa Nova track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Bossa Nova with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Bossa Nova focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Bossa Nova with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "João Gilberto",
+      "Antônio Carlos Jobim",
+      "Astrud Gilberto"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1227,6 +2441,7 @@
     "mood": "energetic",
     "decade": "1800s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/samba.jpg",
     "tags": ["samba", "brazilian", "dance"],
     "artists": ["Pixinguinha", "Zeca Pagodinho", "Paulinho da Viola"],
@@ -1236,6 +2451,25 @@
       "Produce Samba with a vibrant, dynamic mix and a party atmosphere.",
       "Make Samba with a danceable rhythm and a sense of joy.",
       "Compose Samba with a focus on rhythmic interplay and melodic hooks."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1485579149621-3123dd979885?auto=format&fit=crop&w=800&q=60",
+    "description": "Samba — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Samba сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Samba track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Samba with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Samba focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Samba with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Pixinguinha",
+      "Zeca Pagodinho",
+      "Paulinho da Viola"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1248,6 +2482,7 @@
     "mood": "groovy",
     "decade": "1890s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/jazz.jpg",
     "tags": ["jazz", "improvisation", "classic"],
     "artists": ["Miles Davis", "John Coltrane", "Charlie Parker"],
@@ -1257,6 +2492,25 @@
       "Produce Jazz with a warm, organic mix and a live feel.",
       "Make Jazz with a focus on interplay between musicians and emotional expression.",
       "Compose Jazz with a memorable melody and a sense of freedom."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Jazz — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Jazz сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Head → Solos → Head → Outro",
+    "prompts": [
+      "Create a Jazz track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Jazz with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Jazz focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Jazz with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Miles Davis",
+      "John Coltrane",
+      "Charlie Parker"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1269,6 +2523,7 @@
     "mood": "energetic",
     "decade": "1940s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/bebop.jpg",
     "tags": ["jazz", "bebop", "improvisation"],
     "artists": ["Dizzy Gillespie", "Charlie Parker", "Thelonious Monk"],
@@ -1278,6 +2533,25 @@
       "Produce Bebop with a clear, dry sound and a focus on instrumental clarity.",
       "Make Bebop with a sense of urgency and intellectual challenge.",
       "Compose Bebop with a harmonic sophistication and rhythmic creativity."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Bebop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Bebop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Bebop track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Bebop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Bebop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Bebop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Dizzy Gillespie",
+      "Charlie Parker",
+      "Thelonious Monk"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1290,6 +2564,7 @@
     "mood": "chill",
     "decade": "1950s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/cool-jazz.jpg",
     "tags": ["jazz", "cool", "relaxed"],
     "artists": ["Chet Baker", "Dave Brubeck", "Paul Desmond"],
@@ -1299,6 +2574,25 @@
       "Produce Cool Jazz with a warm, intimate sound and a smooth mix.",
       "Make Cool Jazz with a calm, sophisticated atmosphere.",
       "Compose Cool Jazz with a focus on melodic beauty and harmonic simplicity."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Cool Jazz — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Cool Jazz сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Head → Solos → Head → Outro",
+    "prompts": [
+      "Create a Cool Jazz track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Cool Jazz with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Cool Jazz focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Cool Jazz with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Chet Baker",
+      "Dave Brubeck",
+      "Paul Desmond"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1311,6 +2605,7 @@
     "mood": "energetic",
     "decade": "1930s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/swing.jpg",
     "tags": ["jazz", "swing", "big band"],
     "artists": ["Duke Ellington", "Count Basie", "Benny Goodman"],
@@ -1320,6 +2615,25 @@
       "Produce Swing with a lively, acoustic sound and a vintage vibe.",
       "Make Swing with a sense of joy and celebration.",
       "Compose Swing with a focus on rhythm and orchestration."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Swing — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Swing сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Swing track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Swing with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Swing focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Swing with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Duke Ellington",
+      "Count Basie",
+      "Benny Goodman"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1332,6 +2646,7 @@
     "mood": "chill",
     "decade": "1890s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/blues.jpg",
     "tags": ["blues", "classic", "roots"],
     "artists": ["B.B. King", "Muddy Waters", "Robert Johnson"],
@@ -1341,6 +2656,25 @@
       "Produce Blues with a warm, analogue tone and a live performance vibe.",
       "Make Blues with a sense of sorrow and redemption.",
       "Compose Blues with a focus on emotional expression and simplicity."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Blues — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Blues сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Blues track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Blues with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Blues focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Blues with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "B.B. King",
+      "Muddy Waters",
+      "Robert Johnson"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1353,6 +2687,7 @@
     "mood": "energetic",
     "decade": "1950s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/rock.jpg",
     "tags": ["rock", "classic", "guitar"],
     "artists": ["The Beatles", "Led Zeppelin", "The Rolling Stones"],
@@ -1362,6 +2697,25 @@
       "Produce Rock with a full, punchy mix and a live energy.",
       "Make Rock with a sense of rebellion and power.",
       "Compose Rock with a focus on guitar riffs and vocal hooks."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Rock — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Rock сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Rock track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Rock with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Rock focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Rock with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "The Beatles",
+      "Led Zeppelin",
+      "The Rolling Stones"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1374,6 +2728,7 @@
     "mood": "aggressive",
     "decade": "1960s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/hard-rock.jpg",
     "tags": ["rock", "hard-rock", "heavy"],
     "artists": ["AC/DC", "Aerosmith", "Van Halen"],
@@ -1383,6 +2738,25 @@
       "Produce Hard Rock with a thick, saturated sound and a punchy low-end.",
       "Make Hard Rock with a high-energy performance and a sense of attitude.",
       "Compose Hard Rock with a focus on guitar power and vocal intensity."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Hard Rock — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Hard Rock сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Hard Rock track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Hard Rock with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Hard Rock focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Hard Rock with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "AC/DC",
+      "Aerosmith",
+      "Van Halen"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1395,6 +2769,7 @@
     "mood": "aggressive",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/punk-rock.jpg",
     "tags": ["punk", "rock", "raw"],
     "artists": ["Ramones", "Sex Pistols", "The Clash"],
@@ -1404,6 +2779,25 @@
       "Produce Punk Rock with a lo-fi, raw sound and a live performance feel.",
       "Make Punk Rock with a high-energy vibe and a sense of urgency.",
       "Compose Punk Rock with a focus on simplicity and power."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Punk Rock — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Punk Rock сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Punk Rock track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Punk Rock with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Punk Rock focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Punk Rock with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Ramones",
+      "Sex Pistols",
+      "The Clash"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1416,6 +2810,7 @@
     "mood": "intense",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/post-punk.jpg",
     "tags": ["post-punk", "rock", "dark"],
     "artists": ["Joy Division", "The Cure", "Bauhaus"],
@@ -1425,6 +2820,25 @@
       "Produce Post-Punk with a dry, spacious mix and an experimental edge.",
       "Make Post-Punk with a hypnotic rhythm and a sense of unease.",
       "Compose Post-Punk with a focus on atmosphere and lyrical depth."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Post-Punk — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Post-Punk сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Post-Punk track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Post-Punk with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Post-Punk focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Post-Punk with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Joy Division",
+      "The Cure",
+      "Bauhaus"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1437,6 +2851,7 @@
     "mood": "energetic",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/new-wave.jpg",
     "tags": ["new-wave", "rock", "electronic"],
     "artists": ["Talking Heads", "Devo", "Blondie"],
@@ -1446,6 +2861,25 @@
       "Produce New Wave with a bright, polished sound and a danceable rhythm.",
       "Make New Wave with a sense of fun and innovation.",
       "Compose New Wave with a focus on melody and rhythmic creativity."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "New Wave — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "New Wave сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a New Wave track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write New Wave with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce New Wave focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose New Wave with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Talking Heads",
+      "Devo",
+      "Blondie"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1458,6 +2892,7 @@
     "mood": "aggressive",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/grunge.jpg",
     "tags": ["grunge", "rock", "heavy"],
     "artists": ["Nirvana", "Pearl Jam", "Soundgarden"],
@@ -1467,6 +2902,25 @@
       "Produce Grunge with a lo-fi mix, a thick bass, and a dynamic range.",
       "Make Grunge with a moody, introspective atmosphere and explosive choruses.",
       "Compose Grunge with a focus on lyrical honesty and sonic power."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Grunge — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Grunge сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Grunge track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Grunge with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Grunge focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Grunge with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Nirvana",
+      "Pearl Jam",
+      "Soundgarden"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1479,6 +2933,7 @@
     "mood": "chill",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/shoegaze.jpg",
     "tags": ["shoegaze", "rock", "dreamy"],
     "artists": ["My Bloody Valentine", "Slowdive", "Ride"],
@@ -1488,6 +2943,25 @@
       "Produce Shoegaze with a wall of sound, rich harmonies, and a hazy mix.",
       "Make Shoegaze with a sense of nostalgia and introspection.",
       "Compose Shoegaze with a focus on texture and melody."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Shoegaze — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Shoegaze сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Shoegaze track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Shoegaze with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Shoegaze focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Shoegaze with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "My Bloody Valentine",
+      "Slowdive",
+      "Ride"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1500,6 +2974,7 @@
     "mood": "groovy",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/indie-rock.jpg",
     "tags": ["indie", "rock", "guitar"],
     "artists": ["Arctic Monkeys", "The Strokes", "Radiohead"],
@@ -1509,6 +2984,25 @@
       "Produce Indie Rock with a clear, modern mix and a lively performance.",
       "Make Indie Rock with a sense of authenticity and creativity.",
       "Compose Indie Rock with a focus on songwriting and arrangement."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Indie Rock — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Indie Rock сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Indie Rock track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Indie Rock with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Indie Rock focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Indie Rock with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Arctic Monkeys",
+      "The Strokes",
+      "Radiohead"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1521,6 +3015,7 @@
     "mood": "intense",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/alternative-rock.jpg",
     "tags": ["alternative", "rock", "experimental"],
     "artists": ["R.E.M.", "Sonic Youth", "Pixies"],
@@ -1530,6 +3025,25 @@
       "Produce Alternative Rock with a dynamic mix and an experimental feel.",
       "Make Alternative Rock with a sense of innovation and depth.",
       "Compose Alternative Rock with a focus on originality and artistic expression."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&q=60",
+    "description": "Alternative Rock — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Alternative Rock сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Alternative Rock track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Alternative Rock with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Alternative Rock focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Alternative Rock with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "R.E.M.",
+      "Sonic Youth",
+      "Pixies"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1542,6 +3056,7 @@
     "mood": "aggressive",
     "decade": "1960s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/metal.jpg",
     "tags": ["metal", "heavy", "guitar"],
     "artists": ["Black Sabbath", "Metallica", "Iron Maiden"],
@@ -1551,6 +3066,25 @@
       "Produce Metal with a thick, compressed mix and a thunderous low-end.",
       "Make Metal with a sense of intensity and musicianship.",
       "Compose Metal with a focus on guitar virtuosity and rhythmic drive."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Black Sabbath",
+      "Metallica",
+      "Iron Maiden"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1563,6 +3097,7 @@
     "mood": "aggressive",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/heavy-metal.jpg",
     "tags": ["metal", "heavy", "classic"],
     "artists": ["Judas Priest", "Motorhead", "Dio"],
@@ -1572,6 +3107,25 @@
       "Produce Heavy Metal with a big, live sound and a clear guitar mix.",
       "Make Heavy Metal with a feeling of epicness and energy.",
       "Compose Heavy Metal with a focus on melody and aggression."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Heavy Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Heavy Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Heavy Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Heavy Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Heavy Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Heavy Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Judas Priest",
+      "Motorhead",
+      "Dio"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1584,6 +3138,7 @@
     "mood": "aggressive",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/thrash-metal.jpg",
     "tags": ["metal", "thrash", "fast"],
     "artists": ["Slayer", "Megadeth", "Anthrax"],
@@ -1593,6 +3148,25 @@
       "Produce Thrash Metal with a raw, punishing mix and a tight performance.",
       "Make Thrash Metal with a relentless energy and a sense of danger.",
       "Compose Thrash Metal with a focus on speed and precision."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Thrash Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Thrash Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Thrash Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Thrash Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Thrash Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Thrash Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Slayer",
+      "Megadeth",
+      "Anthrax"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1605,6 +3179,7 @@
     "mood": "aggressive",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/death-metal.jpg",
     "tags": ["metal", "death", "extreme"],
     "artists": ["Death", "Cannibal Corpse", "Morbid Angel"],
@@ -1614,6 +3189,25 @@
       "Produce Death Metal with a dense, heavy mix and an aggressive production.",
       "Make Death Metal with a feeling of despair and power.",
       "Compose Death Metal with a focus on brutality and technique."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Death Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Death Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Death Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Death Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Death Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Death Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Death",
+      "Cannibal Corpse",
+      "Morbid Angel"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1626,6 +3220,7 @@
     "mood": "intense",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/black-metal.jpg",
     "tags": ["metal", "black", "atmospheric"],
     "artists": ["Burzum", "Mayhem", "Darkthrone"],
@@ -1635,6 +3230,25 @@
       "Produce Black Metal with a lo-fi sound and a feeling of isolation.",
       "Make Black Metal with a hypnotic, repetitive rhythm and epic feel.",
       "Compose Black Metal with a focus on atmosphere and emotion."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Black Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Black Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Black Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Black Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Black Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Black Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Burzum",
+      "Mayhem",
+      "Darkthrone"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1647,6 +3261,7 @@
     "mood": "intense",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/doom-metal.jpg",
     "tags": ["metal", "doom", "slow"],
     "artists": ["Candlemass", "Saint Vitus", "Pentagram"],
@@ -1656,6 +3271,25 @@
       "Produce Doom Metal with a thick, bottom-heavy mix and a dark mood.",
       "Make Doom Metal with a hypnotic, brooding energy.",
       "Compose Doom Metal with a focus on riff power and emotional weight."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Doom Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Doom Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Doom Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Doom Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Doom Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Doom Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Candlemass",
+      "Saint Vitus",
+      "Pentagram"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1668,6 +3302,7 @@
     "mood": "aggressive",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/sludge-metal.jpg",
     "tags": ["metal", "sludge", "heavy"],
     "artists": ["Melvins", "Eyehategod", "Crowbar"],
@@ -1677,6 +3312,25 @@
       "Produce Sludge Metal with a thick, murky mix and a live, aggressive feel.",
       "Make Sludge Metal with a feeling of decay and heaviness.",
       "Compose Sludge Metal with a focus on groove and heaviness."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Sludge Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Sludge Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Sludge Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Sludge Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Sludge Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Sludge Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Melvins",
+      "Eyehategod",
+      "Crowbar"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1689,6 +3343,7 @@
     "mood": "aggressive",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/metalcore.jpg",
     "tags": ["metal", "core", "aggressive"],
     "artists": ["Killswitch Engage", "Parkway Drive", "August Burns Red"],
@@ -1698,6 +3353,25 @@
       "Produce Metalcore with a punchy, modern mix and a high-energy performance.",
       "Make Metalcore with a sense of aggression and melody.",
       "Compose Metalcore with a focus on rhythmic complexity and emotional delivery."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Metalcore — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Metalcore сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Metalcore track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Metalcore with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Metalcore focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Metalcore with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Killswitch Engage",
+      "Parkway Drive",
+      "August Burns Red"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1710,6 +3384,7 @@
     "mood": "energetic",
     "decade": "1990s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/nu-metal.jpg",
     "tags": ["metal", "nu", "rap"],
     "artists": ["Korn", "Linkin Park", "Limp Bizkit"],
@@ -1719,6 +3394,25 @@
       "Produce Nu Metal with a modern, polished mix and a sense of urban energy.",
       "Make Nu Metal with a rebellious, alternative vibe.",
       "Compose Nu Metal with a focus on groove and vocal delivery."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=60",
+    "description": "Nu Metal — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Nu Metal сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Solo (16) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Nu Metal track at 150–200 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Nu Metal with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Nu Metal focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Nu Metal with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Korn",
+      "Linkin Park",
+      "Limp Bizkit"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1731,6 +3425,7 @@
     "mood": "energetic",
     "decade": "1950s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/pop.jpg",
     "tags": ["pop", "mainstream", "catchy"],
     "artists": ["Michael Jackson", "Madonna", "Taylor Swift"],
@@ -1740,6 +3435,25 @@
       "Produce Pop with a bright, radio-friendly mix and a sense of excitement.",
       "Make Pop with a feel-good vibe and a sing-along chorus.",
       "Compose Pop with a focus on melody and accessibility."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=60",
+    "description": "Pop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Pop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Pop track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Pop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Pop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Pop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Michael Jackson",
+      "Madonna",
+      "Taylor Swift"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1752,6 +3466,7 @@
     "mood": "energetic",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/synthpop.jpg",
     "tags": ["pop", "synth", "electronic"],
     "artists": ["Depeche Mode", "New Order", "Pet Shop Boys"],
@@ -1761,6 +3476,25 @@
       "Produce Synthpop with a bright, polished mix and a danceable rhythm.",
       "Make Synthpop with a sense of nostalgia and modern appeal.",
       "Compose Synthpop with a focus on melody and synth textures."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=60",
+    "description": "Synthpop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Synthpop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Synthpop track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Synthpop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Synthpop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Synthpop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Depeche Mode",
+      "New Order",
+      "Pet Shop Boys"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1773,6 +3507,7 @@
     "mood": "energetic",
     "decade": "2010s",
     "tier": "growth",
+<<<<<<< HEAD
     "image": "images/hyperpop.jpg",
     "tags": ["pop", "hyper", "experimental"],
     "artists": ["100 Gecs", "SOPHIE", "Charli XCX"],
@@ -1782,6 +3517,25 @@
       "Produce Hyperpop with a dynamic mix, aggressive effects, and a sense of fun.",
       "Make Hyperpop with a subversive, playful vibe and a modern edge.",
       "Compose Hyperpop with a focus on surprise and innovation."
+=======
+    "era": "emerging",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=60",
+    "description": "Hyperpop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Hyperpop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a Hyperpop track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Hyperpop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Hyperpop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Hyperpop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "100 Gecs",
+      "SOPHIE",
+      "Charli XCX"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1794,6 +3548,7 @@
     "mood": "energetic",
     "decade": "1990s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/k-pop.jpg",
     "tags": ["k-pop", "pop", "dance"],
     "artists": ["BTS", "BLACKPINK", "EXO"],
@@ -1803,6 +3558,25 @@
       "Produce K-Pop with a bright, powerful mix and a sense of spectacle.",
       "Make K-Pop with a fresh, modern sound and a global appeal.",
       "Compose K-Pop with a focus on melody and performance."
+=======
+    "era": "modern",
+    "region": "asia",
+    "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=60",
+    "description": "K-Pop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "K-Pop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a K-Pop track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write K-Pop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce K-Pop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose K-Pop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "BTS",
+      "BLACKPINK",
+      "EXO"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1815,6 +3589,7 @@
     "mood": "energetic",
     "decade": "1980s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/j-pop.jpg",
     "tags": ["j-pop", "pop", "asian"],
     "artists": ["Hikaru Utada", "Arashi", "AKB48"],
@@ -1824,6 +3599,25 @@
       "Produce J-Pop with a bright, polished mix and a sense of fun.",
       "Make J-Pop with a fresh, youthful vibe and a danceable groove.",
       "Compose J-Pop with a focus on melody and arrangement."
+=======
+    "era": "modern",
+    "region": "asia",
+    "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=60",
+    "description": "J-Pop — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "J-Pop сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro (8) → Verse (16) → Chorus (16) → Verse (16) → Chorus (16) → Bridge (8) → Chorus (16) → Outro (8)",
+    "prompts": [
+      "Create a J-Pop track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write J-Pop with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce J-Pop focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose J-Pop with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Hikaru Utada",
+      "Arashi",
+      "AKB48"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1836,6 +3630,7 @@
     "mood": "groovy",
     "decade": "1940s",
     "tier": "top",
+<<<<<<< HEAD
     "image": "images/r-b.jpg",
     "tags": ["r&b", "soul", "urban"],
     "artists": ["Marvin Gaye", "Stevie Wonder", "Beyoncé"],
@@ -1845,6 +3640,25 @@
       "Produce R&B with a warm, soulful mix and a rhythmic bassline.",
       "Make R&B with a romantic vibe and a sense of sophistication.",
       "Compose R&B with a focus on vocal delivery and groove."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "R&B — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "R&B сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a R&B track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write R&B with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce R&B focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose R&B with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Marvin Gaye",
+      "Stevie Wonder",
+      "Beyoncé"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1857,6 +3671,7 @@
     "mood": "chill",
     "decade": "1950s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/soul.jpg",
     "tags": ["soul", "vocal", "classic"],
     "artists": ["Aretha Franklin", "Otis Redding", "James Brown"],
@@ -1866,6 +3681,25 @@
       "Produce Soul with a warm, organic sound and a live band feel.",
       "Make Soul with a sense of emotional depth and sincerity.",
       "Compose Soul with a focus on vocal expression and groove."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Soul — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Soul сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Soul track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Soul with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Soul focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Soul with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Aretha Franklin",
+      "Otis Redding",
+      "James Brown"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1878,6 +3712,7 @@
     "mood": "groovy",
     "decade": "1960s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/funk.jpg",
     "tags": ["funk", "groove", "bass"],
     "artists": ["George Clinton", "Sly Stone", "Parliament-Funkadelic"],
@@ -1887,6 +3722,25 @@
       "Produce Funk with a lively, analog sound and a tight performance.",
       "Make Funk with a sense of fun and energy.",
       "Compose Funk with a focus on rhythm and bass."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&q=60",
+    "description": "Funk — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Funk сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Funk track at 70–100 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Funk with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Funk focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Funk with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "George Clinton",
+      "Sly Stone",
+      "Parliament-Funkadelic"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1899,6 +3753,7 @@
     "mood": "energetic",
     "decade": "1970s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/disco.jpg",
     "tags": ["disco", "dance", "70s"],
     "artists": ["Donna Summer", "Bee Gees", "Village People"],
@@ -1908,6 +3763,25 @@
       "Produce Disco with a lively, bright mix and a sense of glamour.",
       "Make Disco with a party atmosphere and a catchy hook.",
       "Compose Disco with a focus on rhythm and melody."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Disco — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Disco сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Disco track at 120–130 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Disco with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Disco focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Disco with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Donna Summer",
+      "Bee Gees",
+      "Village People"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1920,6 +3794,7 @@
     "mood": "calm",
     "decade": "1700s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/classical.jpg",
     "tags": ["classical", "orchestral", "academic"],
     "artists": ["Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Johann Sebastian Bach"],
@@ -1929,6 +3804,25 @@
       "Produce Classical with a clear, balanced mix and a live performance feel.",
       "Make Classical with a timeless, elegant atmosphere.",
       "Compose Classical with a focus on structure and expression."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=60",
+    "description": "Classical — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Classical сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Exposition → Development → Recapitulation → Coda",
+    "prompts": [
+      "Create a Classical track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Classical with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Classical focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Classical with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Ludwig van Beethoven",
+      "Wolfgang Amadeus Mozart",
+      "Johann Sebastian Bach"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1941,6 +3835,7 @@
     "mood": "calm",
     "decade": "1600s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/orchestral.jpg",
     "tags": ["orchestral", "cinematic", "instrumental"],
     "artists": ["John Williams", "Ennio Morricone", "Hans Zimmer"],
@@ -1950,6 +3845,25 @@
       "Produce Orchestral with a rich, spacious mix and a sense of grandeur.",
       "Make Orchestral with a cinematic feel and a narrative arc.",
       "Compose Orchestral with a focus on orchestration and emotional impact."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=60",
+    "description": "Orchestral — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Orchestral сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Orchestral track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Orchestral with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Orchestral focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Orchestral with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "John Williams",
+      "Ennio Morricone",
+      "Hans Zimmer"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1962,6 +3876,7 @@
     "mood": "intense",
     "decade": "1900s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/cinematic.jpg",
     "tags": ["cinematic", "film", "epic"],
     "artists": ["Hans Zimmer", "Howard Shore", "John Williams"],
@@ -1971,6 +3886,25 @@
       "Produce Cinematic with a wide, dynamic mix and a Hollywood feel.",
       "Make Cinematic with a grand, inspiring atmosphere.",
       "Compose Cinematic with a focus on tension and release."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=60",
+    "description": "Cinematic — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Cinematic сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Cinematic track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Cinematic with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Cinematic focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Cinematic with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Hans Zimmer",
+      "Howard Shore",
+      "John Williams"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -1983,6 +3917,7 @@
     "mood": "calm",
     "decade": "1900s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/soundtrack.jpg",
     "tags": ["soundtrack", "film", "game"],
     "artists": ["Ennio Morricone", "John Williams", "Hans Zimmer"],
@@ -1992,6 +3927,25 @@
       "Produce Soundtrack with a clear, immersive mix and a cinematic quality.",
       "Make Soundtrack with a memorable melody and a supporting role for visuals.",
       "Compose Soundtrack with a focus on mood and character."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=800&q=60",
+    "description": "Soundtrack — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Soundtrack сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Soundtrack track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Soundtrack with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Soundtrack focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Soundtrack with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Ennio Morricone",
+      "John Williams",
+      "Hans Zimmer"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -2004,6 +3958,7 @@
     "mood": "chill",
     "decade": "1800s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/folk.jpg",
     "tags": ["folk", "acoustic", "traditional"],
     "artists": ["Bob Dylan", "Joan Baez", "Woody Guthrie"],
@@ -2013,6 +3968,25 @@
       "Produce Folk with a warm, intimate sound and a live performance feel.",
       "Make Folk with a peaceful, reflective vibe.",
       "Compose Folk with a focus on melody and lyrics."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Folk — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Folk сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Folk track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Folk with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Folk focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Folk with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Bob Dylan",
+      "Joan Baez",
+      "Woody Guthrie"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -2025,6 +3999,7 @@
     "mood": "chill",
     "decade": "1920s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/country.jpg",
     "tags": ["country", "american", "folk"],
     "artists": ["Johnny Cash", "Dolly Parton", "Willie Nelson"],
@@ -2034,6 +4009,25 @@
       "Produce Country with a warm, analog mix and a live band feel.",
       "Make Country with a sense of nostalgia and open roads.",
       "Compose Country with a focus on melody and lyricism."
+=======
+    "era": "classic",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Country — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Country сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Country track at 60–90 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Country with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Country focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Country with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Johnny Cash",
+      "Dolly Parton",
+      "Willie Nelson"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -2046,6 +4040,7 @@
     "mood": "energetic",
     "decade": "1940s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/bluegrass.jpg",
     "tags": ["bluegrass", "folk", "acoustic"],
     "artists": ["Bill Monroe", "Flatt & Scruggs", "Ricky Skaggs"],
@@ -2055,6 +4050,25 @@
       "Produce Bluegrass with a lively, acoustic sound and a sense of community.",
       "Make Bluegrass with a danceable rhythm and a spirit of celebration.",
       "Compose Bluegrass with a focus on instrumental virtuosity."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Bluegrass — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Bluegrass сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Bluegrass track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Bluegrass with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Bluegrass focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Bluegrass with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Bill Monroe",
+      "Flatt & Scruggs",
+      "Ricky Skaggs"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   },
   {
@@ -2067,6 +4081,7 @@
     "mood": "chill",
     "decade": "1960s",
     "tier": "all",
+<<<<<<< HEAD
     "image": "images/singer-songwriter.jpg",
     "tags": ["singer-songwriter", "acoustic", "folk"],
     "artists": ["Joni Mitchell", "James Taylor", "Carole King"],
@@ -2076,6 +4091,25 @@
       "Produce Singer-Songwriter with an intimate, close-mic sound and a natural feel.",
       "Make Singer-Songwriter with a reflective, contemplative mood.",
       "Compose Singer-Songwriter with a focus on melody and lyrical honesty."
+=======
+    "era": "modern",
+    "region": "global",
+    "image": "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&q=60",
+    "description": "Singer-Songwriter — жанр, ориентированный на настроение, ритмику и характерное звучание. Подходит для создания аутентичных треков под SUNO AI.",
+    "history": "Singer-Songwriter сформировался как стиль, объединяющий культурные влияния и современные продакшн‑подходы. Сегодня активно развивается в цифровых платформах.",
+    "structure": "Intro → Build → Drop → Breakdown → Drop → Outro",
+    "prompts": [
+      "Create a Singer-Songwriter track at 100–120 BPM with authentic groove, modern mix, and clear arrangement. Structure: intro, verse, chorus, breakdown, drop, outro.",
+      "Write Singer-Songwriter with a memorable main theme, punchy drums, and rich harmonic content. Aim for a polished streaming-ready sound.",
+      "Produce Singer-Songwriter focusing on atmosphere, space, and texture. Use genre-typical sound design (e.g., synths, bass, percussion).",
+      "Compose Singer-Songwriter with evolving layers, a strong build, and a satisfying drop. Keep the energy curve smooth and engaging."
+    ],
+    "subgenres": [],
+    "artists": [
+      "Joni Mitchell",
+      "James Taylor",
+      "Carole King"
+>>>>>>> c509c2feaff2d6454bf7f17397dd848521f48fd8
     ]
   }
 ]
