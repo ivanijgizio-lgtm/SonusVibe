@@ -4,11 +4,9 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SonusVibe — Music Genres</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-
   <style>
     * {margin:0;padding:0;box-sizing:border-box;}
     :root {
@@ -51,12 +49,17 @@
     .card-cover .tag{background:rgba(0,0,0,.4);padding:.3rem .7rem;border-radius:999px;font-size:.75rem;}
     .genre-title{font-size:1.2rem;font-weight:700;margin-bottom:.4rem;}
     .meta{color:var(--muted);font-size:.85rem;}
+    .artists-list{color:var(--accent2);font-size:.8rem;margin-top:.5rem;}
 
     .modal.hidden { display: none; }
     .modal {position: fixed;inset: 0;background: rgba(0,0,0,0.7);display: flex;align-items: center;justify-content: center;z-index: 999;}
-    .modal-content {background: var(--surface);color: var(--text);max-width: 650px;width: 92%;padding: 20px;border-radius: 16px;}
-    .modal-content img {width: 100%;border-radius: 12px;margin-bottom: 12px;}
+    .modal-content {background: var(--surface);color: var(--text);max-width: 650px;width: 92%;padding: 20px;border-radius: 16px;max-height:90vh;overflow-y:auto;}
+    .modal-content img {width: 100%;border-radius: 12px;margin-bottom: 12px;max-height:300px;object-fit:cover;}
     .modal-close {float: right;background: transparent;border: none;font-size: 26px;color: var(--text);cursor: pointer;}
+    .prompts-list {list-style:none;padding:0;}
+    .prompts-list li {background:rgba(255,255,255,0.05);padding:.5rem 1rem;border-radius:8px;margin:.3rem 0;font-size:.9rem;display:flex;justify-content:space-between;align-items:center;}
+    .copy-btn {background:var(--accent);border:none;color:white;padding:.2rem .8rem;border-radius:6px;cursor:pointer;font-size:.8rem;transition:.2s;}
+    .copy-btn:hover{opacity:.8;}
   </style>
 </head>
 <body>
@@ -92,7 +95,6 @@
 
     <div class="panel">
       <h3>Filters</h3>
-
       <div class="filter-group">
         <div class="filter-title">Trend</div>
         <div class="filter-options">
@@ -101,7 +103,6 @@
           <button class="filter-tag" data-group="trend" data-filter="growth">Growth</button>
         </div>
       </div>
-
       <div class="filter-group">
         <div class="filter-title">BPM</div>
         <div class="filter-options">
@@ -114,7 +115,6 @@
           <button class="filter-tag" data-group="bpm" data-filter="b160">150–200</button>
         </div>
       </div>
-
       <div class="filter-group">
         <div class="filter-title">Mood</div>
         <div class="filter-options">
@@ -127,21 +127,19 @@
           <button class="filter-tag" data-group="mood" data-filter="aggressive">Aggressive</button>
         </div>
       </div>
-
       <div class="filter-group">
         <div class="filter-title">Decade</div>
         <div class="filter-options">
           <button class="filter-tag active" data-group="decade" data-filter="all">Any</button>
-          <button class="filter-tag" data-group="decade" data-filter="60s">60s</button>
-          <button class="filter-tag" data-group="decade" data-filter="70s">70s</button>
-          <button class="filter-tag" data-group="decade" data-filter="80s">80s</button>
-          <button class="filter-tag" data-group="decade" data-filter="90s">90s</button>
+          <button class="filter-tag" data-group="decade" data-filter="1960s">60s</button>
+          <button class="filter-tag" data-group="decade" data-filter="1970s">70s</button>
+          <button class="filter-tag" data-group="decade" data-filter="1980s">80s</button>
+          <button class="filter-tag" data-group="decade" data-filter="1990s">90s</button>
           <button class="filter-tag" data-group="decade" data-filter="2000s">2000s</button>
           <button class="filter-tag" data-group="decade" data-filter="2010s">2010s</button>
           <button class="filter-tag" data-group="decade" data-filter="2020s">2020s</button>
         </div>
       </div>
-
       <button id="clearBtn" class="btn" style="margin-top:1rem;">Clear</button>
     </div>
 
@@ -161,6 +159,9 @@
     <p id="modalDescription"></p>
     <p><strong>История:</strong> <span id="modalHistory"></span></p>
     <p><strong>Структура:</strong> <span id="modalStructure"></span></p>
+    <p><strong>Исполнители:</strong> <span id="modalArtists"></span></p>
+    <p><strong>Промты для SUNO AI:</strong></p>
+    <ul id="modalPrompts" class="prompts-list"></ul>
   </div>
 </div>
 
@@ -170,7 +171,6 @@ class App {
     this.genresData = [];
     this.filteredGenres = [];
     this.activeFilters = { trend:"all", bpm:"all", mood:"all", decade:"all" };
-
     this.cacheElements();
     this.bindEvents();
     this.loadGenres();
@@ -179,7 +179,6 @@ class App {
   cacheElements() {
     this.modal = document.getElementById("genreModal");
     this.modalClose = document.getElementById("modalClose");
-
     this.togglePageBtn = document.getElementById("togglePageBtn");
     this.backBtn = document.getElementById("backBtn");
     this.searchBtn = document.getElementById("searchBtn");
@@ -188,6 +187,13 @@ class App {
     this.resultsText = document.getElementById("resultsText");
     this.noResults = document.getElementById("noResults");
     this.container = document.getElementById("genresContainer");
+    this.modalImage = document.getElementById("modalImage");
+    this.modalTitle = document.getElementById("modalTitle");
+    this.modalDescription = document.getElementById("modalDescription");
+    this.modalHistory = document.getElementById("modalHistory");
+    this.modalStructure = document.getElementById("modalStructure");
+    this.modalArtists = document.getElementById("modalArtists");
+    this.modalPrompts = document.getElementById("modalPrompts");
   }
 
   bindEvents() {
@@ -196,20 +202,24 @@ class App {
     this.searchBtn.onclick = () => this.handleSearch();
     this.searchInput.oninput = () => this.handleSearch();
     this.clearBtn.onclick = () => this.clearFilters();
-
     document.querySelectorAll('.filter-tag').forEach(tag=>{
       tag.onclick = ()=>this.applyFilter(tag);
     });
-
     this.modalClose.onclick = () => this.closeModal();
     this.modal.onclick = (e) => { if (e.target === this.modal) this.closeModal(); };
   }
 
   async loadGenres() {
-    const res = await fetch('data/genres.json');
-    this.genresData = await res.json();
-    this.filteredGenres = [...this.genresData];
-    this.applyFilters();
+    try {
+      const res = await fetch('data/genres.json');
+      if (!res.ok) throw new Error('Network response was not ok');
+      this.genresData = await res.json();
+      this.filteredGenres = [...this.genresData];
+      this.applyFilters();
+    } catch (e) {
+      console.error('Ошибка загрузки данных:', e);
+      this.resultsText.textContent = 'Ошибка загрузки данных. Проверьте файл data/genres.json.';
+    }
   }
 
   showApp(){document.getElementById('landingPage').classList.add('hidden');document.getElementById('appPage').classList.remove('hidden');}
@@ -245,12 +255,10 @@ class App {
 
   applyFilters(){
     let result = [...this.filteredGenres];
-
     if(this.activeFilters.trend !== "all") result = result.filter(g=>g.tier === this.activeFilters.trend);
     if(this.activeFilters.bpm !== "all") result = result.filter(g=>this.getBpmType(g.bpm) === this.activeFilters.bpm);
     if(this.activeFilters.mood !== "all") result = result.filter(g=>g.mood === this.activeFilters.mood);
     if(this.activeFilters.decade !== "all") result = result.filter(g=>g.decade === this.activeFilters.decade);
-
     this.renderGenres(result);
   }
 
@@ -268,19 +276,22 @@ class App {
 
   renderGenres(genres){
     this.container.innerHTML = "";
-    this.resultsText.textContent = `Показано ${genres.length}`;
+    this.resultsText.textContent = `Показано ${genres.length} жанров`;
     if(!genres.length){this.noResults.classList.remove('hidden');return;}
     this.noResults.classList.add('hidden');
 
     genres.forEach(g=>{
       const card = document.createElement('div');
       card.className="genre-card";
+      const artistsHtml = g.artists && g.artists.length ? 
+        `<div class="artists-list">🎤 ${g.artists.join(', ')}</div>` : '';
       card.innerHTML=`
         <div class="card-cover" style="background-image:url('${g.image||''}')">
           <span class="tag">${g.bpm||'BPM'}</span>
         </div>
         <div class="genre-title">${g.name}</div>
-        <div class="meta">${g.description || ""}</div>
+        <div class="meta">${g.description ? g.description.substring(0,80)+'...' : ''}</div>
+        ${artistsHtml}
       `;
       card.addEventListener("click", () => this.openModal(g));
       this.container.appendChild(card);
@@ -288,11 +299,37 @@ class App {
   }
 
   openModal(genre){
-    document.getElementById("modalImage").src = genre.image || "";
-    document.getElementById("modalTitle").textContent = genre.name || "";
-    document.getElementById("modalDescription").textContent = genre.description || "Описание отсутствует.";
-    document.getElementById("modalHistory").textContent = genre.history || "История отсутствует.";
-    document.getElementById("modalStructure").textContent = genre.structure || "Структура не указана.";
+    this.modalImage.src = genre.image || "";
+    this.modalTitle.textContent = genre.name || "";
+    this.modalDescription.textContent = genre.description || "Описание отсутствует.";
+    this.modalHistory.textContent = genre.history || "История отсутствует.";
+    this.modalStructure.textContent = genre.structure || "Структура не указана.";
+    this.modalArtists.textContent = genre.artists ? genre.artists.join(', ') : "Нет данных";
+
+    this.modalPrompts.innerHTML = '';
+    if (genre.prompts && genre.prompts.length) {
+      genre.prompts.forEach((p, index) => {
+        const li = document.createElement('li');
+        const span = document.createElement('span');
+        span.textContent = p;
+        const btn = document.createElement('button');
+        btn.textContent = 'Copy';
+        btn.className = 'copy-btn';
+        btn.onclick = (e) => {
+          e.stopPropagation();
+          navigator.clipboard.writeText(p).then(() => {
+            btn.textContent = 'Copied!';
+            setTimeout(() => btn.textContent = 'Copy', 1500);
+          }).catch(() => alert('Не удалось скопировать'));
+        };
+        li.appendChild(span);
+        li.appendChild(btn);
+        this.modalPrompts.appendChild(li);
+      });
+    } else {
+      this.modalPrompts.innerHTML = '<li>Нет промтов для этого жанра</li>';
+    }
+
     this.modal.classList.remove("hidden");
     this.modal.classList.add("show");
   }
